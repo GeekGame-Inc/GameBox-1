@@ -73,3 +73,4 @@ public class BoutiqueAdapter extends SuperAdapter<BoutiqueGameModel> {
 		}
 	}
 }
+
