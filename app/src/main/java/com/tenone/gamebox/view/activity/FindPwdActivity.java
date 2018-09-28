@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:FindPwdActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-4-27����11:23:13
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.annotation.SuppressLint;
@@ -25,16 +17,6 @@ import com.tenone.gamebox.view.base.BaseActivity;
 import com.tenone.gamebox.view.custom.CustomizeEditText;
 import com.tenone.gamebox.view.custom.TitleBarView;
 
-/**
- * �һ����� ClassName:FindPwdActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-4-27 ����11:23:13 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 @SuppressLint("ResourceAsColor")
 public class FindPwdActivity extends BaseActivity implements FindPwdView {
     @ViewInject(R.id.id_title_bar)

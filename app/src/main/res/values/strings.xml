@@ -249,8 +249,8 @@
 
     <string name="player_txt"><Data><![CDATA[<font color="#171F27">有</font> <font color="#1992ea">%1$s</font><font color="#171F27">人玩过该游戏 </font>]]></Data></string>
 
-    <string name="question_txt"><Data><![CDATA[<font color="#171F27">共</font><font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个问题,去逛逛吧!</font>]]></Data></string>
-    <string name="question_txt2"><Data><![CDATA[<font color="#171F27">共</font> <font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个问题。</font>]]></Data></string>
+    <string name="question_txt"><Data><![CDATA[<font color="#171F27">共</font><font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个回答,去逛逛吧!</font>]]></Data></string>
+    <string name="question_txt2"><Data><![CDATA[<font color="#171F27">共</font> <font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个回答。</font>]]></Data></string>
     <string name="tiwen_txt"><Data><![CDATA[<font color="#8B8684">向</font><font color="#1992ea">%1$s</font><font color="#8B8684">位该游戏的玩家请教]]></Data></string>
     <string name="huida_txt"><Data><![CDATA[<font color="#8B8684">查看全部</font><font color="#1992ea">%1$s</font><font color="#8B8684">个回答]]></Data></string>
     <string name="man">男</string>

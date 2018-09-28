@@ -1,6 +1,7 @@
 package com.tenone.gamebox.view.adapter;
 
 import android.content.Context;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,6 +20,7 @@ public class BoutiqueAdapter extends SuperAdapter<BoutiqueGameModel> {
 
 	private Context mContext;
 	private int landscapeImgWidth, verticalImgWidth, landscapeImgHeight, verticalImgHeight, dp5;
+
 
 	public BoutiqueAdapter(Context context, List<BoutiqueGameModel> items, int layoutResId) {
 		super( context, items, layoutResId );
@@ -39,35 +41,38 @@ public class BoutiqueAdapter extends SuperAdapter<BoutiqueGameModel> {
 		holder.setText( R.id.id_boutique_size, item.getGameSize() + "M" );
 		holder.setText( R.id.id_boutique_intro, item.getGameIntro() );
 		holder.setText( R.id.id_boutique_comment, item.getGameCommentCounts() + "\u4e2a\u6e38\u620f\u70b9\u8bc4" );
+		ImageView adsIv = holder.findViewById( R.id.id_boutique_img );
 		LinearLayout linearLayout = holder.findViewById( R.id.id_boutique_imgRoot );
 		String ads = item.getGameAdsImg();
 		if (!MyApplication.getHttpUrl().getBaseUrl().equals( ads )) {
-			ImageView adsIv = new ImageView( mContext );
-			linearLayout.addView( adsIv );
 			ViewGroup.LayoutParams params = adsIv.getLayoutParams();
 			params.width = landscapeImgWidth;
 			params.height = landscapeImgHeight;
 			adsIv.setLayoutParams( params );
 			adsIv.setScaleType( ImageView.ScaleType.CENTER_CROP );
 			ImageLoadUtils.loadBannerImg( adsIv, mContext, ads );
+			adsIv.setVisibility( View.VISIBLE );
+			linearLayout.setVisibility( View.GONE );
 		} else {
+			adsIv.setVisibility( View.GONE );
+			linearLayout.setVisibility( View.VISIBLE );
 			String[] imgs = item.getGameImgs();
+			ImageView[] iv = {holder.findViewById( R.id.id_boutique_img1 ),
+					holder.findViewById( R.id.id_boutique_img2 ), holder.findViewById( R.id.id_boutique_img3 )};
 			if (imgs != null) {
 				int length = imgs.length;
 				for (int i = 0; i < length; i++) {
 					String url = imgs[i];
-					ImageView img = new ImageView( mContext );
-					linearLayout.addView( img );
-					LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) img.getLayoutParams();
+					LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) iv[i].getLayoutParams();
 					params.width = verticalImgWidth;
 					params.height = verticalImgHeight;
 					if (i == 1) {
 						params.leftMargin = dp5;
 						params.rightMargin = dp5;
 					}
-					img.setLayoutParams( params );
-					img.setScaleType( ImageView.ScaleType.CENTER_CROP );
-					ImageLoadUtils.loadGameDetailsImg( img, mContext, url );
+					iv[i].setLayoutParams( params );
+					iv[i].setScaleType( ImageView.ScaleType.CENTER_CROP );
+					ImageLoadUtils.loadGameDetailsImg( iv[i], mContext, url );
 				}
 			}
 		}

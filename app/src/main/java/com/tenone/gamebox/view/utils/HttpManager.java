@@ -18,7 +18,6 @@ import com.tenone.gamebox.view.base.MyApplication;
 import com.thoughtworks.xstream.mapper.Mapper;
 
 import java.io.File;
-import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +58,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -93,7 +92,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "orderID", orderId + "" )
@@ -112,7 +111,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -138,7 +137,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -163,7 +162,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -200,7 +199,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -231,7 +230,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "mobile", mobile + "" )
@@ -250,7 +249,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "mobile", mobile + "" )
@@ -287,7 +286,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		if (!TextUtils.isEmpty( path )) {
@@ -321,7 +320,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -341,7 +340,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -363,7 +362,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -383,7 +382,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "channel", channel + "" )
@@ -415,7 +414,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "channel", channel + "" )
@@ -444,7 +443,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "channel", channel + "" )
@@ -470,7 +469,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -487,7 +486,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -511,7 +510,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -537,7 +536,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -559,7 +558,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -579,7 +578,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -606,7 +605,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "channel", channel + "" )
@@ -626,7 +625,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -649,7 +648,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMd5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Log.i( "sign", "string is " + builder.toString() );
@@ -672,7 +671,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -693,7 +692,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -713,7 +712,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid + "" )
@@ -740,7 +739,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "id", uid )
@@ -758,7 +757,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		url += "&uid=" + uid + "&sign=" + sign;
@@ -778,7 +777,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -795,7 +794,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -818,7 +817,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -839,7 +838,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "system", "1" )
@@ -857,7 +856,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "cid", channel )
@@ -875,7 +874,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "version", version )
@@ -930,7 +929,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -953,7 +952,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -976,7 +975,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -998,7 +997,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -1021,7 +1020,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder().add( "uid", uid )
@@ -1041,7 +1040,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1065,7 +1064,7 @@ public class HttpManager {
 		String uid = SpUtil.getUserId();
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1092,7 +1091,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		MediaType MEDIA_TYPE_JPEG = MediaType.parse( "image/png" );
@@ -1129,7 +1128,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1157,7 +1156,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1179,7 +1178,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1200,7 +1199,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1226,7 +1225,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1256,7 +1255,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1287,7 +1286,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1314,7 +1313,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1340,7 +1339,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1368,7 +1367,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1398,7 +1397,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1430,7 +1429,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1457,7 +1456,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1485,7 +1484,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1512,7 +1511,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1538,7 +1537,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1563,7 +1562,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1600,7 +1599,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -1634,7 +1633,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1655,7 +1654,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1703,7 +1702,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1733,7 +1732,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1783,7 +1782,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1816,7 +1815,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1840,7 +1839,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1863,7 +1862,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		url += "&device_id=" + deviceId + "&conv_type=" + conv_type + "&app_type=android" + "&sign=" + sign;
@@ -1885,7 +1884,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		url += "&device_id=" + deviceId + "&mac=" + mac + "&os=0&source=TD&event_type=" + type + "&sign=" + sign;
@@ -1941,7 +1940,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1963,7 +1962,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -1984,7 +1983,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -2087,7 +2086,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder1 = new FormBody.Builder();
@@ -2121,7 +2120,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2153,7 +2152,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2178,7 +2177,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2202,7 +2201,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2227,7 +2226,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2250,7 +2249,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2270,7 +2269,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2292,7 +2291,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2318,7 +2317,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		builder.addFormDataPart( "img", file.getName(),
@@ -2346,7 +2345,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		String finalSign = sign;
@@ -2403,7 +2402,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		FormBody.Builder builder = new FormBody.Builder();
@@ -2426,7 +2425,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2447,7 +2446,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2468,7 +2467,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2497,7 +2496,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2519,7 +2518,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2541,7 +2540,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2562,7 +2561,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2583,7 +2582,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2610,7 +2609,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		String finalSign = sign;
@@ -2696,7 +2695,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( uBuilder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2724,7 +2723,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2756,7 +2755,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2780,7 +2779,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2801,7 +2800,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2825,7 +2824,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2849,7 +2848,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2872,7 +2871,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2894,7 +2893,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2916,7 +2915,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()
@@ -2937,7 +2936,7 @@ public class HttpManager {
 		String sign = "";
 		try {
 			sign = EncryptionUtils.getMD5( builder.toString() ).toLowerCase();
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		RequestBody body = new FormBody.Builder()

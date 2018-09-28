@@ -210,7 +210,7 @@ public class BaseIndexGameFragment extends BaseLazyFragment implements HttpResul
 						.putExtra( "id", String.valueOf( model.getGameId() ) ) );
 			}
 		} );
-		refreshLayout.setOnScrollListener( new PrecisionAbsLisViewOnScrollListener( getActivity(), searchLayout.getHeight() ) {
+		refreshLayout.setOnScrollListener( new PrecisionAbsLisViewOnScrollListener( getActivity(), searchLayout.getMeasuredHeight() ) {
 			@Override
 			public void onVisibility(int visibility) {
 				searchIv.setVisibility( visibility );

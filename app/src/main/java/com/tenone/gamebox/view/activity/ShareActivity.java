@@ -3,7 +3,6 @@ package com.tenone.gamebox.view.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Gravity;
@@ -18,6 +17,7 @@ import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.listener.HttpResultListener;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.share.SharePopupWindow;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.custom.ToastCustom;
 import com.tenone.gamebox.view.utils.BeanUtils;
@@ -29,7 +29,7 @@ import java.util.HashMap;
 import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 
-public class ShareActivity extends AppCompatActivity implements
+public class ShareActivity extends BaseAppCompatActivity implements
         PlatformActionListener, HttpResultListener {
     @ViewInject(R.id.id_share_coin)
     TextView coinTv;

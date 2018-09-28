@@ -28,6 +28,7 @@ public class LoadMoreRecyclerView extends RecyclerView {
 	private SuperAdapter superAdapter;
 	private LinearLayoutManager layoutManager;
 	private View emptyView;
+	private boolean isScrolling = false;
 
 	public LoadMoreRecyclerView(Context context) {
 		this( context, null );
@@ -52,19 +53,20 @@ public class LoadMoreRecyclerView extends RecyclerView {
 			@Override
 			public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
 				super.onScrollStateChanged( recyclerView, newState );
+		//		isScrolling = newState != RecyclerView.SCROLL_STATE_IDLE;
 			}
 
 			@Override
 			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+				Log.i( "LoadMoreRecyclerView", " dx is " + dx + " dy is " + dy );
 				super.onScrolled( recyclerView, dx, dy );
 				if (canLoadMore() && dy >= 0) {
 					int totalItemCount = layoutManager.getItemCount();
 					int lastVisibleItem = layoutManager.findLastVisibleItemPosition();
 					if (lastVisibleItem + VISIBLE_THRESHOLD >= totalItemCount) {
-						if (isLoading) {
+						if (isLoading || isScrolling) {
 							return;
 						}
-						Log.i( "LoadMoreRecyclerView", "onLoadMore  lastVisibleItem is " + lastVisibleItem + " totalItemCount is " + totalItemCount );
 						onLoadMore( recyclerView );
 					}
 				}

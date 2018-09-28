@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -17,6 +16,7 @@ import com.tenone.gamebox.mode.listener.HttpResultListener;
 import com.tenone.gamebox.mode.mode.HttpType;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.view.adapter.TradingCustomerAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ToastUtils;
@@ -24,7 +24,7 @@ import com.tenone.gamebox.view.utils.ToastUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TradingCustomerActivity extends AppCompatActivity implements HttpResultListener, SwipeRefreshLayout.OnRefreshListener, TradingCustomerAdapter.OnQQClickListener {
+public class TradingCustomerActivity extends BaseAppCompatActivity implements HttpResultListener, SwipeRefreshLayout.OnRefreshListener, TradingCustomerAdapter.OnQQClickListener {
     @ViewInject(R.id.id_trading_customer_refresh)
     SwipeRefreshLayout refreshLayout;
     @ViewInject(R.id.id_trading_customer_recycler)

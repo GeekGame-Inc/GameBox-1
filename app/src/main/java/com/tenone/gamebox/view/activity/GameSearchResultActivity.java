@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:GameSearchResultActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-4-25����5:15:38
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.annotation.SuppressLint;
@@ -24,16 +16,6 @@ import com.tenone.gamebox.view.base.BaseActivity;
 import com.tenone.gamebox.view.custom.RefreshLayout;
 import com.tenone.gamebox.view.custom.SearchTitleBarView;
 
-/**
- * ��Ϸ�������ҳ ClassName:GameSearchResultActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-4-25 ����5:15:38 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 @SuppressLint("ResourceAsColor")
 public class GameSearchResultActivity extends BaseActivity implements
         GameSearchResultView {

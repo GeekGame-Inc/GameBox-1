@@ -1,12 +1,3 @@
-/** 
- * Project Name:GameBox 
- * File Name:GiftSearchResultActivity.java 
- * Package Name:com.tenone.gamebox.view.activity 
- * Date:2017-3-28����2:12:51 
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved. 
- * 
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.os.Bundle;

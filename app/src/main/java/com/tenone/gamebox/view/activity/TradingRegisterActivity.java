@@ -61,7 +61,7 @@ public class TradingRegisterActivity extends BaseActivity implements HttpResultL
     private void initView() {
         codeTv.setSelected( true );
         titleBarView.setLeftImg( R.drawable.icon_xqf_b );
-        titleBarView.setTitleText( "交易注册" );
+        titleBarView.setTitleText( "\u4ea4\u6613\u6ce8\u518c" );
     }
 
     @OnClick({R.id.id_trading_register_codeTv, R.id.id_trading_register_agreement
@@ -74,20 +74,20 @@ public class TradingRegisterActivity extends BaseActivity implements HttpResultL
             case R.id.id_trading_register_codeTv:
                 account = accountEt.getText().toString();
                 if (TextUtils.isEmpty( account )) {
-                    ToastUtils.showToast( this, "请输入手机号码" );
+									ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u7801" );
                     return;
                 }
                 if (!BeanUtils.isMatchered( BeanUtils.PHONE_PATTERN, account )) {
-                    ToastUtils.showToast( this, "请输入正确的手机号码" );
+									ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u624b\u673a\u53f7\u7801" );
                     return;
                 }
                 HttpManager.sendMessage( this, 22, this, account, 1 );
                 startCountdown();
                 break;
             case R.id.id_trading_register_agreement:
-                startActivity( new Intent( this, WebActivity.class )
-                        .putExtra( "title", "用户协议" )
-                        .putExtra( "url", MyApplication.getHttpUrl().getAgreement() ) );
+							startActivity( new Intent( this, WebActivity.class )
+									.putExtra( "title", "\u7528\u6237\u534f\u8bae" )
+									.putExtra( "url", MyApplication.getHttpUrl().getAgreement() ) );
                 break;
             case R.id.id_trading_register_register:
                 account = accountEt.getText().toString();
@@ -102,26 +102,26 @@ public class TradingRegisterActivity extends BaseActivity implements HttpResultL
     }
 
     private boolean checkRegister() {
-        if (TextUtils.isEmpty( account )) {
-            ToastUtils.showToast( this, "请输入手机号" );
-            return false;
-        }
-        if (!BeanUtils.isMatchered( BeanUtils.PHONE_PATTERN, account )) {
-            ToastUtils.showToast( this, "请输入正确的手机号码" );
-            return false;
-        }
-        if (TextUtils.isEmpty( code )) {
-            ToastUtils.showToast( this, "请输入验证码" );
-            return false;
-        }
-        if (TextUtils.isEmpty( pwd ) || pwd.length() < 6) {
-            ToastUtils.showToast( this, "请输入不少于6位的密码" );
-            return false;
-        }
-        if (TextUtils.isEmpty( pwd ) || pwd.length() < 6) {
-            ToastUtils.showToast( this, "请输入不少于6位的密码" );
-            return false;
-        }
+			if (TextUtils.isEmpty( account )) {
+				ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u624b\u673a\u53f7" );
+				return false;
+			}
+			if (!BeanUtils.isMatchered( BeanUtils.PHONE_PATTERN, account )) {
+				ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u624b\u673a\u53f7\u7801" );
+				return false;
+			}
+			if (TextUtils.isEmpty( code )) {
+				ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u9a8c\u8bc1\u7801" );
+				return false;
+			}
+			if (TextUtils.isEmpty( pwd ) || pwd.length() < 6) {
+				ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u4e0d\u5c11\u4e8e6\u4f4d\u7684\u5bc6\u7801" );
+				return false;
+			}
+			if (TextUtils.isEmpty( pwd ) || pwd.length() < 6) {
+				ToastUtils.showToast( this, "\u8bf7\u8f93\u5165\u4e0d\u5c11\u4e8e6\u4f4d\u7684\u5bc6\u7801" );
+				return false;
+			}
         return true;
     }
 
@@ -133,23 +133,23 @@ public class TradingRegisterActivity extends BaseActivity implements HttpResultL
             timer = new Timer();
         }
         if (timerTask == null) {
-            timerTask = new TimerTask() {
-                @Override
-                public void run() {
-                    runOnUiThread( () -> {
-                        if (time < 1) {
-                            codeTv.setClickable( true );
-                            codeTv.setTextColor( getResources().getColor( R.color.blue_40 ) );
-                            codeTv.setText( "重新获取" );
-                            time = 60;
-                            cancleTimer();
-                        } else {
-                            codeTv.setText( time + "s后重新获取" );
-                        }
-                    } );
-                    time--;
-                }
-            };
+					timerTask = new TimerTask() {
+						@Override
+						public void run() {
+							runOnUiThread( () -> {
+								if (time < 1) {
+									codeTv.setClickable( true );
+									codeTv.setTextColor( getResources().getColor( R.color.blue_40 ) );
+									codeTv.setText( "\u91cd\u65b0\u83b7\u53d6" );
+									time = 60;
+									cancleTimer();
+								} else {
+									codeTv.setText( time + "s\u540e\u91cd\u65b0\u83b7\u53d6" );
+								}
+							} );
+							time--;
+						}
+					};
         }
         timer.schedule( timerTask, 1000, 1000 );
     }
@@ -175,15 +175,15 @@ public class TradingRegisterActivity extends BaseActivity implements HttpResultL
     public void onSuccess(int what, ResultItem resultItem) {
         cancelProgressDialog();
         if (1 == resultItem.getIntValue( "status" )) {
-            switch (what) {
-                case 22:
-                    ToastUtils.showToast( this, "验证码发送成功,请注意查收" );
-                    break;
-                case HttpType.REFRESH:
-                    ToastUtils.showToast( this, "注册成功" );
-                    registerResult( resultItem );
-                    break;
-            }
+					switch (what) {
+						case 22:
+							ToastUtils.showToast( this, "\u9a8c\u8bc1\u7801\u53d1\u9001\u6210\u529f,\u8bf7\u6ce8\u610f\u67e5\u6536" );
+							break;
+						case HttpType.REFRESH:
+							ToastUtils.showToast( this, "\u6ce8\u518c\u6210\u529f" );
+							registerResult( resultItem );
+							break;
+					}
         } else {
             ToastUtils.showToast( this, resultItem.getString( "msg" ) );
         }

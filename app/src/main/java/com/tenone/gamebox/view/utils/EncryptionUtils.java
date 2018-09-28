@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:EncryptionUtils.java
- * Package Name:com.tenone.gamebox.view.utils
- * Date:2017-4-17����4:32:47
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.utils;
 
 import android.annotation.SuppressLint;
@@ -18,21 +10,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-
-/**
- * ClassName:EncryptionUtils <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-4-17 ����4:32:47 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 @SuppressLint("DefaultLocale")
 public class EncryptionUtils {
 
-    // MD5����ʵ��
     public static String getMD5(String str) {
         MessageDigest md5 = null;
         try {
@@ -61,7 +41,6 @@ public class EncryptionUtils {
         return hexValue.toString().toLowerCase();
     }
 
-    // MD5����ʵ��
     public static String getMd5Up(String str) {
         MessageDigest md5 = null;
         try {
@@ -128,20 +107,15 @@ public class EncryptionUtils {
         return hs;
     }
 
-    // SHA1 ����ʵ��
     public static String encryptToSHA(String info) {
         byte[] digesta = null;
         try {
-            // �õ�һ��SHA-1����ϢժҪ
             MessageDigest alga = MessageDigest.getInstance( "SHA-1" );
-            // ���Ҫ���м���ժҪ����Ϣ
             alga.update( info.getBytes() );
-            // �õ���ժҪ
             digesta = alga.digest();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        // ��ժҪתΪ�ַ���
         String rs = byte2hex( digesta );
         return rs;
     }
@@ -150,7 +124,6 @@ public class EncryptionUtils {
         String sin = "";
         Collection<String> keyset = map.keySet();
         List<String> list = new ArrayList<String>( keyset );
-        // ��key��ֵ���ֵ���������
         Collections.sort( list );
         for (String string : list) {
             sin += (string + map.get( string ));

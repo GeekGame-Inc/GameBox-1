@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -105,7 +106,7 @@ public class TradingFragment extends BaseLazyFragment implements SwipeRefreshLay
 		LinearLayoutManager manager = new LinearLayoutManager( getActivity(), LinearLayoutManager.VERTICAL, false );
 		listView.setLayoutManager( manager );
 		listView.addItemDecoration( new SpacesItemDecoration( getActivity(), LinearLayoutManager.HORIZONTAL, 1,
-				getResources().getColor( R.color.divider ) ) );
+				ContextCompat.getColor( getContext(), R.color.divider) ) );
 		listView.setAdapter( adapter );
 		listView.setmLoadMoreListener( this );
 		refreshLayout.setOnRefreshListener( this );

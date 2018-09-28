@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:PrivilegeActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-4-13����3:26:22
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.content.Intent;
@@ -23,16 +15,6 @@ import com.tenone.gamebox.view.custom.MyRefreshListView;
 import com.tenone.gamebox.view.custom.RefreshLayout;
 import com.tenone.gamebox.view.custom.TitleBarView;
 
-/**
- * � ClassName:PrivilegeActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-4-13 ����3:26:22 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 public class PrivilegeActivity extends BaseActivity implements PrivilegeView {
     @ViewInject(R.id.id_title_bar)
     TitleBarView titleBarView;

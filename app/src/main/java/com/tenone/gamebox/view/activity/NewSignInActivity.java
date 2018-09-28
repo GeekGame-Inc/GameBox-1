@@ -2,7 +2,6 @@ package com.tenone.gamebox.view.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
@@ -20,6 +19,7 @@ import com.tenone.gamebox.mode.listener.HttpResultListener;
 import com.tenone.gamebox.mode.mode.HttpType;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.view.adapter.NewSignInGridViewAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.custom.MyGridView;
 import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.DisplayMetricsUtils;
@@ -30,7 +30,7 @@ import com.tenone.gamebox.view.utils.TrackingUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewSignInActivity extends AppCompatActivity implements HttpResultListener {
+public class NewSignInActivity extends BaseAppCompatActivity implements HttpResultListener {
 	@ViewInject(R.id.id_new_sigin_toolbar)
 	Toolbar toolbar;
 	@ViewInject(R.id.id_new_sigin_bg)

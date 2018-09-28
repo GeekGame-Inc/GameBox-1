@@ -8,7 +8,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
@@ -30,6 +29,7 @@ import com.tenone.gamebox.mode.mode.HttpType;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.share.SharePopupWindow;
 import com.tenone.gamebox.view.adapter.ManagementAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.custom.CircleImageView;
 import com.tenone.gamebox.view.custom.CustomQBadgeView;
 import com.tenone.gamebox.view.custom.CustomerRatingBar;
@@ -51,7 +51,7 @@ import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.PlatformActionListener;
 
 
-public class UserInfoActivity extends AppCompatActivity implements HttpResultListener, MineDynamicFragment.OnShareCallback, PlatformActionListener {
+public class UserInfoActivity extends BaseAppCompatActivity implements HttpResultListener, MineDynamicFragment.OnShareCallback, PlatformActionListener {
 	@ViewInject(R.id.id_userInfo_appbar)
 	AppBarLayout appBarLayout;
 	@ViewInject(R.id.id_userInfo_header)

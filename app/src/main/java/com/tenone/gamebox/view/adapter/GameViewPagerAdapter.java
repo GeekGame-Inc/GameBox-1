@@ -29,6 +29,7 @@ public class GameViewPagerAdapter<T> extends FragmentPagerAdapter {
 
 
 	@Override
+	@SuppressWarnings( "deprecation" )
 	public Object instantiateItem(View container, int position) {
 		return array.get(position);
 	}

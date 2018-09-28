@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:OpenServerActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-3-24����6:11:43
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.content.Intent;

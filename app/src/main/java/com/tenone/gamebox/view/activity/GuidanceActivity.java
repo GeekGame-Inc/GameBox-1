@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:GuidanceActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-5-9����5:52:36
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.content.Context;
@@ -36,17 +28,6 @@ import com.tenone.gamebox.view.utils.SpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * ����ҳ ClassName:GuidanceActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-5-9 ����5:52:36 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 
 public class GuidanceActivity extends AppCompatActivity implements OnClickListener, ViewPager.OnPageChangeListener {
 	Context context;

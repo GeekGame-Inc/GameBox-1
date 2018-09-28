@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -23,6 +22,7 @@ import com.tenone.gamebox.mode.mode.HttpType;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.mode.mode.TaskCenterModel;
 import com.tenone.gamebox.view.adapter.TaskCenterAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.base.Constant;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.custom.SpacesItemDecoration;
@@ -36,7 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaskCenterActivity extends AppCompatActivity implements HttpResultListener, SwipeRefreshLayout.OnRefreshListener, OnRecyclerViewItemClickListener<Integer> {
+public class TaskCenterActivity extends BaseAppCompatActivity implements HttpResultListener, SwipeRefreshLayout.OnRefreshListener, OnRecyclerViewItemClickListener<Integer> {
 	@ViewInject(R.id.id_task_toolbar)
 	Toolbar toolbar;
 	@ViewInject(R.id.id_task_recycler)

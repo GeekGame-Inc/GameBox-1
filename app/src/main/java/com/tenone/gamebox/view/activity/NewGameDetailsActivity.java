@@ -15,7 +15,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.Spanned;
@@ -46,6 +45,7 @@ import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.presenter.AppStatisticsManager;
 import com.tenone.gamebox.share.SharePopupWindow;
 import com.tenone.gamebox.view.adapter.ManagementAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.base.Configuration;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.custom.CustomQBadgeView;
@@ -83,7 +83,7 @@ import cn.sharesdk.framework.PlatformActionListener;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
-public class NewGameDetailsActivity extends AppCompatActivity implements HttpResultListener, DownReceiver.DownStatusChangeListener,
+public class NewGameDetailsActivity extends BaseAppCompatActivity implements HttpResultListener, DownReceiver.DownStatusChangeListener,
 		ApkInstallListener.InstallListener, PlatformActionListener {
 	@ViewInject(R.id.id_game_new_appBar)
 	AppBarLayout appBarLayout;

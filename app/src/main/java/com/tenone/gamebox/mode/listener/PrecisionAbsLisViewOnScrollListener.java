@@ -1,7 +1,6 @@
 package com.tenone.gamebox.mode.listener;
 
 import android.content.Context;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.AbsListView;
@@ -18,7 +17,8 @@ public abstract class PrecisionAbsLisViewOnScrollListener implements RefreshLayo
 		this.context = context;
 		this.searchLayoutHeight = searchLayoutHeight;
 	}
-	@SuppressWarnings( "unchecked" )
+
+	@SuppressWarnings("unchecked")
 	private SparseArray<ItemRecod> recordSp = new SparseArray( 0 );
 	private int mCurrentfirstVisibleItem = 0;
 	boolean isSendGoneMessage = false, isSendVisibleMessage = false;
@@ -37,16 +37,13 @@ public abstract class PrecisionAbsLisViewOnScrollListener implements RefreshLayo
 			if (null == itemRecord) {
 				itemRecord = new ItemRecod();
 			}
-			//item�߶�
 			itemRecord.height = firstView.getHeight();
-			//����λ�þඥ������(��ֵ)
 			itemRecord.top = firstView.getTop();
 			recordSp.append( firstVisibleItem, itemRecord );
 		}
-
 		int scrollY = getScrollY();
-		int dp5 = DisplayMetricsUtils.dipTopx( context, 5 );
-		int critical = searchLayoutHeight + dp5;
+		int dp5 = DisplayMetricsUtils.dipTopx( context, 50 );
+		int critical = dp5;
 		if (scrollY > critical) {
 			if (!isSendVisibleMessage) {
 				onVisibility( View.VISIBLE );
@@ -60,10 +57,8 @@ public abstract class PrecisionAbsLisViewOnScrollListener implements RefreshLayo
 				isSendVisibleMessage = false;
 			}
 		}
-		Log.d( "BTGame", getScrollY() + " search layout height is " + searchLayoutHeight + "  dp5 is " + dp5 );
 	}
 
-	//��ȡ������ȷֵ
 	private int getScrollY() {
 		int height = 0;
 		for (int i = 0; i < mCurrentfirstVisibleItem; i++) {
@@ -85,4 +80,5 @@ public abstract class PrecisionAbsLisViewOnScrollListener implements RefreshLayo
 	}
 
 	public abstract void onVisibility(int visibility);
+
 }

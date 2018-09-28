@@ -397,4 +397,20 @@ public class SpUtil {
 	public static synchronized void setActions(String actions) {
 		sp.edit().putString( actionsKey, actions ).commit();
 	}
+
+
+	public static synchronized void setFloatingX(float x) {
+		sp.edit().putFloat( "KEY_FLOATING_X", x ).commit();
+	}
+
+	public static synchronized float getFloatingX() {
+		return sp.getFloat( "KEY_FLOATING_X", 0f );
+	}
+	public static synchronized void setFloatingY(float y) {
+		sp.edit().putFloat( "KEY_FLOATING_Y", y ).commit();
+	}
+
+	public static synchronized float getFloatingY() {
+		return sp.getFloat( "KEY_FLOATING_Y", 0f );
+	}
 }

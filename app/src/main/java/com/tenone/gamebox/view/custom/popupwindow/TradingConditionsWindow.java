@@ -35,7 +35,6 @@ public class TradingConditionsWindow extends PopupWindow {
         this.mContext = context;
         this.type = type;
         this.conditios = conditios;
-        // 设置弹窗外可点击
         setOutsideTouchable( false );
         setBackgroundDrawable( new BitmapDrawable() );
         setWidth( ViewGroup.LayoutParams.MATCH_PARENT );

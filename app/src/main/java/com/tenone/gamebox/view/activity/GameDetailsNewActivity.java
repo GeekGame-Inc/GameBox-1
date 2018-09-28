@@ -68,7 +68,7 @@ import cn.sharesdk.framework.PlatformActionListener;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
-
+@SuppressWarnings( "deprecation" )
 public class GameDetailsNewActivity extends BaseActivity implements HttpResultListener, PlatformActionListener, ApkInstallListener.InstallListener, DownReceiver.DownStatusChangeListener, DownActionReceiver.DownActivonListener {
     @ViewInject(R.id.coordinatortablayout)
     CoordinatorTabLayout mCoordinatorTabLayout;

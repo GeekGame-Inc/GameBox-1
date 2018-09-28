@@ -1,12 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:GameDetailsActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-3-13����4:43:48
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- *
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.annotation.SuppressLint;
@@ -30,18 +21,7 @@ import com.tenone.gamebox.view.custom.DownProgress;
 import com.tenone.gamebox.view.custom.TitleBarView;
 import com.tenone.gamebox.view.custom.TwoStateImageView;
 import com.tenone.gamebox.view.custom.viewpagerindicator.TabPageIndicator;
-
-/**
- * ��Ϸ���� ClassName:GameDetailsActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-3-13 ����4:43:48 <br/>
- *
- * @author John Lie
- * @version
- * @since JDK 1.6
- * @see
- */
+@SuppressWarnings( "deprecation" )
 @SuppressLint("ResourceAsColor")
 public class GameDetailsActivity extends BaseActivity implements
 		GameDetailsView {

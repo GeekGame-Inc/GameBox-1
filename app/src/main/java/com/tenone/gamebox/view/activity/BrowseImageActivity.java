@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:BrowseImageActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-4-26����10:42:28
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.annotation.SuppressLint;

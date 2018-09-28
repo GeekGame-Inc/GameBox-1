@@ -17,7 +17,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -37,6 +36,7 @@ import com.tenone.gamebox.mode.listener.HttpResultListener;
 import com.tenone.gamebox.mode.listener.UpdateListener;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.view.adapter.ManagementAdapter;
+import com.tenone.gamebox.view.base.BaseAppCompatActivity;
 import com.tenone.gamebox.view.base.Constant;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.custom.NoScrollViewPager;
@@ -75,7 +75,7 @@ import java.util.List;
 
 @SuppressLint("ResourceAsColor")
 @SuppressWarnings("deprecation")
-public class MainActivity extends AppCompatActivity implements
+public class MainActivity extends BaseAppCompatActivity implements
 		DeleteDialogConfrimListener, UpdateListener, ViewPager.OnPageChangeListener, ToDrivingReceiver.ToDrivingListener {
 	@ViewInject(R.id.id_mian_viewpager)
 	NoScrollViewPager viewPager;

@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:RegisterActivity.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-3-15����5:23:12
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.content.Intent;
@@ -30,16 +22,6 @@ import com.tenone.gamebox.view.custom.CustomizeEditText;
 import com.tenone.gamebox.view.custom.TitleBarView;
 import com.tenone.gamebox.view.utils.JrttUtils;
 
-/**
- * ע�� ClassName:RegisterActivity <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-3-15 ����5:23:12 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 
 public class RegisterActivity extends BaseActivity implements RegisterView {
 	@ViewInject(R.id.id_title_bar)
@@ -85,7 +67,7 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
 	public void onClick(View view) {
 		if (R.id.id_register_agreement == view.getId()) {
 			startActivity( new Intent( this, WebActivity.class )
-					.putExtra( "title", "�û�Э��" )
+					.putExtra( "title", "\u7528\u6237\u534f\u8bae" )
 					.putExtra( "url", MyApplication.getHttpUrl().getAgreement() ) );
 		}
 	}

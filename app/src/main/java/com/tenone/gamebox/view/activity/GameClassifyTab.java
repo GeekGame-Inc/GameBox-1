@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:GameClassifyTab.java
- * Package Name:com.tenone.gamebox.view.activity
- * Date:2017-3-9����4:55:31
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.content.Intent;

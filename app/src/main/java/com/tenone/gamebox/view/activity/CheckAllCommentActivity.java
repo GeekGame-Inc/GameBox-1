@@ -1,12 +1,3 @@
-/** 
- * Project Name:GameBox 
- * File Name:CheckAllCommentActivity.java 
- * Package Name:com.tenone.gamebox.view.activity 
- * Date:2017-5-2����3:15:24 
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved. 
- * 
- */
-
 package com.tenone.gamebox.view.activity;
 
 import android.annotation.SuppressLint;
@@ -23,7 +14,8 @@ import com.tenone.gamebox.view.base.BaseActivity;
 import com.tenone.gamebox.view.custom.RefreshLayout;
 import com.tenone.gamebox.view.custom.TitleBarView;
 
-@SuppressLint("ResourceAsColor") public class CheckAllCommentActivity extends BaseActivity implements
+@SuppressLint("ResourceAsColor")
+public class CheckAllCommentActivity extends BaseActivity implements
 		CheckAllCommentView {
 	@ViewInject(R.id.id_title_bar)
 	TitleBarView titleBarView;
