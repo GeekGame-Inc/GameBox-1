@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 错误信息 -->
+<resources>
+
+    <string name="nickRepetition">用户名已存在</string>
+    <string name="accountRepetition" translatable="false">该账号已被注册</string>
+    <string name="pwdError">密码错误</string>
+    <string name="pwdNotEnough">密码至少6位</string>
+    <string name="phoneError">手机号不正确</string>
+    <string name="codeError">验证码错误</string>
+    <string name="mailBoxError">邮箱格式错误</string>
+    <string name="nickEmpty">昵称为空</string>
+    <string name="pwdEnoughed">密码最多16位</string>
+
+</resources>

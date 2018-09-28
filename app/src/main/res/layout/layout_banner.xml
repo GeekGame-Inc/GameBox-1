@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:background="@drawable/radiu_white"
+    android:orientation="vertical">
+
+    <com.tenone.gamebox.view.custom.xbanner.XBanner
+        android:id="@+id/id_banner"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:background="@drawable/icon_banner_loading"
+        app:AutoPlayTime="3000"
+        app:pointNormal="@drawable/ic_dot_defult"
+        app:pointSelect="@drawable/ic_dot_checked"
+        app:pointsContainerBackground="@color/transparent"
+        app:pointsPosition="CENTER"
+        app:tipTextColor="@color/white"
+        app:tipTextSize="12sp" />
+
+</LinearLayout>

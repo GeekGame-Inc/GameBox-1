@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/id_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blue_40"
+        android:gravity="center"
+        android:text="交易细则"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+    <LinearLayout
+        android:id="@+id/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/id_window_trading_notes_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:button="@drawable/selector_checkbox"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:checked="false"
+            android:text="我已阅读交易细则"
+            android:textColor="@color/black_33"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/id_window_trading_notes_agree"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/selector_getcode"
+            android:gravity="center"
+            android:text="我记住了"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/id_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/l">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_window_trading_notes_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="出售流程"
+                android:textColor="@color/black_33"
+                android:textSize="17sp" />
+
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/id_window_trading_notes_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_window_trading_notes_title1"
+                android:src="@drawable/selector_trading_notes" />
+
+            <View
+                android:id="@+id/id_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/id_window_trading_notes_img"
+                android:layout_marginTop="10dp"
+                android:background="@color/divider"></View>
+
+            <TextView
+                android:id="@+id/id_window_trading_notes_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_line"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="卖家须知"
+                android:textColor="@color/black_33"
+                android:textSize="17sp" />
+
+            <com.tenone.gamebox.view.custom.MyListView
+                android:id="@+id/id_window_trading_notes_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_window_trading_notes_title2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:divider="@null"
+                android:scrollbars="none"></com.tenone.gamebox.view.custom.MyListView>
+
+            <TextView
+                android:id="@+id/id_window_trading_notes_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_window_trading_notes_listview"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:text="如遇到以下情况，请警惕是骗子"
+                android:textColor="@color/black_33"
+                android:textSize="17sp" />
+
+            <com.tenone.gamebox.view.custom.MyListView
+                android:id="@+id/id_window_trading_notes_listview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_window_trading_notes_title3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:divider="@null"
+                android:scrollbars="none"></com.tenone.gamebox.view.custom.MyListView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

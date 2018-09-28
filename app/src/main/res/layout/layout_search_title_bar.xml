@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_searchTitle_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/id_searchTitle_leftImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:src="@drawable/icon_xqf_b" />
+
+    <ImageView
+        android:id="@+id/id_searchTitle_rightImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/radiu_border"
+        android:contentDescription="@string/empty"
+        android:padding="10dp"
+        android:src="@drawable/ic_sousuo" />
+
+    <com.tenone.gamebox.view.custom.CustomizeEditText
+        android:id="@+id/id_searchTitle_editText"
+        style="@style/AutoCompleteTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/id_searchTitle_rightImg"
+        android:layout_toRightOf="@id/id_searchTitle_leftImg"
+        android:hint="@string/searchHint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textSize="12sp" />
+
+</RelativeLayout>

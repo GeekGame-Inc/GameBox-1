@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/id_about_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/d_icon_hezi" />
+
+        <TextView
+            android:id="@+id/id_about_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/id_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_appName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/id_about_http"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_version"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/radiu_about"
+            android:drawableLeft="@drawable/ic_wangzhi"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/defultTextColor"></TextView>
+
+        <TextView
+            android:id="@+id/id_about_webo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_http"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/radiu_about"
+            android:drawableLeft="@drawable/ic_weibo"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/defultTextColor"></TextView>
+
+        <TextView
+            android:id="@+id/id_about_weChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_webo"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/radiu_about"
+            android:drawableLeft="@drawable/ic_weixin"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/defultTextColor"></TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/ic_banquan" />
+    </RelativeLayout>
+
+</LinearLayout>

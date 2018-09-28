@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.tenone.gamebox.view.custom.TitleBarView
+        android:id="@+id/id_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.tenone.gamebox.view.custom.TitleBarView>
+
+    <View
+        android:id="@+id/id_title_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider" />
+</merge>

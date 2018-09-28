@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_empty"></include>
+
+        <com.tenone.gamebox.view.custom.RefreshLayout
+            android:id="@+id/id_through_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tenone.gamebox.view.custom.MyRefreshListView
+                android:id="@+id/id_through_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/white"
+                android:divider="@color/divider"
+                android:dividerHeight="1dp"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@color/transparent" />
+        </com.tenone.gamebox.view.custom.RefreshLayout>
+
+        <TextView
+            android:id="@+id/id_through_time"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/lineBg"
+            android:gravity="center"
+            android:textColor="@color/rebateColor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

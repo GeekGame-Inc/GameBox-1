@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radiu_border"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/id_deleteDialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/confirmDelete"
+        android:textColor="@color/black_33"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/id_deleteDialog_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/id_deleteDialog_title"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:text="@string/cancle"
+        android:textColor="@color/gray_69" />
+
+    <Button
+        android:id="@+id/id_deleteDialog_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_deleteDialog_title"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:text="@string/confirm"
+        android:textColor="@color/blue" />
+
+</RelativeLayout>

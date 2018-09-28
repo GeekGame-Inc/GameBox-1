@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/id_strategy_nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/id_strategy_sourceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/id_strategy_nameTv"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/id_strategy_img"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/id_strategy_sourceTv"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/id_strategy_timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_strategy_img"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_strategy_writerTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_strategy_img"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/id_strategy_timeTv"
+        android:gravity="center_vertical|left"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/id_strategy_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_strategy_img"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/id_strategy_timeTv"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/ic_pinglun" />
+
+        <TextView
+            android:id="@+id/id_strategy_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

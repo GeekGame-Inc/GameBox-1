@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_gift_list_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/id_gift_list_giftImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_loading_logo"
+        android:contentDescription="@string/empty" />
+
+    <TextView
+        android:id="@+id/id_gift_list_giftName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_gift_list_giftImg"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/id_gift_list_giftImg"
+        android:textColor="@color/gray_69"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/id_gift_list_giftContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_gift_list_giftImg"
+        android:layout_toRightOf="@id/id_gift_list_giftImg"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_gift_list_giftContent"
+        android:layout_below="@id/id_gift_list_giftName"
+        android:layout_toRightOf="@id/id_gift_list_giftImg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/id_gift_list_giftNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_libao_drawable"
+            android:gravity="center"
+            android:textColor="@color/gray_9a"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/id_gift_list_residue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="剩余:"
+            android:textColor="@color/gray_9a"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <com.tenone.gamebox.view.custom.TwoStateButton
+        android:id="@+id/id_gift_list_button"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:defultColor_TwoStateButton="@color/blue_40"
+        app:defultDrawable_TwoStateButton="@drawable/radiu_progressbar"
+        app:defultText_TwoStateButton="@string/get"
+        app:otherColor_TwoStateButton="@color/white"
+        app:otherDrawable_TwoStateButton="@drawable/radiu_shape_full"
+        app:otherText_TwoStateButton="@string/copy" />
+
+</RelativeLayout>

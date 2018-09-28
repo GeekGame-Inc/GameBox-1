@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/id_item_strategy_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/id_item_strategy_gameImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_loading_logo"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/id_item_strategy_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_item_strategy_gameImg"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_item_strategy_gameImg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/id_item_strategy_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_item_strategy_gameImg"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_item_strategy_gameImg"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_9a"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/id_item_strategy_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/id_item_strategy_time"
+            android:layout_below="@id/id_item_strategy_title"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_item_strategy_gameImg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_69"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/id_item_strategy_stick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/icon_dynamic_top" />
+
+    </RelativeLayout>
+
+    <com.tenone.gamebox.view.custom.MyGridView
+        android:id="@+id/id_item_strategy_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"></com.tenone.gamebox.view.custom.MyGridView>
+</LinearLayout>

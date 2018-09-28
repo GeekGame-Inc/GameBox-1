@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_new_top_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/h_icon_beijing"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/id_new_top_second"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_w">
+
+        <ImageView
+            android:id="@+id/id_second_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/a_icon_disan" />
+
+        <ImageView
+            android:id="@+id/id_new_top_second_gameIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/id_second_iv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_loading_logo" />
+
+        <ImageView
+            android:id="@+id/id_second_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_second_gameIcon"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/e_icon_dier" />
+
+        <TextView
+            android:id="@+id/id_new_top_second_gameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_second_iv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="游戏名字"
+            android:textColor="@color/textColor1"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_second_gameName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/k_icon_xiazai" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_new_top_first"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_w">
+
+        <ImageView
+            android:id="@+id/id_first_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/a_icon_diyi" />
+
+        <ImageView
+            android:id="@+id/id_new_top_first_gameIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/id_first_iv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_loading_logo" />
+
+        <ImageView
+            android:id="@+id/id_first_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_first_gameIcon"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/d_icon_diyi" />
+
+        <TextView
+            android:id="@+id/id_new_top_first_gameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_first_iv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="游戏名字"
+            android:textColor="@color/textColor1"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_first_gameName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/k_icon_xiazai" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_new_top_third"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_w">
+
+        <ImageView
+            android:id="@+id/id_third_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/c_icon_dier" />
+
+
+        <ImageView
+            android:id="@+id/id_new_top_third_gameIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/id_third_iv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_loading_logo" />
+
+        <ImageView
+            android:id="@+id/id_third_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_third_gameIcon"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/f_icon_disan" />
+
+        <TextView
+            android:id="@+id/id_new_top_third_gameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_third_iv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="游戏名字"
+            android:textColor="@color/textColor1"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_new_top_third_gameName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/k_icon_xiazai" />
+
+    </RelativeLayout>
+</LinearLayout>

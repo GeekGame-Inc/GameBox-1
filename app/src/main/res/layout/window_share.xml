@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/ic_share_pengyouquan"
+        android:gravity="center"
+        android:text="@string/circleOfFriends"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/ic_share_weibo"
+        android:gravity="center"
+        android:text="@string/Wechat"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/ic_share_kongfjian"
+        android:gravity="center"
+        android:text="@string/Qzone"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <com.tenone.gamebox.view.custom.viewpagerindicator.TabPageIndicator
+        android:id="@+id/id_message_tabPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tenone.gamebox.view.custom.CustomerUnderlinePageIndicator
+        android:id="@+id/id_message_underlineIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <com.tenone.gamebox.view.custom.NoScrollViewPager
+        android:id="@+id/id_message_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

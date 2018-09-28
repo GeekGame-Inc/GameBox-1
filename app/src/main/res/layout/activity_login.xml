@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/d_icon_hezi" />
+
+    <com.tenone.gamebox.view.custom.CustomizeEditText
+        android:id="@+id/id_login_account"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_yonghu"
+        android:drawablePadding="5dp"
+        android:hint="@string/inputAccountHint"
+        android:maxLines="1"
+        android:padding="11dp"
+        android:textColorHint="@color/hintColor"
+        android:textSize="12sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_bottom"
+        android:padding="1dp">
+
+
+        <TextView
+            android:id="@+id/id_login_forgetTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/forgetPwd"
+            android:textColor="#eb2202"
+            android:textSize="14sp" />
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/id_login_forgetTv"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/c_icon_mima"
+            android:drawablePadding="5dp"
+            android:hint="@string/inputPwdHint"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColorHint="@color/gray_9a"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/id_login_loginBt"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_red_new"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

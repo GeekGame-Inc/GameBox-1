@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:padding="10dp"
+        android:text="我的收藏"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <GridView
+        android:id="@+id/id_window_collect_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:padding="2dp"
+        android:scrollbars="none"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+</LinearLayout>

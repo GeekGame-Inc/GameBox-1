@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar"></include>
+
+
+    <EditText
+        android:id="@+id/id_trading_reset_pwdEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_mima"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入旧密码"
+        android:inputType="textPassword"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/id_trading_reset_newEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_mima"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/id_trading_reset_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_bt"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

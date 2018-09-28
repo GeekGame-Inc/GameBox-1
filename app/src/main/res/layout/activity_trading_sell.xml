@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/id_trading_sell_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_login_bt"
+            android:gravity="center"
+            android:text="确认出售"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/id_trading_sell_confirm">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="游戏名"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_gameName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="三国群阴转"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="账号"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="sy185"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="游戏区服"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/id_trading_sell_server"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:hint="请填写区服信息"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="游戏平台"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_platform"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_jt_y"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择游戏平台"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="出售价格"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/id_trading_sell_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv2"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="商品标题"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/id_trading_sell_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv3"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:hint="请勿留下联系方式(20字内)"
+                        android:maxLength="20"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_bottom"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="有效期"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_jt_y"
+                        android:gravity="center_vertical|right"
+                        android:hint="选择商品有效期"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:gravity="center"
+                        android:text="商品描述"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/id_trading_sell_describe"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@id/tv4"
+                        android:background="@drawable/radiu_white"
+                        android:ellipsize="end"
+                        android:gravity="top|left"
+                        android:hint="可以按照账号等级、装备、道具等。(200字内,填写描述,可以更快速完成交易喔!)"
+                        android:padding="10dp"
+                        android:textColor="@color/gray_69"
+                        android:textColorHint="@color/getcode_gray"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="游戏截图"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2-7张游戏内截图"
+                        android:textColor="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_editImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:text="编辑"
+                        android:textColor="@color/blue_40"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <com.tenone.gamebox.view.custom.MyGridView
+                    android:id="@+id/id_trading_sell_imgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="4dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"></com.tenone.gamebox.view.custom.MyGridView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="充值订单截图"
+                        android:textColor="@color/gray_69"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2-7张充值订单截图"
+                        android:textColor="@color/getcode_gray"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_trading_sell_editImg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:text="编辑"
+                        android:textColor="@color/blue_40"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/id_trading_sell_editImg1"
+                        android:text="*至少得包含40%以上的金额订单，可以是微信、支付宝等支付记录，不满足要求无法审核通过"
+                        android:textColor="@color/blue_40"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <com.tenone.gamebox.view.custom.MyGridView
+                    android:id="@+id/id_trading_sell_imgs1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="4dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"></com.tenone.gamebox.view.custom.MyGridView>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</LinearLayout>

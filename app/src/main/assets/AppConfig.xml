@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 全局配置文件 -->
+<AppConfigModle>
+    <!-- 渠道号 -->
+   <channelID>185</channelID>
+    <!-- 总接口地址 -->
+   <downDomainName>http://api.185sy.com/api/indexbox/map.html</downDomainName>
+</AppConfigModle>

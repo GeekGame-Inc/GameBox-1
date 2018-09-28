@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar"></include>
+
+    <EditText
+        android:id="@+id/id_trading_forget_accountEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_shoujihao"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom">
+
+        <TextView
+            android:id="@+id/id_trading_forget_codeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="获取验证码"
+            android:textColor="@color/blue_40"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/id_trading_forget_codeEt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/id_trading_forget_codeTv"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/c_icon_yanzhengma"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:inputType="phone"
+            android:textColor="@color/gray_69"
+            android:textColorHint="@color/gray_9a"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/id_trading_forget_pwdEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_mima"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请设置密码"
+        android:inputType="textPassword"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/id_trading_forget_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_bt"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

@@ -1,0 +1,326 @@
+<resources>
+
+    <string name="app_name">185手游</string>
+    <string name="download">下载</string>
+    <string name="open">打开</string>
+    <string name="install">安装</string>
+    <string name="installing">正在安装</string>
+    <string name="go_on">继续</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="pause">暂停</string>
+    <string name="start">开始</string>
+    <string name="game">游戏</string>
+    <string name="gift">礼包</string>
+    <string name="top">排行榜</string>
+    <string name="mine">我的</string>
+    <string name="recommend">推荐</string>
+    <string name="newGame">新游</string>
+    <string name="hot">热门</string>
+    <string name="classify">分类</string>
+    <string name="empty"></string>
+    <string name="loading">加载中</string>
+    <string name="no_data">没有更多数据</string>
+    <string name="loaded">加载完成</string>
+    <string name="uninstall">卸载</string>
+    <string name="openServerTab">开服表</string>
+    <string name="trading">交易</string>
+    <string name="driving">开车</string>
+    <string name="ApplyForRebate">申请返利</string>
+    <string name="openServerRemind">开服提醒</string>
+    <string name="systemNotificaiton">系统通知</string>
+    <string name="message_details">消息详情</string>
+    <string name="rankingList">排行榜</string>
+    <string name="strategy">攻略</string>
+    <string name="fullVGame">满V游戏</string>
+    <string name="fullV">满V</string>
+    <string name="get">领取</string>
+    <string name="copy">复制</string>
+    <string name="codeCopyHintTitle">礼包码已复制</string>
+    <string name="codeCopyHint">领取后请尽快使用,以免过期!</string>
+    <string name="confirm">确 定</string>
+    <string name="cancle">取 消</string>
+    <string name="register">注 册</string>
+    <string name="login">登 录</string>
+    <string name="exitLogin">退出登录</string>
+    <string name="registerNow">立即注册</string>
+    <string name="getCode">获取验证码</string>
+    <string name="sent">已发送</string>
+    <string name="forgetPwd">忘记密码?</string>
+    <string name="findPwd">找回密码</string>
+    <string name="management">应用管理</string>
+    <string name="messageManage">消息管理</string>
+    <string name="allContinue">全部继续</string>
+    <string name="allUpdate">全部更新</string>
+    <string name="allDelete">全部删除</string>
+    <string name="allCancle">全部取消</string>
+    <string name="all">全部</string>
+    <string name="folder_all">所有照片</string>
+    <string name="preview">预览</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="msg_amount_limit">已经达到最高选择数量</string>
+    <string name="action_done">完成</string>
+    <string name="photo_unit">张</string>
+    <string name="tip_take_photo">拍摄照片</string>
+    <string name="error_image_not_exist">图片错误</string>
+    <string name="error_no_permission">无权限</string>
+    <string name="permission_dialog_title">权限拒绝</string>
+    <string name="permission_dialog_ok">好</string>
+    <string name="permission_dialog_cancel">拒绝</string>
+    <string name="permission_rationale">浏览图片需要您提供浏览存储的权限</string>
+    <string name="permission_rationale_write_storage">保存拍照图片需要您提供写存储权限</string>
+    <string name="yourComment">你发表的评论:</string>
+    <string name="reply">回复</string>
+    <string name="setting">设置</string>
+    <string name="myAttention">我的关注</string>
+    <string name="myCollect">我的收藏</string>
+    <string name="cancleAttention">取消关注</string>
+    <string name="cancleCollect">取消收藏</string>
+    <string name="changePwd">修改密码</string>
+    <string name="aboutUs">关于我们</string>
+    <string name="myRemind">我的提醒</string>
+    <string name="myGift">我的礼包</string>
+    <string name="record">搜索历史</string>
+    <string name="hotSearch">热门搜索</string>
+    <string name="remindMe">提醒我</string>
+    <string name="cancleRemind">取消提醒</string>
+    <string name="alreadyOpen">已开服</string>
+    <string name="hotGameCircle">热门游戏圈</string>
+    <string name="youLike">猜你喜欢</string>
+    <string name="downloadService">下载服务</string>
+    <string name="downloadService2">下载服务2</string>
+    <string name="alarmService">闹钟服务</string>
+    <string name="activity">活动</string>
+    <string name="circleOfFriends">朋友圈</string>
+    <string name="Wechat">微信</string>
+    <string name="Qzone">QQ空间</string>
+    <string name="hotComment">热门评论</string>
+    <string name="publishComment">我要评论</string>
+    <string name="checkAllComment">查看所有评论</string>
+    <string name="more">更多</string>
+    <string name="gameIntro">游戏简介</string>
+    <string name="gameFeature">游戏特色</string>
+    <string name="gameRebate">游戏返利</string>
+    <string name="next">下一步</string>
+    <string name="longClickDelete">温馨提示:长按删除任务</string>
+    <string name="longClickUnInstall">温馨提示:长按卸载应用</string>
+    <string name="apply_for_rebate">申请返利</string>
+
+    <!-- 输入提示 -->
+    <string name="nickHint">请输入要修改的昵称</string>
+    <string name="nick">昵称</string>
+    <string name="inputAccountHint">请输入用户名</string>
+    <string name="inputPwdHint">请输入密码</string>
+    <string name="inputPhoneHint">请输入手机号</string>
+    <string name="inputCodeHint">请输入验证码</string>
+    <string name="inputMailBoxHint">请输入邮箱地址</string>
+    <string name="searchHint">请输入搜索内容</string>
+    <string name="commentHint">请输入内容</string>
+    <string name="inputOldPwdHint">请输入原密码</string>
+    <string name="inputNewPwdHint">请输入新密码</string>
+    <string name="inputConfirmPwdHint">请再次输入新密码</string>
+    <string name="inputRightOldPwdHint">请输入正确的原密码</string>
+    <string name="oldPwd">原密码</string>
+    <string name="newPwd">新密码</string>
+    <string name="confirmPwd">确认密码</string>
+    <!-- 确认消息 -->
+    <string name="confirmDelete">是否确定删除 ?</string>
+    <string name="confirmUnInstall">是否确定卸载 ?</string>
+    <string name="confirmAllCancle">是否全部取消收藏?</string>
+    <string name="clearAllRemind">清除所有已开服的提醒记录?</string>
+    <!-- 设置 -->
+    <string name="onlyWifi">仅使用wifi下载</string>
+    <string name="isAutoInstall">下载完后是否自动安装游戏</string>
+    <string name="isAutoClear">安装完成后是否清理安装包</string>
+    <string name="clearCache">清除缓存</string>
+    <string name="clearDownloadDirectory">清空下载目录</string>
+    <string name="messageSetting">消息设置</string>
+    <string name="openMessageNotification">开启消息通知</string>
+    <string name="voice">声音</string>
+    <string name="shake">震动</string>
+    <string name="checkForUpdates">检测更新</string>
+    <string name="checkForUpdatesIng">检测更新中......</string>
+    <string name="newVersion">恭喜您!\n您目前使用的版本是最新版本</string>
+
+    <!-- 权限提示 -->
+    <string name="download_pat_error">下载地址错误</string>
+    <string name="no_memory">本地存储空间不足</string>
+    <string name="no_network">无法访问网络</string>
+    <string name="time_out">连接超时</string>
+    <string name="download_error">下载出错</string>
+    <string name="no_download_path">获取游戏下载地址出错，请重新获取</string>
+    <string name="permission_read_external_hint">没有存储权限，无法开启这个功能，请开启权限。</string>
+    <string name="permission_white_external_hint">没有此权限，无法开启这个功能，请开启权限。</string>
+    <string name="permission_recode_audio_hint">没有此权限，无法开启这个功能，请开启权限</string>
+
+    <string name="permission_hint">请同意权限请求。PERMISSION_RE</string>
+    <string name="permission_list_hint">本应用需要以下所有权限</string>
+    <string name="sing_in_title1"><Data><![CDATA[ 本月已累计签到<font color="#29a1f7"> <b>%1$s</b> </font>天，继续签到 <font color="#29a1f7"><b>%2$s</b></font>天可获得额外奖励]]></Data></string>
+    <string name="sing_in_title4"><Data><![CDATA[ 本月已累计签到<font color="#29a1f7"> <b>%1$s</b> </font>天，您已领取完本月所有额外奖励]]></Data></string>
+    <string name="sing_in_title2"><Data><![CDATA[ 本月已累计签到<font color="#29a1f7"> <b>%1$s</b> </font>天，获取 <font color="#29a1f7"><b>%2$s</b></font>金币]]></Data></string>
+    <string name="gold_html"><Data><![CDATA[<font  color="#434343">%1$s</font><br/><font color="#939393">金币</font>]]></Data></string>
+    <string name="platform_html"><Data><![CDATA[<font color="#434343">%1$s</font><br/></b><font color="#939393">平台币</font>]]></Data></string>
+    <string name="share_html"><Data><![CDATA[<font color="#434343">%1$s</font><br/><font color="#939393">分享奖励</font>]]></Data></string>
+
+    <string name="rebate_html"><Data><![CDATA[<font color="#939393">可返元宝:</font><font color="#cbb00e">%1$s</font>]]></Data></string>
+    <string name="vip_text">1.购买超级会员立即返还%1$s平台币.\n2.超级会员每日签到额外领取%2$s金币.\n3.开通超级会员，每日游戏好评享三倍奖励.\n4.超级会员更多福利敬请期待</string>
+    <string name="sign_text"><Data><![CDATA[<font color="#989898">+</font><font color="#ff7900">%1$s</font><font color="#989898"> (vip额外奖励</font> <font color="#ff7900"> %2$s</font><font color="#989898">)金币,坚持有惊喜</b> </font>]]></Data></string>
+    <string name="comment_text"><Data><![CDATA[<font color="#989898">每日首次评论奖励 </font> <font color="#ff7900">%1$s</font><font color="#989898">金币 </font>]]></Data></string>
+    <string name="answer_text"><Data><![CDATA[<font color="#989898">每日前10条回复均可获得 </font> <font color="#ff7900">%1$s</font><font color="#989898">金币奖励 </font>]]></Data></string>
+    <string name="dirver_text"><Data><![CDATA[<font color="#989898"> 每日首次成功发车可获得 </font> <font color="#ff7900">%1$s</font>
+    <font color="#989898">金币</font>]]></Data></string>
+
+    <string name="exchange_text"><Data><![CDATA[<font color="#ff7900">%1$s </font> <font color="#989898">金币=</font> <font color="#ff7900"> 1 </font><font color="#989898">平台币,</font><font color="#ff7900"> %2$s </font> <font color="#989898">平台币=</font> <font color="#ff7900"> %3$s</font> <font color="#989898">RMB<br/>(平台币可在游戏里面充值)</font>]]></Data></string>
+    <string name="share_text"><Data><![CDATA[<font color="#989898">最高奖励</font>  <font color="#ff7900">%1$s</font> <font color="#989898">金币/人</font>]]></Data></string>
+    <string name="top_text"><Data><![CDATA[<font color="#989898">最高奖励</font>  <font color="#ff7900">%1$s</font> <font color="#989898">金币/天</font>]]></Data></string>
+    <string name="lucky_text"><Data><![CDATA[<font color="#989898">更多奖励在这里,每次抽奖消耗 </font> <font color="#ff7900">%1$s</font> <font color="#989898">金币</font>]]></Data></string>
+    <string name="share_rules"><Data><![CDATA[<font color="#333333">邀请好友一起玩游戏,每邀请一位好友,您可获得 </font> <font color="#ff7900">%1$s</font> <font color="#333333">金币,好友在游戏中每充值1RMB,您也可获得</font><font color="#ff7900">%2$s</font><font color="#333333">金币！！！<br/>单个好友最高奖励</font><font color="#ff7900">%3$s</font><font color="#333333">金币,邀请人数不限！</font>]]></Data></string>
+
+    <string name="than_one_exit">再按一次退出</string>
+    <string name="have_new_update">检测到有新版本，是否立即更新?</string>
+    <string name="now_update">立即更新</string>
+    <string name="no_update">暂不更新</string>
+    <string name="dowanloading">正在下载:</string>
+    <string name="dowanloadend_install">下载完成,正在安装</string>
+    <string name="wechat">微信</string>
+    <string name="frind">朋友圈</string>
+    <string name="QQ">QQ</string>
+    <string name="QZon">QQ空间</string>
+    <string name="noNetwork">网络未连接</string>
+    <string name="timeout">连接超时...</string>
+    <string name="notfound">未找到服务器...</string>
+    <string name="agin">正在重新连接...</string>
+
+    <string name="boxShare1">最专业的手游变态公益服</string>
+    <string name="boxShare2">"上线满V，送99999999元宝，海量BT手游，秒变土豪\n下载游戏盒子，更多游戏，更多礼包等着您</string>
+    <string name="gameShare1">我正在玩儿《</string>
+    <string name="gameShare2">》，一起来玩儿吧</string>
+    <string name="say_about">说点什么吧!!!</string>
+    <string name="dowanloadend">下载完成</string>
+    <string name="click_instanll">点击安装</string>
+    <string name="expand">展开</string>
+    <string name="coll">收起</string>
+    <string name="open_notify">开服通知</string>
+    <string name="open_notify_text">服 开服啦</string>
+    <string name="not_wifi_text">您当前正处于非WIFI网络环境下，播放gif动图会使用大量流量，是否继续观看？</string>
+    <string name="is4G">数据流量使用提醒</string>
+    <string name="go_on_play">继续播放</string>
+    <string name="no_play">还是算了</string>
+
+
+    <string name="dynamic_comment"><Data><![CDATA[<font color="#0000ff"> 回复 </font> <font color="#1a1a1a"> %1$s</font><font color="#ababab">: </font><font color="#ababab"> %2$s</font>]]></Data></string>
+    <string name="about_for_me_dy_comment"><Data><![CDATA[<font color="#1a1a1a"> %1$s</font><font color="#0000ff"> 回复 </font> <font color="#1a1a1a"> %2$s</font><font color="#ababab">: </font><font color="#ababab"> %3$s</font>]]></Data></string>
+    <string name="agreement_text"><Data><![CDATA[<font color="#837f7e">我已经阅读并同意</font><font color="#ff7900">《用户协议》</font> ]]></Data></string>
+    <string name="share_success">分享成功</string>
+    <string name="share_error">分享出错</string>
+    <string name="share_cancle">分享取消</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="collect">收藏</string>
+    <string name="cancle_success">取消成功</string>
+    <string name="instaling_txt">正在安装,请稍候</string>
+    <string name="already_add_downlaod_list">已添加到下载列表!</string>
+    <string name="install_app_txt">安装应用需要打开未知来源权限，请去设置中开启权限</string>
+    <string name="no_install">不安装了</string>
+    <string name="go_open">去打开</string>
+    <string name="download_error_message">游戏下载过程中，因为网络原因，部分数据丢失，请重新下载</string>
+    <string name="cancle_download">取消下载</string>
+    <string name="try_download">重新下载</string>
+    <string name="phone_permissions">图片选择需要以下权限:  1.访问设备上的照片</string>
+
+    <string name="commitment_txt"><Data><![CDATA[<font color="#666666">%1$s</font><font color="#29a1f7">%2$s</font> ]]></Data></string>
+    <string name="error_qq">QQ号码错误</string>
+    <string name="check_qq">请检查是否安装了QQ客户端</string>
+    <string name="min_price">不得低于</string>
+    <string name="point">"&#183;</string>
+    <string name="new_sign_text"><Data><![CDATA[<font color="#171F27">本月已累计签到</font><font color="#61A4ee">%1$s</font><fontcolor="#171F27"> 天，继续签到</font> <font color="#61A4ee">%2$s</font><font color="#171F27">天可获得额外奖励</font>]]></Data></string>
+
+
+    <string name="bga_pp_take_picture">拍摄照片</string>
+    <string name="bga_pp_photo_not_support">当前设备暂不支持拍照</string>
+    <string name="bga_pp_toast_photo_picker_max">最多只能选择 %1$s 张图片</string>
+    <string name="bga_pp_all_image">所有图片</string>
+    <string name="bga_pp_confirm">确定</string>
+    <string name="bga_pp_choose">选择</string>
+    <string name="bga_pp_view_photo">查看图片</string>
+    <string name="bga_pp_download_img_failure">下载到图片失败</string>
+    <string name="bga_pp_save_img_failure">保存图片失败，再试试?</string>
+    <string name="bga_pp_save_img_success_folder">图片已保存至 %s 文件夹</string>
+
+
+    <string name="player_txt"><Data><![CDATA[<font color="#171F27">有</font> <font color="#1992ea">%1$s</font><font color="#171F27">人玩过该游戏 </font>]]></Data></string>
+
+    <string name="question_txt"><Data><![CDATA[<font color="#171F27">共</font><font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个问题,去逛逛吧!</font>]]></Data></string>
+    <string name="question_txt2"><Data><![CDATA[<font color="#171F27">共</font> <font color="#1992ea">%1$s</font> <font color="#171F27">条问题,收到</font><font color="#1992ea">%2$s</font><font color="#171F27">个问题。</font>]]></Data></string>
+    <string name="tiwen_txt"><Data><![CDATA[<font color="#8B8684">向</font><font color="#1992ea">%1$s</font><font color="#8B8684">位该游戏的玩家请教]]></Data></string>
+    <string name="huida_txt"><Data><![CDATA[<font color="#8B8684">查看全部</font><font color="#1992ea">%1$s</font><font color="#8B8684">个回答]]></Data></string>
+    <string name="man">男</string>
+    <string name="women">女</string>
+    <string name="other">其他</string>
+    <string name="please_input_nick">请输入昵称</string>
+    <string name="change_nick">修改昵称</string>
+    <string name="please_input_qq">请输入QQ号</string>
+    <string name="change_qq">修改QQ号</string>
+    <string name="please_input_mail">请输入邮箱</string>
+    <string name="please_input_mobile">请输入手机号</string>
+    <string name="please_input_right_mobile">请输入正确的手机号</string>
+    <string name="change_mail">修改邮箱</string>
+    <string name="eidt_message">编辑资料</string>
+    <string name="driver_message">司机资料</string>
+    <string name="save">保存</string>
+    <string name="change_your_nick">修改你的昵称</string>
+    <string name="have_no_nick">暂无昵称</string>
+    <string name="choice_your_sex">选择你的性别</string>
+    <string name="not_set">未设置</string>
+    <string name="edit_your_intro">编辑你的简介</string>
+    <string name="edit">编辑</string>
+    <string name="not_intro">暂无简介</string>
+    <string name="choice_your_loc">选择你的地区</string>
+    <string name="not_loc">暂无地区</string>
+    <string name="input_your_mail">输入你的邮箱</string>
+    <string name="not_mail">暂无邮箱</string>
+    <string name="input_your_qq">输入你的QQ</string>
+    <string name="not_qq">暂无QQ</string>
+    <string name="choice_your_birthday">选择你的生日</string>
+    <string name="not_birthday">暂无生日</string>
+    <string name="choice_sex">选择性别</string>
+    <string name="sichuan">四川</string>
+    <string name="chengdu">成都</string>
+    <string name="init_data_error">数据初始化失败</string>
+    <string name="release_question_hint">5-100字范围内,请描述您的问题吧~</string>
+    <string name="image_cache">图片缓存</string>
+    <string name="zhuanyou_shengqing">转游申请</string>
+    <string name="initing_data">正在初始化数据...</string>
+    <string name="bind_alipy">绑定支付宝</string>
+    <string name="check_once">检查一下</string>
+    <string name="confirm_no_error">确认无误</string>
+    <string name="alipay_account_hint">此支付宝账号是交易成功后转账的账号,为了保证您的权益,请仔细核对</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="change_alipay_account">修改支付宝账号</string>
+    <string name="bind_alipay_account">绑定支付宝账号</string>
+    <string name="please_input_real_name">请输入真实姓名</string>
+    <string name="please_input_alipay_account">请输入支付宝账号</string>
+    <string name="curren_version">当前版本</string>
+    <string name="get_again">重新获取</string>
+    <string name="detail_of_the_activity">活动详情</string>
+    <string name="detail_of_the_strategy">攻略详情</string>
+    <string name="new_game">新游</string>
+    <string name="game_top">排行榜</string>
+    <string name="ultralow_discount">超低折扣</string>
+    <string name="make_coin">赚金币</string>
+    <string name="latest_release">最新发布</string>
+    <string name="lowest_price">价格最低</string>
+    <string name="highest_price">价格最高</string>
+    <string name="android">安卓</string>
+    <string name="ios">ios</string>
+    <string name="double_end">双端</string>
+    <string name="unlimited">不限</string>
+    <string name="login_trading">交易登录</string>
+    <string name="register_trading">交易注册</string>
+    <string name="login_success">登录成功</string>
+    <string name="select_account">选择账号</string>
+    <string name="mine_account">我的账号</string>
+    <string name="add">新增</string>
+    <string name="account">账号</string>
+    <string name="question_info_edit_hint">近期玩过该游戏的玩家才可回答哟~</string>
+    <string name="send">发送</string>
+</resources>

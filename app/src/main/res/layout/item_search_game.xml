@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/id_searchGame_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/id_searchGame_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/id_searchGame_img"
+        android:layout_alignRight="@id/id_searchGame_img"
+        android:layout_below="@id/id_searchGame_img"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp" />
+
+</RelativeLayout>

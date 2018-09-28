@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/circle_gray"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="第一次买卖账号请先关联自己的支付宝账号，关联完支付宝账号请关联自己的游戏账号"
+            android:textColor="@color/gray_9a"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/circle_gray"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="选择游戏账号下的游戏选项，填写相关具体信息后提交审核"
+            android:textColor="@color/gray_9a"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/circle_gray"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:text="只可出售有充值金额的游戏"
+            android:textColor="@color/gray_9a"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/circle_gray"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="提交信息后,当前游戏账号将会被冻结,无法登录当前游戏账号下的所有游戏"
+            android:textColor="@color/gray_9a"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

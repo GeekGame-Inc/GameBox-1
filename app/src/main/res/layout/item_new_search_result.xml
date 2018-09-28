@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+
+    <ImageView
+        android:id="@+id/id_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_search_time" />
+
+    <TextView
+        android:id="@+id/id_item_new_search_result_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/id_iv"
+        android:text="少年三国志"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_item_new_search_result_leable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/id_item_new_search_result_name"
+        android:background="@drawable/selector_bt_dis_leable"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="BT手游"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/id_item_new_search_result_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="4.4折"
+        android:textColor="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignLeft="@id/id_item_new_search_result_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/id_item_new_search_result_dis"
+        android:background="@color/divider"></View>
+</RelativeLayout>

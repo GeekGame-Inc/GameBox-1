@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar"></include>
+
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/c_icon_denglutu" />
+
+    <EditText
+        android:id="@+id/id_trading_login_accountEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_shoujihao"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom">
+
+        <TextView
+            android:id="@+id/id_trading_login_forgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="忘记密码?"
+            android:textColor="@color/blue_40"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/id_trading_login_pwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/id_trading_login_forgetPwd"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/c_icon_mima"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/gray_69"
+            android:textColorHint="@color/gray_9a"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_trading_login_login"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_bt"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="注:后续可用此手机号密码登录您所购买及绑定的所有账号"
+        android:textColor="@color/gray_9a"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

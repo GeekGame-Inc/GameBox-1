@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_item_comment_reply_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/id_item_comment_reply_nameTv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="张厂长"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/id_item_comment_reply_nameTv1"
+        android:text="回复"
+        android:textColor="@color/blue"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv1"
+        android:text="你"
+        android:textColor="@color/textColor1"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_item_comment_reply_contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/id_item_comment_reply_nameTv1"
+        android:layout_below="@id/id_item_comment_reply_nameTv1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="回复内容回复内容回复内容回复内容回复内容回复内容回复内容"
+        android:textColor="@color/textColor1"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_item_comment_reply_timeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_item_comment_reply_contentTv"
+        android:layout_marginTop="10dp"
+        android:text="1998-05-08 15:22"
+        android:textColor="@color/textColor1"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/id_item_comment_reply_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_item_comment_reply_contentTv"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/icon_dynamic_comment_sm"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:text="回复"
+        android:textColor="@color/textColor1"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

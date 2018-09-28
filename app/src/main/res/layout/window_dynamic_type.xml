@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="选择上传图片类型"
+        android:textColor="@color/titleBarColor"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background"></View>
+
+    <TextView
+        android:id="@+id/id_window_select_dynamic_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="选择静态图"
+        android:textColor="@color/rebateColor"
+        android:textSize="17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background"></View>
+
+    <TextView
+        android:id="@+id/id_window_select_dynamic_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="选择GIF图"
+        android:textColor="@color/red"
+        android:textSize="17sp" />
+
+</LinearLayout>

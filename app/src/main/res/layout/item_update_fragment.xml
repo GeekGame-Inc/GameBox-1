@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 下载管理列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_update_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/id_update_item_gameImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY" />
+
+    <com.tenone.gamebox.view.custom.DownloadProgressBar
+        android:id="@+id/id_update_item_gameBt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        app:bar_borderWidth="1dp"
+        app:bar_radius="15dp"
+        app:bar_textSize="12sp"
+        app:loadingColor="@color/blue_40"
+        app:progress_text_color="@color/white"
+        app:stopColor="@color/blue_40" />
+
+    <TextView
+        android:id="@+id/id_update_item_gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_update_item_gameImg"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/id_update_item_gameImg"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_update_item_gameSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_update_item_gameImg"
+        android:layout_toRightOf="@id/id_update_item_gameImg"
+        android:textColor="@color/defultTextColor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/id_update_item_gameVersions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/id_update_item_gameImg"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fragment_game_title">
+        <item>推荐</item>
+        <item>新游</item>
+        <item>分类</item>
+        <item>攻略</item>
+    </string-array>
+
+    <string-array name="fragment_new_game_title">
+        <item>BT版</item>
+        <item>精品</item>
+        <item>折扣</item>
+        <item>H5</item>
+        <item>承诺</item>
+    </string-array>
+
+    <string-array name="fragment_new_open_title">
+        <item>BT版</item>
+        <item>折扣</item>
+    </string-array>
+
+    <string-array name="mine_item">
+        <item>每日签到</item>
+        <item>每日评论</item>
+        <item>每日问答</item>
+        <item>邀请好友</item>
+        <item>邀请排行</item>
+        <item>每日发车</item>
+        <item>金币兑换</item>
+        <item>金币抽奖</item>
+        <item>货币明细</item>
+        <item>返利申请</item>
+        <item>申请转游</item>
+        <item>应用管理</item>
+        <item>我的礼包</item>
+        <item>我的收藏</item>
+        <item>我的消息</item>
+        <item>我的提问</item>
+        <item>客服中心</item>
+        <item>修改密码</item>
+        <item>绑定手机</item>
+        <item>关于我们</item>
+    </string-array>
+
+    <string-array name="management_titles">
+        <item>下载管理</item>
+        <item>已装应用</item>
+        <item>应用更新</item>
+    </string-array>
+    <string-array name="message_titles">
+        <item>系统消息</item>
+        <item>评论回复</item>
+        <item>开服通知</item>
+    </string-array>
+    <string-array name="details_title">
+        <item>金币明细</item>
+        <item>平台币明细</item>
+    </string-array>
+    <string-array name="open_server">
+        <item>今日开服</item>
+        <item>即将开服</item>
+        <item>已开新服</item>
+    </string-array>
+    <string-array name="game_details_titles">
+        <item>详情</item>
+        <item>评论</item>
+        <item>礼包</item>
+        <item>开服</item>
+        <item>攻略</item>
+    </string-array>
+    <string-array name="trading_record_titles">
+        <item>已购买</item>
+        <item>审核中</item>
+        <item>出售中</item>
+        <item>已出售</item>
+        <item>仓库中</item>
+    </string-array>
+    <string-array name="rebate_titles">
+        <item>申请返利</item>
+        <item>返利记录</item>
+    </string-array>
+    <string-array name="transfer_titles">
+        <item>转游申请</item>
+        <item>转游记录</item>
+    </string-array>
+
+    <string-array name="driving_titles">
+        <item>全部</item>
+        <item>热门</item>
+        <item>关注</item>
+        <item>我的</item>
+        <item>消息</item>
+    </string-array>
+
+    <string-array name="top">
+        <item>今日排行</item>
+        <item>昨日排行</item>
+    </string-array>
+
+    <string-array name="task_center">
+        <item>签到</item>
+        <item>每日评论</item>
+        <item>每日发车</item>
+        <item>邀请好友</item>
+        <item>邀请排行榜</item>
+        <item>每日问答</item>
+        <item>金币抽奖</item>
+        <item>金币兑换</item>
+        <item>成为VIP</item>
+    </string-array>
+</resources>

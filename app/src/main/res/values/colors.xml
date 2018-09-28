@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="gold">#ffffd700</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="blue1">#61A4ee</color>
+    <color name="green">#ff008000</color>
+    <color name="blue">#2082D2</color>
+    <color name="blue_40">#1992ea</color>
+    <color name="purple">#ff800080</color>
+    <color name="purple_df4">#d200ff</color>
+    <color name="operate">#ec3825</color>
+    <color name="pink">#ffffc0cb</color>
+    <color name="orange">#ffffa500</color>
+    <color name="toolbar_item_bg_normal">#ff3b3e42</color>
+    <color name="toolbar_text_color_normal">#ff878a90</color>
+    <color name="toolbar_text_color_select">#ffffb701</color>
+    <color name="hotsblogsbg">#CCD59F</color>
+    <color name="maincolor">#ff957f7f</color>
+    <color name="ECECEC">#ececec</color>
+    <color name="appColor">#ff0000</color>
+    <color name="background">#f0f0f0</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#80000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_35">#353535</color>
+    <color name="black_33">#333333</color>
+    <color name="gray">#ff808080</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="red">#ff3b30</color>
+    <color name="defultTextColor">#8B8684</color>
+    <color name="textColor1">#171F27</color>
+    <color name="titleBarColor">#3a3937</color>
+    <color name="underLineColor">#f89d19</color>
+    <color name="line0">#bdbdbb</color>
+    <color name="divider">#eeeeee</color>
+    <color name="mineColor1">#eaa815</color>
+    <color name="mineColor2">#de800c</color>
+    <color name="mineColor3">#d65106</color>
+    <color name="hintColor">#989898</color>
+    <color name="editBoderColor">#e2abc2</color>
+    <color name="editSolid">#e3dadb</color>
+    <color name="getcode_gray">#ccc9ca</color>
+    <color name="gray_f2">#f2f2f2</color>
+    <color name="gray_9a">#989898</color>
+    <color name="gray_80">#808080</color>
+    <color name="gray_69">#666666</color>
+    <color name="getGift">#d3d4d9</color>
+    <color name="dcdc">#dcdcdc</color>
+    <color name="settingBg">#eae1e1</color>
+    <color name="sevenSix">#767676</color>
+    <color name="noLoginColor1">#f87f6e</color>
+    <color name="noLoginColor2">#f86e4c</color>
+    <color name="noLoginColor3">#f84e37</color>
+    <color name="dThree">#d3cdcd</color>
+    <color name="dbd8">#dbd8d3</color>
+    <color name="sixA">#aaaaaa</color>
+    <color name="souBg">#e1d8d9</color>
+    <color name="label1">#894d8b</color>
+    <color name="label2">#d89431</color>
+    <color name="label3">#3a88da</color>
+    <color name="label4">#4ca52d</color>
+    <color name="gameImgColor">#dad8d8</color>
+    <color name="rebateColor">#ff7900</color>
+    <color name="welfareColor">#FF883A</color>
+    <color name="mine_color">#de5454</color>
+    <color name="lineBg">#f0f0f0</color>
+    <color name="rebateItemBtTextColot">#cbb00e</color>
+    <color name="newColor">#f07a0e</color>
+
+
+    <!-- 状态栏的颜色 -->
+    <color name="bga_pp_colorPrimaryDark">@android:color/black</color>
+    <!-- 导航栏的颜色 -->
+    <color name="bga_pp_navigationBarColor">@android:color/black</color>
+    <!-- Toolbar的颜色 -->
+    <color name="bga_pp_colorPrimary">#303D42</color>
+
+    <!-- 图片选择器库里所有Activity界面的背景色 -->
+    <color name="bga_pp_activity_bg">#1A1A1A</color>
+
+    <!-- 图片处于选中状态时的遮罩层颜色 -->
+    <color name="bga_pp_photo_selected_mask">#4D000000</color>
+
+    <!-- 右上角确认按钮不可用时的颜色 -->
+    <color name="bga_pp_btn_confirm_disabled">#8017C7D1</color>
+    <!-- 右上角确认按钮可用时的颜色 -->
+    <color name="bga_pp_btn_confirm_enabled">#17C7D1</color>
+    <!-- 右上角确认按钮按下时的颜色 -->
+    <color name="bga_pp_btn_confirm_pressed">#CC17C7D1</color>
+
+    <color name="bga_pp_loading_progress_startColor">@android:color/white</color>
+    <color name="bga_pp_loading_progress_centerColor">#17C7D1</color>
+    <color name="bga_pp_loading_progress_endColor">#CC17C7D1</color>
+
+
+    <color name="vpi__background_holo_dark">#ff000000</color>
+    <color name="vpi__background_holo_light">#fff3f3f3</color>
+    <color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light</color>
+    <color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark</color>
+    <color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="vpi__bright_foreground_inverse_holo_dark">
+        @color/vpi__bright_foreground_holo_light
+    </color>
+    <color name="vpi__bright_foreground_inverse_holo_light">
+        @color/vpi__bright_foreground_holo_dark
+    </color>
+</resources>

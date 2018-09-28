@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/id_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lineBg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/id_vip_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_yuan"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="30"
+                android:textColor="@color/rebateColor"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/id_vip_open"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_getcode"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="立即开通"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_vip_oldprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/id_vip_price"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/id_vip_price"
+                android:text="原价:30"
+                android:textColor="@color/defultTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/id_bottom" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_vip_tequan"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="超级会员享受更多福利特权"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineBg" />
+
+                <com.tenone.gamebox.view.custom.MyGridView
+                    android:id="@+id/id_vip_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:padding="15dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="15dp" >
+                </com.tenone.gamebox.view.custom.MyGridView>
+
+                <TextView
+                    android:id="@+id/id_vip_textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="57px"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/vip_text"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/lineBg" />
+
+                <com.tenone.gamebox.view.custom.MyListView
+                    android:id="@+id/id_vip_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/divider"
+                    android:dividerHeight="1px"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none" >
+                </com.tenone.gamebox.view.custom.MyListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lineBg" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

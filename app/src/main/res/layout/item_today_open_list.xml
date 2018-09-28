@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_item_todayOpen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/id_item_todayOpen_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/empty" />
+
+    <TextView
+        android:id="@+id/id_item_todayOpen_nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_item_todayOpen_img"
+        android:layout_toRightOf="@+id/id_item_todayOpen_img"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_item_todayOpen_sizeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_item_todayOpen_img"
+        android:layout_toRightOf="@id/id_item_todayOpen_img"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:id="@+id/id_item_todayOpen_labelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_item_todayOpen_sizeTv"
+        android:layout_below="@id/id_item_todayOpen_nameTv"
+        android:layout_toRightOf="@id/id_item_todayOpen_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.tenone.gamebox.view.custom.ThreeStateButton
+        android:id="@+id/id_item_todayOpen_button"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:defultColor_ThreeStateButton="@color/blue_40"
+        app:defultDrawable_ThreeStateButton="@drawable/radiu_progressbar"
+        app:defultText_ThreeStateButton="@string/remindMe"
+        app:otherColor_ThreeStateButton="@color/white"
+        app:otherDrawable_ThreeStateButton="@drawable/radiu_shape_full"
+        app:otherText_ThreeStateButton="@string/cancleRemind"
+        app:threeColor_ThreeStateButton="@color/white"
+        app:threeDrawable_ThreeStateButton="@drawable/shape_getcode_gray"
+        app:threeText_ThreeStateButton="@string/alreadyOpen" />
+</RelativeLayout>

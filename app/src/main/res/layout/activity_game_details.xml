@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 游戏详情 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:button="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/id_topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/id_gameDetails_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/empty"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/id_gameDetails_gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/id_gameDetails_img"
+                android:layout_toRightOf="@id/id_gameDetails_img"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/id_gameDetails_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/id_gameDetails_img"
+                android:layout_toRightOf="@id/id_gameDetails_img"
+                android:textColor="@color/defultTextColor"
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/id_gameDetails_ratingBar"
+                style="@style/CustomerRatingbarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/id_gameDetails_img"
+                android:isIndicator="true" />
+
+            <LinearLayout
+                android:id="@+id/id_gameDetails_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/id_gameDetails_gameName"
+                android:layout_alignTop="@id/id_gameDetails_gameName"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/id_gameDetails_gameName"
+                android:gravity="center_vertical|bottom"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_gameDetails_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/id_gameDetails_size"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="玩家QQ群"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.tenone.gamebox.view.custom.TwoStateImageView
+                android:id="@+id/id_gameDetails_collect"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="center"
+                button:defultDrawable_TwoStateImage="@drawable/ic_collect_no"
+                button:otherDrawable_TwoStateImage="@drawable/ic_collect_start" />
+
+            <com.tenone.gamebox.view.custom.TwoStateImageView
+                android:id="@+id/id_gameDetails_share"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="center"
+                button:defultDrawable_TwoStateImage="@drawable/ic_share_no"
+                button:otherDrawable_TwoStateImage="@drawable/ic_shared" />
+
+            <com.tenone.gamebox.view.custom.DownProgress
+                android:id="@+id/id_gameDetails_dwon"
+                style="@style/ProgressBar_Down"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/id_gameDetails_share"
+                android:layout_toRightOf="@id/id_gameDetails_collect"
+                app:textSize_DownProgressStyle="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/id_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@id/id_bottomView"
+            android:background="@color/dcdc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/id_line"
+            android:layout_below="@id/id_topView"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/dcdc" />
+
+            <com.tenone.gamebox.view.custom.viewpagerindicator.TabPageIndicator
+                android:id="@+id/id_gameDetails_tabPageIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.tenone.gamebox.view.custom.CustomerUnderlinePageIndicator
+                android:id="@+id/id_gameDetails_underlineIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/ic_line_bg" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_gameDetails_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

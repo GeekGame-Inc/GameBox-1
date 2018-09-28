@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_rebate"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="联系客服"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/id_item_trading_customer_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv1"
+        android:gravity="center"
+        android:text="QQ:478956453"
+        android:textColor="@color/gray_69"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/id_item_trading_customer_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/radius_border_kf"
+        android:gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="7dp"
+        android:text="戳我"
+        android:textColor="@color/blue_40"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/tv1"
+        android:background="@color/divider"></View>
+
+</RelativeLayout>

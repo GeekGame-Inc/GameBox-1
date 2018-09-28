@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.tenone.gamebox.view.custom.CustomerScrollView
+        android:id="@+id/id_mine_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lineBg"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/id_mine_topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/ic_wobeijing" >
+
+                <RelativeLayout
+                    android:id="@+id/id_mine_headerLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.tenone.gamebox.view.custom.CircleImageView
+                        android:id="@+id/id_mine_headerImg"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="48dp"
+                        android:contentDescription="@string/empty"
+                        android:src="@drawable/icon_touxiang"
+                        app:border_color="#f8dfa9"
+                        app:border_width="1.3dp" />
+
+                    <TextView
+                        android:id="@+id/id_mine_nickTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/id_mine_headerImg"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@id/id_mine_headerImg"
+                        android:gravity="center"
+                        android:textColor="#f6dca4"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/id_mine_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/empty"
+                        android:padding="10dp"
+                        android:src="@drawable/icon_shezhi" />
+
+                    <TextView
+                        android:id="@+id/id_mine_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/id_mine_headerImg"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/id_mine_headerImg"
+                        android:contentDescription="@string/empty"
+                        android:drawableLeft="@drawable/selector_vip"
+                        android:drawablePadding="3dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/underLineColor"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <com.tenone.gamebox.view.custom.CircleImageView
+                    android:id="@+id/id_mine_headerImg2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/ic_defult_header"
+                    android:visibility="gone"
+                    app:border_color="#f8dfa9"
+                    app:border_width="1.3dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_mine_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="150dp"
+                android:background="@drawable/radiu_white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp" >
+
+                <TextView
+                    android:id="@+id/id_mine_gold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="5dp"
+                    android:text="0\n金币"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@color/lineBg" />
+
+                <TextView
+                    android:id="@+id/id_mine_platform"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="5dp"
+                    android:text="0\n平台币"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@color/lineBg" />
+
+                <TextView
+                    android:id="@+id/id_mine_shareEarnings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="5dp"
+                    android:text="0\n邀请奖励"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/id_mine_vipTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rebate"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="5dp"
+                    android:text="会员充值"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <com.tenone.gamebox.view.custom.MyListView
+                android:id="@+id/id_mine_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_mine_linear"
+                android:layout_marginTop="15dp"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/lineBg"
+                android:dividerHeight="1dp"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" >
+            </com.tenone.gamebox.view.custom.MyListView>
+        </RelativeLayout>
+    </com.tenone.gamebox.view.custom.CustomerScrollView>
+
+    <RelativeLayout
+        android:id="@+id/id_mine_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:alpha="0"
+        android:background="@color/mine_color" >
+
+        <TextView
+            android:id="@+id/id_mine_titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/mine"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/id_mine_setting2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/icon_shezhi" />
+    </RelativeLayout>
+
+</RelativeLayout>

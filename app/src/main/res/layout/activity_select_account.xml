@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/id_select_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_select_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_login_bt"
+                android:gravity="center"
+                android:text="修改密码"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/id_select_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_border_kf"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/blue_40" />
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/id_select_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/id_select_bottom">
+
+            <ExpandableListView
+                android:id="@+id/id_select_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:childDivider="@color/white"
+                android:childIndicator="@null"
+                android:divider="@color/divider"
+                android:dividerHeight="1px"
+                android:footerDividersEnabled="false"
+                android:groupIndicator="@null"
+                android:headerDividersEnabled="false"
+                android:scrollbars="none"
+                android:stackFromBottom="false"></ExpandableListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

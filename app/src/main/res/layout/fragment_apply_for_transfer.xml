@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_oldGameName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="旧游戏名称"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_oldServer"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="旧游戏区服"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_oldRoleName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="旧游戏角色名"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/empty"
+            android:gravity="center"
+            android:text="↓" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/empty" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/empty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_newGameName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="新游戏名称"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_newServer"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="新游戏区服"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_apply_for_transfer_newRoleName"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiu_border"
+            android:gravity="center"
+            android:hint="新游戏角色名"
+            android:padding="3dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/defultTextColor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/lineBg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="请至少输入一项联系方式!"
+        android:textColor="@color/defultTextColor" />
+
+    <com.tenone.gamebox.view.custom.CustomizeEditText
+        android:id="@+id/id_transfer_phoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius_border_line"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号码"
+        android:padding="5dp"
+        android:textColor="@color/textColor1"
+        android:textColorHint="@color/defultTextColor"
+        android:textSize="12sp" />
+
+    <com.tenone.gamebox.view.custom.CustomizeEditText
+        android:id="@+id/id_transfer_qqEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius_border_line"
+        android:gravity="center_vertical"
+        android:hint="请输入QQ号码"
+        android:padding="5dp"
+        android:textColor="@color/textColor1"
+        android:textColorHint="@color/defultTextColor"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/id_transfer_confirmBt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/radiu_shape_full"
+        android:text="@string/confirm"
+        android:textColor="@color/white" />
+
+</LinearLayout>

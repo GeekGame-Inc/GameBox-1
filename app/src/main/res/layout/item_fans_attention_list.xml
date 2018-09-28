@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_top_bottom"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <com.tenone.gamebox.view.custom.CircleImageView
+        android:id="@+id/id_item_fans_attention_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        app:border_color="@color/blue_40"
+        app:border_width="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/id_item_fans_attention_header">
+
+        <RelativeLayout
+            android:id="@+id/id_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_item_fans_attention_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black_33"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/id_item_fans_attention_sexImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/id_item_fans_attention_name" />
+
+            <ImageView
+                android:id="@+id/id_item_fans_attention_vipImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/id_item_fans_attention_sexImg"
+                android:src="@drawable/icon_dynamic_vip" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_item_fans_attention_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_rl"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/defultTextColor"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+    <com.tenone.gamebox.view.custom.AttentionTextView
+        android:id="@+id/id_item_fans_attention_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="3dp"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lineBg"></View>
+</RelativeLayout>

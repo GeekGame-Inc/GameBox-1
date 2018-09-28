@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_game_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_yxjj"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="@string/gameIntro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black_33"
+            android:textSize="16sp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_fragment_details_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"></android.support.v7.widget.RecyclerView>
+
+            <com.tenone.gamebox.view.custom.MoreTextView
+                android:id="@+id/id_fragment_details_expandableTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="9dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                expandableTextView:maxLine_MoreTextStyle="3"
+                expandableTextView:textColor_MoreTextStyle="@color/gray_69"
+                expandableTextView:textSize_MoreTextStyle="14sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_yxts"
+            android:drawablePadding="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="@string/gameFeature"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black_33"
+            android:textSize="16sp" />
+
+        <com.tenone.gamebox.view.custom.MoreTextView
+            android:id="@+id/id_fragment_details_expandableTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="9dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            expandableTextView:maxLine_MoreTextStyle="3"
+            expandableTextView:textColor_MoreTextStyle="@color/gray_69"
+            expandableTextView:textSize_MoreTextStyle="13sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/id_fragment_details_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_yxfl"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:text="@string/gameRebate"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black_33"
+                android:textSize="16sp" />
+
+            <com.tenone.gamebox.view.custom.MoreTextView
+                android:id="@+id/id_fragment_details_expandableTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="9dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                expandableTextView:maxLine_MoreTextStyle="3"
+                expandableTextView:textColor_MoreTextStyle="@color/gray_69"
+                expandableTextView:textSize_MoreTextStyle="13sp" />
+
+            <TextView
+                android:id="@+id/id_fragment_details_sqfl"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/radius_border_kf"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="申请返利"
+                android:textColor="@color/blue_40"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/id_fragment_details_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_top"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_v"
+                android:drawablePadding="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:text="VIP价格"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black_33"
+                android:textSize="16sp" />
+
+            <com.tenone.gamebox.view.custom.MoreTextView
+                android:id="@+id/id_fragment_details_expandableTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="9dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                expandableTextView:maxLine_MoreTextStyle="3"
+                expandableTextView:textColor_MoreTextStyle="@color/gray_69"
+                expandableTextView:textSize_MoreTextStyle="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/id_fragment_details_layout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_djhd"
+                android:drawablePadding="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:text="独家活动"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <com.tenone.gamebox.view.custom.MyListView
+                android:id="@+id/id_fragment_details_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                android:listSelector="@color/white"></com.tenone.gamebox.view.custom.MyListView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/id_fragment_details_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_top"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_jcsk"
+                android:drawablePadding="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:text="精彩时刻"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_fragment_details_gifIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_gray_f2"
+                    android:contentDescription="@string/empty"
+                    android:minHeight="125dp" />
+
+                <ImageView
+                    android:id="@+id/id_fragment_details_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/icon_bf" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_rmpl"
+                android:drawablePadding="5dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="9dp"
+                android:text="@string/hotComment"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black_33"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/id_fragment_details_publishComment"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/radius_border_kf"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/publishComment"
+                android:textColor="@color/blue_40"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <com.tenone.gamebox.view.custom.MyListView
+            android:id="@+id/id_fragment_details_commentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:divider="@null"
+            android:footerDividersEnabled="true"
+            android:listSelector="@color/transparent"></com.tenone.gamebox.view.custom.MyListView>
+
+
+        <TextView
+            android:id="@+id/id_fragment_details_check"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/radius_border_kf"
+            android:gravity="center"
+            android:text="点击查看更多评论"
+            android:textColor="@color/blue_40"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="10dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_cnxh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:text="@string/youLike"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black_33"
+            android:textSize="16sp" />
+
+
+        <com.tenone.gamebox.view.custom.MyGridView
+            android:id="@+id/id_fragment_details_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/white"
+            android:listSelector="@color/transparent"
+            android:numColumns="4"
+            android:padding="10dp"
+            android:scrollbars="none"></com.tenone.gamebox.view.custom.MyGridView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_x_z" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="我是有底线的"
+                android:textColor="@color/gray_9a"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_x_y" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

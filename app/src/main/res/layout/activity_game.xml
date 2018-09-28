@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabHostGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_serachbar" />
+
+    <com.tenone.gamebox.view.custom.viewpagerindicator.TabPageIndicator
+        android:id="@+id/id_game_tabPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tenone.gamebox.view.custom.CustomerUnderlinePageIndicator
+        android:id="@+id/id_game_underlineIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/line0" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/game_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

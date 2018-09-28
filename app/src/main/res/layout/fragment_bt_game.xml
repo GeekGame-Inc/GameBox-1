@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.tenone.gamebox.view.custom.RefreshLayout
+        android:id="@+id/id_fragment_bt_dis_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.tenone.gamebox.view.custom.MyRefreshListView
+            android:id="@+id/id_fragment_bt_dis_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/white"
+            android:divider="@color/divider"
+            android:dividerHeight="1px"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent" />
+    </com.tenone.gamebox.view.custom.RefreshLayout>
+
+    <ImageView
+        android:id="@+id/id_fragment_bt_dis_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/a_icon_sousuo"
+        android:visibility="gone" />
+
+</RelativeLayout>

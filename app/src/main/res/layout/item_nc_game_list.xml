@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_nc_game_list_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="13dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="13dp">
+
+
+        <ImageView
+            android:id="@+id/id_nc_game_list_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_loading_logo"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/id_nc_game_list_gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/id_nc_game_list_icon"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:maxLength="7"
+            android:maxLines="1"
+            android:textColor="@color/textColor1"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/id_nc_game_list_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/c_icon_jingqingqidai"
+            android:visibility="gone" />
+
+        <com.tenone.gamebox.view.custom.TwoStateButton
+            android:id="@+id/id_nc_game_list_yy"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:defultColor_TwoStateButton="@color/blue_40"
+            app:defultDrawable_TwoStateButton="@drawable/radiu_progressbar"
+            app:defultText_TwoStateButton="预约"
+            app:otherColor_TwoStateButton="@color/white"
+            app:otherDrawable_TwoStateButton="@drawable/shape_getcode_gray"
+            app:otherText_TwoStateButton="已预约" />
+
+        <TextView
+            android:id="@+id/id_nc_game_list_welfare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_nc_game_list_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/id_nc_game_list_icon"
+            android:background="@drawable/shape_welfare"
+            android:maxLength="20"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <com.tenone.gamebox.view.custom.LableView
+            android:id="@+id/id_nc_game_list_lableView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/id_nc_game_list_welfare"
+            android:layout_below="@id/id_nc_game_list_gameName"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/id_nc_game_list_img"
+            android:layout_toRightOf="@id/id_nc_game_list_icon"
+            android:gravity="center_vertical"></com.tenone.gamebox.view.custom.LableView>
+
+    </RelativeLayout>
+</LinearLayout>

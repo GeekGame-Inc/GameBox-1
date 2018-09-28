@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_footer_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:minHeight="40dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/id_footer_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <com.tenone.gamebox.view.custom.loadingindicator.AVLoadingIndicatorView
+        android:id="@+id/id_footer_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        app:indicatorColor="@color/black"
+        app:indicatorName="BallPulseIndicator"
+        app:maxHeight="50dp"
+        app:maxWidth="50dp"
+        app:minHeight="35dp"
+        app:minWidth="35dp" />
+
+</LinearLayout>

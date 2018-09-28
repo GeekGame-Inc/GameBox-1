@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 公共游戏列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/id_game_list_item_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/id_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|left"
+            android:paddingBottom="7dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_game_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="80dp">
+
+        <ImageView
+            android:id="@+id/id_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/icon_fan" />
+
+        <ImageView
+            android:id="@+id/id_game_list_item_gameImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_loading_logo"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/id_game_list_item_gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_game_list_item_gameImg"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/id_game_list_item_gameImg"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/id_game_list_item_gameSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_game_list_item_gameName"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/id_icon"
+            android:layout_toRightOf="@id/id_game_list_item_gameName"
+            android:textColor="@color/textColor1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/id_game_list_item_gameDownTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_game_list_item_gameImg"
+            android:layout_toLeftOf="@id/id_icon"
+            android:layout_toRightOf="@id/id_game_list_item_gameImg"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/textColor1"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/id_game_list_item_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/id_game_list_item_gameDownTimes"
+            android:layout_below="@id/id_game_list_item_gameName"
+            android:layout_toLeftOf="@id/id_icon"
+            android:layout_toRightOf="@id/id_game_list_item_gameImg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"></LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

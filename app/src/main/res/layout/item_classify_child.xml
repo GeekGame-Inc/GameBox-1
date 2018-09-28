@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:id="@+id/id_classify_layout" >
+
+    <com.tenone.gamebox.view.custom.MyGridView
+        android:id="@+id/id_classify_childGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/white"
+        android:listSelector="@color/transparent"
+        android:numColumns="4" >
+    </com.tenone.gamebox.view.custom.MyGridView>
+
+</LinearLayout>

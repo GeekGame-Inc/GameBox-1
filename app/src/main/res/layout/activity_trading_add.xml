@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar"></include>
+
+    <EditText
+        android:id="@+id/id_trading_add_accountEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_yonghu"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入将要关联的账号的用户名"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/id_trading_add_pwdEt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border_bottom"
+        android:drawableLeft="@drawable/c_icon_mima"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:hint="请输入将要关联的账号密码"
+        android:inputType="textPassword"
+        android:textColor="@color/gray_69"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/id_trading_add_add"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_bt"
+        android:gravity="center"
+        android:text="关联"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="*注意:只能输入游戏账号用户名,手机号无效"
+        android:textColor="@color/gray_9a"
+        android:textSize="12sp" />
+
+</LinearLayout>

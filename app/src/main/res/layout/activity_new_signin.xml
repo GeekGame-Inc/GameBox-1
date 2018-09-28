@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/id_new_sigin_bg"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/a_icon_beijin" />
+
+
+            <com.tenone.gamebox.view.custom.MyGridView
+                android:id="@+id/id_new_sigin_grid1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:horizontalSpacing="3dp"
+                android:numColumns="4"></com.tenone.gamebox.view.custom.MyGridView>
+
+
+            <com.tenone.gamebox.view.custom.MyGridView
+                android:id="@+id/id_new_sigin_grid2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_new_sigin_grid1"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="3dp"
+                android:numColumns="4"></com.tenone.gamebox.view.custom.MyGridView>
+
+
+            <RelativeLayout
+                android:id="@+id/id_new_sigin_bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/shape_w"
+                android:elevation="3dp"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/id_signin_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="本月已累计签到0天，继续签到3天可获得额外奖励"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_day"
+                    android:layout_marginTop="10dp"
+                    android:text="签到说明:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_text"
+                    android:layout_marginTop="5dp"
+                    android:text="1.每日签到"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_ereyDayTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_tv1"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/gray_80"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_ereyDayTv"
+                    android:layout_marginTop="5dp"
+                    android:text="2.累计签到奖励"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_addTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_tv2"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/gray_80"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_addTv"
+                    android:layout_marginTop="5dp"
+                    android:text="3.签到规则"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_rule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_tv3"
+                    android:layout_marginTop="5dp"
+                    android:text="签到界面展示本月内累计签到天数，本月签到天数只在本月有效，下个月累计签到天数清零，并重新计数。"
+                    android:textColor="@color/gray_80"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_rule"
+                    android:layout_marginTop="5dp"
+                    android:text="4.签到金币未到帐"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/id_signin_orther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_signin_tv4"
+                    android:layout_marginTop="5dp"
+                    android:text="请在24小时之内联系客服，客服确认信息后，后台给您补发金币。"
+                    android:textColor="@color/gray_80"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/id_signin_signIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="45dp"
+                android:elevation="4dp"
+                android:src="@drawable/selector_sigin" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/id_new_sigin_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:descendantFocusability="blocksDescendants"
+        android:minHeight="44dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:navigationIcon="@drawable/selector_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/id_new_sigin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:scrollHorizontally="true"
+            android:text="签到"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/id_new_sigin_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/b_icon_qiandoadikuang"
+        android:drawableLeft="@drawable/c_icon_meiriqiandao"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:text="每日签到"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|left"
+        android:padding="5dp"
+        android:text="@string/longClickUnInstall"
+        android:textColor="@color/gray_9a"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/id_installed_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"></ListView>
+
+</RelativeLayout>

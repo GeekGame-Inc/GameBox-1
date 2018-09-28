@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_titleBar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/id_titleBar_leftImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/empty"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/id_titleBar_leftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:textColor="@color/gray_69"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_titleBar_leftTextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/id_titleBar_leftImg"
+        android:textColor="@color/gray_69"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/id_titleBar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:textColor="@color/gray_69"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:maxLength="8"
+        android:ellipsize="middle" />
+
+    <ImageView
+        android:id="@+id/id_titleBar_rightImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/empty"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/id_titleBar_rightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:textColor="@color/gray_69"
+        android:textSize="16sp" />
+
+</RelativeLayout>

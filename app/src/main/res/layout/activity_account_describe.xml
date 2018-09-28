@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f2"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <com.tenone.gamebox.view.custom.CustomizeEditText
+        android:id="@+id/id_account_describe_edit"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/radiu_border"
+        android:gravity="left|top"
+        android:hint="可以按照账号等级、装备、道具等。(200字内,填写描述,可以更快速完成交易喔!)"
+        android:maxLength="200"
+        android:padding="10dp"
+        android:textColor="@color/black_33"
+        android:textColorHint="@color/gray_9a"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_account_describe_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/id_userIntro_edit"
+        android:layout_below="@id/id_userIntro_edit"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical|right"
+        android:text="0/200"
+        android:textColor="@color/defultTextColor"
+        android:textSize="12sp" />
+</LinearLayout>

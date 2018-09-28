@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/id_notificaiton_img"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_logo_failure" />
+
+    <CheckBox
+        android:id="@+id/id_notificaiton_check"
+        style="@style/CheckBoxStyle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_notificaiton_gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_notificaiton_img"
+        android:layout_marginLeft="3dp"
+        android:layout_toLeftOf="@id/id_notificaiton_check"
+        android:layout_toRightOf="@id/id_notificaiton_img"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/black_33"
+        android:textSize="14sp" />
+
+    
+    
+    <TextView
+        android:layout_alignBottom="@id/id_notificaiton_img"
+        android:id="@+id/id_notificaiton_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_toLeftOf="@id/id_notificaiton_check"
+        android:layout_toRightOf="@id/id_notificaiton_img"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_9a"
+        android:textSize="12sp" />
+    
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_above="@id/id_notificaiton_time"
+        android:id="@+id/id_notificaiton_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_notificaiton_gameName"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toLeftOf="@id/id_notificaiton_check"
+        android:layout_toRightOf="@id/id_notificaiton_img"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_69"
+        android:textSize="12sp" />
+
+</RelativeLayout>

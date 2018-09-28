@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <include layout="@layout/item_prizes" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lineBg" />
+
+    <ListView
+        android:id="@+id/id_prizes_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/lineBg"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/id_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/id_dynamic_details_praiseLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_dynamic_details_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:id="@+id/id_dynamic_details_stepOnLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_dynamic_details_stepOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:id="@+id/id_dynamic_details_shareLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_dynamic_details_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:id="@+id/id_dynamic_details_commentLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_dynamic_details_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/id_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/id_bottom"
+            android:background="@color/lineBg"></View>
+
+        <com.tenone.gamebox.view.custom.RefreshLayout
+            android:id="@+id/id_dynamic_details_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/id_line">
+
+            <com.tenone.gamebox.view.custom.MyRefreshListView
+                android:id="@+id/id_dynamic_details_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/lineBg"
+                android:dividerHeight="1dp"
+                android:headerDividersEnabled="true"></com.tenone.gamebox.view.custom.MyRefreshListView>
+        </com.tenone.gamebox.view.custom.RefreshLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/id_dynamic_details_editLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_dynamic_details_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="发送"
+                android:textSize="14sp" />
+
+            <EditText
+                android:imeOptions="actionSend"
+                android:id="@+id/id_dynamic_details_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@id/id_dynamic_details_send"
+                android:background="@drawable/radiu_border"
+                android:gravity="center_vertical"
+                android:hint="说点什么吧..."
+                android:padding="5dp"
+                android:textColorHint="@color/defultTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

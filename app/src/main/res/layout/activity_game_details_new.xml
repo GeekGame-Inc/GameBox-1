@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tenone.gamebox.view.custom.CoordinatorTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:button="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatortablayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_gameDetails_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:background="@color/lineBg"></View>
+
+    <RelativeLayout
+        android:id="@+id/id_bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.tenone.gamebox.view.custom.TwoStateImageView
+            android:id="@+id/id_gameDetails_collect"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="center"
+            button:defultDrawable_TwoStateImage="@drawable/ic_collect_no"
+            button:otherDrawable_TwoStateImage="@drawable/ic_collect_start" />
+
+        <com.tenone.gamebox.view.custom.TwoStateImageView
+            android:id="@+id/id_gameDetails_share"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="center"
+            button:defultDrawable_TwoStateImage="@drawable/ic_share_no"
+            button:otherDrawable_TwoStateImage="@drawable/ic_shared" />
+
+        <com.tenone.gamebox.view.custom.DownProgress
+            android:id="@+id/id_gameDetails_dwon"
+            style="@style/ProgressBar_Down"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/id_gameDetails_share"
+            android:layout_toRightOf="@id/id_gameDetails_collect"
+            app:textSize_DownProgressStyle="14sp" />
+    </RelativeLayout>
+</com.tenone.gamebox.view.custom.CoordinatorTabLayout>
+

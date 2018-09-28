@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_item_alreadyOpen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/id_item_alreadyOpen_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/empty" />
+
+    <TextView
+        android:id="@+id/id_item_alreadyOpen_nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_item_alreadyOpen_img"
+        android:layout_toRightOf="@+id/id_item_alreadyOpen_img"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_item_alreadyOpen_sizeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_item_alreadyOpen_img"
+        android:layout_toRightOf="@id/id_item_alreadyOpen_img"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/id_item_alreadyOpen_labelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_item_alreadyOpen_sizeTv"
+        android:layout_below="@id/id_item_alreadyOpen_nameTv"
+        android:layout_toRightOf="@id/id_item_alreadyOpen_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.tenone.gamebox.view.custom.DownProgress
+        android:id="@+id/id_item_alreadyOpen_progress"
+        style="@style/ProgressBar_Down"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:max="100"
+        app:textSize_DownProgressStyle="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 公共游戏列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_game_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="80dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/id_game_top_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_loading_logo"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/id_game_top_gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/id_game_top_icon"
+        android:ellipsize="end"
+        android:gravity="left|top"
+        android:maxLength="7"
+        android:maxLines="1"
+        android:text="名字"
+        android:textColor="@color/textColor1"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/id_game_top_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_game_top_gameName"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/id_game_top_gameName"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="大小"
+        android:textColor="@color/gray_69"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/id_game_top_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_game_top_gameName"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/id_game_top_size"
+        android:background="@drawable/shape_red"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="折扣"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_game_top_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_game_top_gameName"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/id_game_top_size"
+        android:background="@drawable/radiu_today"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="今日首发"
+        android:textColor="@color/purple_df4"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/id_game_top_welfare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_game_top_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/id_game_top_icon"
+        android:background="@drawable/shape_welfare"
+        android:maxLength="20"
+        android:paddingBottom="1dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="1dp"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/id_game_top_ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/j_icon_shuzidi"
+        android:gravity="center"
+        android:paddingEnd="2dp"
+        android:paddingStart="2dp"
+        android:textColor="@color/defultTextColor"
+        android:textSize="13sp" />
+
+    <com.tenone.gamebox.view.custom.LableView
+        android:id="@+id/id_game_top_lableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_game_top_welfare"
+        android:layout_below="@id/id_game_top_gameName"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/id_game_top_icon"
+        android:layout_toLeftOf="@id/id_game_top_ranking"
+        android:gravity="center_vertical"></com.tenone.gamebox.view.custom.LableView>
+</RelativeLayout>

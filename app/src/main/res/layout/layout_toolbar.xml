@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_gravity="top"
+    android:layout_height="130dp">
+
+    <RelativeLayout
+        android:layout_marginTop="45dp"
+        android:id="@+id/id_group_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_collapseMode="parallax">
+
+        <ImageView
+            android:id="@+id/id_gameDetails_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/id_gameDetails_gameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_gameDetails_img"
+            android:layout_toRightOf="@id/id_gameDetails_img"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/id_gameDetails_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_gameDetails_gameName"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/id_gameDetails_gameName"
+            android:gravity="center_vertical|bottom"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/id_gameDetails_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_gameDetails_img"
+            android:layout_below="@id/id_gameDetails_label"
+            android:layout_toRightOf="@id/id_gameDetails_img"
+            android:gravity="bottom"
+            android:textColor="@color/defultTextColor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

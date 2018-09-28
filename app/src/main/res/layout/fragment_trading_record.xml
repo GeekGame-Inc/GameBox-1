@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/id_record_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_record_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/selector_up_down_trading"
+            android:gravity="right|center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="全部" />
+    </LinearLayout>
+
+
+    <com.tenone.gamebox.view.custom.RefreshLayout
+        android:id="@+id/id_record_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_record_topLayout">
+
+        <com.tenone.gamebox.view.custom.MyRefreshListView
+            android:id="@+id/id_record_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/divider"
+            android:dividerHeight="1px"
+            android:headerDividersEnabled="false"></com.tenone.gamebox.view.custom.MyRefreshListView>
+
+
+    </com.tenone.gamebox.view.custom.RefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<paths>
+
+    <root-path
+        name="root_path"
+        path="." />
+    
+    <files-path
+        name="filesDir"
+        path="test1" />
+
+    <cache-path
+        name="appCache"
+        path="cache" />
+
+    <external-path
+        name="downloadFile"
+        path="185BoxDownload" />
+
+    <external-files-path
+        name="photoFile"
+        path="header" />
+
+    <external-cache-path
+        name="imgCache"
+        path="header" />
+
+</paths>

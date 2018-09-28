@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dlp="http://schemas.android.com/apk/res-auto"
+    xmlns:trading="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_game_new_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/id_game_new_collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:collapsedTitleTextAppearance="@style/ToolBarTitleText"
+            app:contentScrim="@color/white"
+            app:expandedTitleGravity="left"
+            app:expandedTitleTextAppearance="@style/transparentText"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <LinearLayout
+                android:id="@+id/id_new_game_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_xqbj"
+                android:orientation="vertical"
+                android:paddingTop="70dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/radiu_white_top"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="1dp">
+
+
+                    <ImageView
+                        android:id="@+id/id_new_game_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription='""'
+                        android:src="@drawable/ic_loading_logo" />
+
+                    <ImageView
+                        android:id="@+id/id_new_game_operate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_new_game_icon"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription='""'
+                        android:src="@drawable/selector_xqbq"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/id_new_game_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_new_game_operate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/textColor1"
+                        android:textSize="16sp" />
+
+                    <com.tenone.gamebox.view.custom.LableView
+                        android:id="@+id/id_new_game_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_new_game_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14dp"></com.tenone.gamebox.view.custom.LableView>
+
+                    <RelativeLayout
+                        android:id="@+id/id_relative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_new_game_label"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:maxLines="1"
+                            android:id="@+id/id_new_game_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/gray_69"
+                            android:textSize="11sp" />
+
+                        <View
+                            android:id="@+id/l"
+                            android:layout_width="2dp"
+                            android:layout_height="9dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toRightOf="@id/id_new_game_size"
+                            android:background="@color/gray_69"></View>
+
+
+                        <TextView
+                            android:id="@+id/id_new_game_times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/l"
+                            android:maxLines="1"
+                            android:textColor="@color/gray_69"
+                            android:textSize="11sp" />
+
+
+                        <LinearLayout
+                            android:id="@+id/id_new_game_timeLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toRightOf="@id/id_new_game_times"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="9dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@color/gray_69"></View>
+
+                            <TextView
+                                android:maxLines="1"
+                                android:id="@+id/id_new_game_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/gray_69"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_relative"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@drawable/e_icon_fengexianshang"></View>
+
+                        <RelativeLayout
+                            android:id="@+id/id_new_game_topLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="15dp"
+                                android:text="185平台最火游戏"
+                                android:textColor="@color/textColor1"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/id_new_game_topTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="15dp"
+                                android:drawablePadding="3dp"
+                                android:drawableRight="@drawable/c_icon_top"
+                                android:gravity="center"
+                                android:textColor="@color/blue_40"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/id_new_game_questionAndAnswer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/id_new_game_consult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/shape_login_bt"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="4dp"
+                                android:text="向Ta请教"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/id_new_game_player"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_toLeftOf="@id/id_new_game_consult"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/textColor1"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:id="@+id/id_new_game_questionNums"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/id_new_game_player"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_toLeftOf="@id/id_new_game_consult"
+                                android:gravity="left|center_vertical"
+                                android:textColor="@color/textColor1"
+                                android:textSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@drawable/f_icon_fenggexianxia"></View>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:paddingTop="13dp">
+
+                        <TextView
+                            android:id="@+id/id_new_game_qq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:drawablePadding="3dp"
+                            android:drawableTop="@drawable/ic_qq"
+                            android:text="玩家QQ群"
+                            android:textColor="@color/textColor1"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <com.tenone.gamebox.view.custom.IconTopTextBottomView
+                            android:id="@+id/id_new_game_trading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/id_new_game_qq"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:visibility="visible"
+                            trading:badge_num="10"
+                            trading:def_color="@color/defultTextColor"
+                            trading:def_icon="@drawable/d_icon_zhjy_an"
+                            trading:icon="@drawable/d_icon_zhjy"
+                            trading:other_color="@color/blue_40"
+                            trading:text_size="6sp"
+                            trading:tv_text="账号交易" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/id_new_game_disLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/icon_xqzk"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/id_new_game_dis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/id_new_game_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:descendantFocusability="blocksDescendants"
+                android:minHeight="44dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/selector_back"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:id="@+id/id_new_game_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/gray_69"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/id_new_game_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="26dp"
+                    android:contentDescription='""'
+                    android:scrollHorizontally="true"
+                    android:src="@drawable/selector_share" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:tabMode="fixed">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/id_new_game_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/border_top_bottom"
+                app:tabIndicatorColor="@color/blue"
+                app:tabSelectedTextColor="@color/blue"
+                app:tabTextAppearance="@style/TabLayoutTextSizeStyle"
+                app:tabTextColor="@color/gray_69" />
+
+            <View
+                android:id="@+id/id_new_game_labelView"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+
+            <View
+                android:id="@+id/id_new_game_labelView2"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+
+            <View
+                android:id="@+id/id_new_game_labelView3"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_new_game_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginBottom="45dp"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/id_new_game_promptLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/i_icon_dp_di"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/id_new_game_promptClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription='""'
+            android:src="@drawable/i_icon_dp_quxiaoanniiu" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="@color/gray_f2">
+
+        <TextView
+            android:id="@+id/id_new_game_sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="9dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_sc"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="收藏"
+            android:textColor="@color/blue_40"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/id_new_game_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="9dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/icon_pl"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="评论"
+            android:textColor="@color/blue_40"
+            android:textSize="11sp" />
+
+
+        <com.tenone.gamebox.view.custom.DownloadProgressBar
+            android:id="@+id/id_new_game_down"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@id/id_new_game_pl"
+            android:layout_toRightOf="@id/id_new_game_sc"
+            dlp:bar_borderWidth="1dp"
+            dlp:bar_radius="20dp"
+            dlp:bar_textSize="15sp"
+            dlp:loadingColor="@color/blue_40"
+            dlp:progress_text_color="@color/white"
+            dlp:stopColor="@color/blue_40" />
+
+        <TextView
+            android:id="@+id/id_new_game_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@id/id_new_game_pl"
+            android:layout_toRightOf="@id/id_new_game_sc"
+            android:background="@drawable/shape_login_bt"
+            android:gravity="center"
+            android:text="开始游戏"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

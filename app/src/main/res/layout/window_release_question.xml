@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_window_release_question_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/id_relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <com.tenone.gamebox.view.custom.CustomizeEditText
+            android:id="@+id/id_window_release_question_edit"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/radiu_line"
+            android:gravity="left|top"
+            android:hint="@string/release_question_hint"
+            android:maxLength="100"
+            android:padding="10dp"
+            android:textColor="@color/textColor1"
+            android:textColorHint="@color/hintColor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/id_window_release_question_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/id_window_release_question_edit"
+            android:layout_below="@id/id_window_release_question_edit"
+            android:layout_marginTop="10dp"
+            android:text="0/100"
+            android:textColor="@color/hintColor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_relative2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@id/id_relative1"
+        android:background="@color/white"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+
+        <TextView
+            android:id="@+id/id_window_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="向0位玩过该游戏的人请教"
+            android:textColor="@color/defultTextColor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/id_window_release_question_release"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_getcode"
+            android:clickable="false"
+            android:paddingBottom="3dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="3dp"
+            android:text="提问"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/id_window_release_question_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toLeftOf="@id/id_window_release_question_release"
+            android:background="@color/white"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:layout_toLeftOf="@id/id_window_release_question_reward"
+            android:text="悬赏:"
+            android:textColor="@color/defultTextColor"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_window_release_question_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/id_relative2"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

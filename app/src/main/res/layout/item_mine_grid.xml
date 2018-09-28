@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mine_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/id_mine_line"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/lineBg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/id_mine_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/empty" />
+
+        <TextView
+            android:id="@+id/id_mine_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_mine_iv"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/id_mine_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/ic_next_class"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/defultTextColor"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+</LinearLayout>

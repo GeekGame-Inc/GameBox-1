@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_attention_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/id_attention_item_gameImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="7dp"
+        android:contentDescription="@string/empty"
+        android:scaleType="fitXY" />
+
+
+    <com.tenone.gamebox.view.custom.DownloadProgressBar
+        android:id="@+id/id_attention_item_gameBt"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        app:bar_borderWidth="1dp"
+        app:bar_radius="15dp"
+        app:bar_textSize="12sp"
+        app:loadingColor="@color/blue_40"
+        app:progress_text_color="@color/white"
+        app:stopColor="@color/blue_40" />
+
+    <TextView
+        android:id="@+id/id_attention_item_gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_attention_item_gameImg"
+        android:layout_gravity="center_vertical"
+        android:layout_toRightOf="@id/id_attention_item_gameImg"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/id_attention_item_gameDownTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_attention_item_gameImg"
+        android:layout_toRightOf="@id/id_attention_item_gameImg"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RatingBar
+        android:id="@+id/id_attention_item_gameRatingBar"
+        style="@style/CustomerRatingbarStyle"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/id_attention_item_gameImg"
+        android:isIndicator="true"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/id_attention_item_cancleAttention"
+        android:layout_width="83dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_shadow"
+        android:gravity="center"
+        android:text="@string/cancleCollect"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

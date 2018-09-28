@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/id_classify_groupTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/l"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textColor="@color/black_33"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_classify_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/id_classify_groupTv"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/l"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_jt_y"
+            android:padding="10dp"
+            android:text="@string/more"
+            android:textColor="@color/gray_69"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <com.tenone.gamebox.view.custom.MyGridView
+        android:id="@+id/id_classify_childGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:cacheColorHint="@color/white"
+        android:listSelector="@color/transparent"
+        android:numColumns="4"></com.tenone.gamebox.view.custom.MyGridView>
+
+</LinearLayout>

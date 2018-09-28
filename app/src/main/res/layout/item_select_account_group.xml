@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dp">
+
+    <TextView
+        android:drawableLeft="@drawable/c_icon_liuchengdian"
+        android:id="@+id/id_item_select_account_group_accoutTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawablePadding="4dp"
+        android:drawableRight="@drawable/selector_up_down_trading"
+        android:text="账号1 : 1325452145"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/textsize_14" />
+
+    <TextView
+        android:id="@+id/id_item_select_account_group_statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="交易中"
+        android:textColor="@color/blue_40" />
+
+</RelativeLayout>

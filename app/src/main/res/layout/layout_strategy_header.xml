@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical|start"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/hotGameCircle"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line0" />
+
+    <com.tenone.gamebox.view.custom.MyGridView
+        android:id="@+id/id_strategyHeader_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/white"
+        android:contentDescription="@string/empty"
+        android:listSelector="@color/white"
+        android:scrollbars="none" >
+    </com.tenone.gamebox.view.custom.MyGridView>
+
+</LinearLayout>

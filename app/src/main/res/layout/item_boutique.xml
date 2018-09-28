@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/id_boutique_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_loading_logo" />
+
+        <TextView
+            android:id="@+id/id_boutique_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/id_boutique_icon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/id_boutique_icon"
+            android:text="游戏名字"
+            android:textColor="@color/textColor1"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_boutique_icon"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/id_boutique_icon"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_boutique_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游戏类型"
+                android:textColor="@color/defultTextColor"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="13dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/line0"></View>
+
+            <TextView
+                android:id="@+id/id_boutique_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游戏大小"
+                android:textColor="@color/defultTextColor"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/radius_border_kf"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="查看详情"
+            android:textColor="@color/blue_40"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/id_boutique_imgRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/id_boutique_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_boutique_imgRoot"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent_half"
+            android:drawableLeft="@drawable/icon_boutique_comment"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:paddingStart="7dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="3dp"
+            android:text="7个游戏点评"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_boutique_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="游戏简介"
+        android:textColor="@color/textColor1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lineBg" />
+</LinearLayout>

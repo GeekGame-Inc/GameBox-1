@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:padding="5dp">
+
+
+    <com.tenone.gamebox.view.custom.CircleImageView
+        android:id="@+id/id_item_dynamic_comment_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        app:border_color="@color/white"
+        app:border_width="1dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_item_dynamic_comment_header"
+        android:layout_toRightOf="@id/id_item_dynamic_comment_header">
+
+        <TextView
+            android:id="@+id/id_item_dynamic_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4844512"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gray_69"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/id_item_dynamic_comment_vipImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_item_dynamic_comment_name"
+            android:layout_alignTop="@id/id_item_dynamic_comment_name"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/id_item_dynamic_comment_name"
+            android:src="@drawable/icon_dynamic_vip" />
+
+        <TextView
+            android:id="@+id/id_item_dynamic_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_item_dynamic_comment_name"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:textColor="@color/black_33"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_item_dynamic_comment_content"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/id_item_dynamic_comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="211122541"
+                android:textColor="@color/gray_9a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/id_item_dynamic_comment_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:textColor="@color/gray_9a"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/id_item_dynamic_comment_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/id_item_dynamic_comment_praise"
+                android:background="@drawable/radiu_border"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="删除"
+                android:textColor="@color/black_33"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/id_item_dynamic_comment_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/id_item_dynamic_comment_praise"
+                android:drawableLeft="@drawable/icon_dynamic_comment_sm"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:text="回复"
+                android:textColor="@color/defultTextColor"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/id_item_dynamic_comment_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_dynamic_top"
+        android:visibility="gone" />
+</RelativeLayout>

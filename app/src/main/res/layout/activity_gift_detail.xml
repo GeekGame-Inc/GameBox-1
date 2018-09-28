@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:button="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/id_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_xqf_b" />
+
+        <TextView
+            android:id="@+id/id_gift_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="礼包详情"
+            android:textColor="@color/gray_69"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/id_gift_detail_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_xiazai" />
+
+        <View
+            android:id="@+id/id_gift_detail_right_view"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/id_gift_detail_game_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_gift_detail_gameIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_loading_logo" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_gameName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/id_gift_detail_gameIcon"
+                    android:layout_toRightOf="@id/id_gift_detail_gameIcon"
+                    android:textColor="@color/black_33"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_gameIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/id_gift_detail_gameIcon"
+                    android:layout_toRightOf="@id/id_gift_detail_gameIcon"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_9a"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_gameSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/id_gift_detail_gameIntro"
+                    android:layout_below="@id/id_gift_detail_gameName"
+                    android:layout_toRightOf="@id/id_gift_detail_gameIcon"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray_69"
+                    android:textSize="13sp" />
+
+
+                <com.tenone.gamebox.view.custom.DownloadProgressBar
+                    android:id="@+id/id_gift_detail_down"
+                    android:layout_width="70dp"
+                    android:layout_height="26dp"
+                    android:layout_above="@id/id_gift_detail_gameIntro"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="20dp"
+                    app:bar_borderWidth="1dp"
+                    app:bar_radius="15dp"
+                    app:bar_textSize="12sp"
+                    app:loadingColor="@color/blue_40"
+                    app:progress_text_color="@color/white"
+                    app:stopColor="@color/blue_40" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineBg"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/id_gift_detail_giftName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor1"
+                    android:textSize="14sp" />
+
+                <com.tenone.gamebox.view.custom.TwoStateButton
+                    android:id="@+id/id_gift_detail_get"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    button:defultColor_TwoStateButton="@color/blue_40"
+                    button:defultDrawable_TwoStateButton="@drawable/radiu_progressbar"
+                    button:defultText_TwoStateButton="领取"
+                    button:otherColor_TwoStateButton="@color/white"
+                    button:otherDrawable_TwoStateButton="@drawable/radiu_shape_full"
+                    button:otherText_TwoStateButton="复制" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_gift_detail_giftName"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/id_gift_detail_get">
+
+                    <TextView
+                        android:id="@+id/id_gift_detail_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="(剩余5%)"
+                        android:textColor="@color/defultTextColor"
+                        android:textSize="12sp" />
+
+                    <ProgressBar
+                        android:id="@+id/id_gift_detail_giftProgress"
+                        style="@style/progressbar_gif"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/id_gift_detail_num"
+                        android:max="100" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.礼包内容"
+                    android:textColor="@color/blue_40"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray_9a"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.兑换方法"
+                    android:textColor="@color/blue_40"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_use"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray_9a"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.注意事项"
+                    android:textColor="@color/blue_40"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_attention"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lineBg"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.礼包时间"
+                    android:textColor="@color/blue_40"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_gift_detail_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="10dp"
+                    android:textColor="@color/gray_9a"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

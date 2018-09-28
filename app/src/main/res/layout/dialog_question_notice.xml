@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/radiu_line_border">
+
+    <TextView
+        android:id="@+id/id_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/radius_top_blue"
+        android:gravity="center"
+        android:text="问答须知"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/id_dialog_know"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/radius_bottom_white"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="@color/defultTextColor"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/id_dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/id_dialog_know"
+        android:background="@color/lineBg"></View>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/id_dialog_line"
+        android:layout_below="@id/id_dialog_title"
+        android:padding="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="6dp"
+                android:text="想对新接触的游戏有更多的了解？游戏问答----让您有地方问,让大神为您解答。"
+                android:textColor="@color/defultTextColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="问答礼仪"
+                android:textColor="@color/textColor1"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/id_dialog_protocol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="礼仪1"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="礼仪2"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="问答须知"
+                android:textColor="@color/textColor1"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:id="@+id/id_dialog_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="1.须知1"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="2.须知2"
+                    android:textColor="@color/defultTextColor"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

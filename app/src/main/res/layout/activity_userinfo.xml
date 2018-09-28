@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rating="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_userInfo_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/id_userInfo_collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/white"
+            app:expandedTitleGravity="center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:paddingBottom="10dp"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax">
+
+                <com.tenone.gamebox.view.custom.CircleImageView
+                    android:id="@+id/id_userInfo_header"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/icon_touxiang"
+                    app:border_color="@color/white"
+                    app:border_width="1.3dp" />
+
+                <LinearLayout
+                    android:id="@+id/id_linear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_userInfo_header"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/id_userInfo_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/id_userInfo_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/selector_sex" />
+
+                    <ImageView
+                        android:id="@+id/id_userInfo_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/icon_dynamic_vip" />
+
+
+                    <TextView
+                        android:id="@+id/id_userInfo_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/radius_border_white"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_linear1"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老司机指数:"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <com.tenone.gamebox.view.custom.CustomerRatingBar
+                        android:id="@+id/id_userInfo_ratingBar"
+                        style="@style/DynamicRatingbarBigStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        rating:starCount="5"
+                        rating:starEmpty="@drawable/icon_dynamic_nullxing"
+                        rating:starFill="@drawable/icon_dynamic_xing"
+                        rating:starHalf="@drawable/icon_dynamic_nullxing"
+                        rating:starImageSize="10dp"
+                        rating:starPadding="3dp"
+                        rating:starStep="2.5"
+                        rating:stepSize="Full" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_userInfo_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/id_userInfo_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:descendantFocusability="blocksDescendants"
+                android:minHeight="44dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/selector_back"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:id="@+id/id_userInfo_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/gray_69"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/id_userInfo_rightTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="10dp"
+                    android:scrollHorizontally="true"
+                    android:textColor="@drawable/titletext_select_color"
+                    android:textSize="15sp" />
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:tabMode="fixed">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/id_userInfo_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/border_top_bottom"
+                app:tabIndicatorColor="@color/blue_40"
+                app:tabSelectedTextColor="@color/blue_40"
+                app:tabTextAppearance="@style/TabLayoutTextSizeStyle"
+                app:tabTextColor="@color/gray_69"></android.support.design.widget.TabLayout>
+
+            <View
+                android:id="@+id/id_userInfo_labelView1"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+
+            <View
+                android:id="@+id/id_userInfo_labelView2"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+
+            <View
+                android:id="@+id/id_userInfo_labelView3"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:focusable="false"></View>
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_userInfo_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>

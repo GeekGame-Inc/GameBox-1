@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/id_signin_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/radiu_sign_border"
+                android:paddingBottom="12dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="12dp"
+                android:text="签到"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/id_signin_signNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/textColor1" />
+
+            <com.tenone.gamebox.view.custom.SignInView
+                android:id="@+id/id_signin_signView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@id/id_signin_signNum"
+                android:layout_centerHorizontal="true" >
+            </com.tenone.gamebox.view.custom.SignInView>
+
+            <View
+                android:id="@+id/id_signin_line1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/id_signin_signView"
+                android:layout_marginTop="15dp"
+                android:background="@color/lineBg" />
+
+            <TextView
+                android:id="@+id/id_signin_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_line1"
+                android:padding="10dp"
+                android:text="签到说明:"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/id_signin_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/id_signin_text"
+                android:background="@color/lineBg" />
+
+            <TextView
+                android:id="@+id/id_signin_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_line2"
+                android:padding="10dp"
+                android:text="1.每日签到"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_ereyDayTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_tv1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/textColor1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_ereyDayTv"
+                android:padding="10dp"
+                android:text="2.累计签到奖励"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_addTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_tv2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/textColor1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_addTv"
+                android:padding="10dp"
+                android:text="3.签到规则"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_tv3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="签到界面展示本月内累计签到天数，本月签到天数只在本月有效，下个月累计签到天数清零，并重新计数。"
+                android:textColor="@color/textColor1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_rule"
+                android:padding="10dp"
+                android:text="4.签到金币未到帐"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_signin_orther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_signin_tv4"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="请在24小时之内联系客服，客服确认信息后，后台给您补发金币。"
+                android:textColor="@color/textColor1"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

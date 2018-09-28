@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/StyledIndicatorsNew"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/id_driving_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/border_top_bottom"
+            app:tabIndicatorColor="@color/blue"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/blue"
+            app:tabTextAppearance="@style/TabLayoutTextSizeStyle"
+            app:tabTextColor="@color/gray_69">
+
+        </android.support.design.widget.TabLayout>
+
+        <TextView
+            android:id="@+id/id_driving_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/id_driving_tabLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/id_driving_tabLayout"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_driving_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/id_driving_tabLayout" />
+
+        <ImageView
+            android:id="@+id/id_driving_publishDynamics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_pub_dynamic" />
+    </RelativeLayout>
+
+</LinearLayout>

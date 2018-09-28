@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabButtonAttr">
+        <attr name="text" format="string"></attr>
+        <attr name="checkedIcon" format="reference"></attr>
+        <attr name="defultIcon" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="XBanner">
+        <attr name="isAutoPlay" format="boolean" />
+        <attr name="AutoPlayTime" format="integer|reference" />
+        <attr name="pointNormal" format="color|reference" />
+        <attr name="pointSelect" format="color|reference" />
+        <attr name="pointsVisibility" format="boolean" />
+        <attr name="pointsPosition" format="enum">
+            <enum name="LEFT" value="0" />
+            <enum name="CENTER" value="1" />
+            <enum name="RIGHT" value="2" />
+        </attr>
+        <attr name="pointsContainerBackground" format="reference|color" />
+        <attr name="pointContainerPosition" format="enum">
+            <enum name="TOP" value="10" />
+            <enum name="BOTTOM" value="12" />
+        </attr>
+        <!-- 指示点容器左右内间距 -->
+        <attr name="pointContainerLeftRightPadding" format="dimension" />
+        <!-- 指示点上下内间距 -->
+        <attr name="pointTopBottomPadding" format="dimension" />
+        <!-- 指示点左右内间距 -->
+        <attr name="pointLeftRightPadding" format="dimension" />
+        <!-- 提示文案的文字颜色 -->
+        <attr name="tipTextColor" format="reference|color" />
+        <!-- 提示文案的文字大小 -->
+        <attr name="tipTextSize" format="dimension" />
+        <!-- 是否是数字指示器 -->
+        <attr name="isShowNumberIndicator" format="boolean" />
+        <!-- 数字指示器背景 -->
+        <attr name="numberIndicatorBacgroud" format="reference" />
+        <!-- 当只有一页数据时是否显示指示器，默认值为false -->
+        <attr name="isShowIndicatorOnlyOne" format="boolean" />
+        <!-- 图片切换速度 -->
+        <attr name="pageChangeDuration" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CirCleRefreshLayout">
+        <attr name="AniBackColor" format="color" />
+        <attr name="AniForeColor" format="color" />
+        <attr name="CircleSmaller" format="integer" />
+    </declare-styleable>
+    <!-- 加载动画 -->
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension" />
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension" />
+        <attr name="indicatorName" format="string" />
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="DownProgressStyle">
+        <attr name="textSize_DownProgressStyle" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TwoStateButtonAttr">
+        <attr name="defultDrawable_TwoStateButton" format="reference" />
+        <attr name="otherDrawable_TwoStateButton" format="reference" />
+        <attr name="defultText_TwoStateButton" format="string" />
+        <attr name="otherText_TwoStateButton" format="string" />
+        <attr name="defultColor_TwoStateButton" format="color" />
+        <attr name="otherColor_TwoStateButton" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ThreeStateButtonAttr">
+        <attr name="defultDrawable_ThreeStateButton" format="reference" />
+        <attr name="otherDrawable_ThreeStateButton" format="reference" />
+        <attr name="threeDrawable_ThreeStateButton" format="reference" />
+        <attr name="defultText_ThreeStateButton" format="string" />
+        <attr name="otherText_ThreeStateButton" format="string" />
+        <attr name="threeText_ThreeStateButton" format="string" />
+        <attr name="defultColor_ThreeStateButton" format="color" />
+        <attr name="otherColor_ThreeStateButton" format="color" />
+        <attr name="threeColor_ThreeStateButton" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TwoStateImageViewAttr">
+        <attr name="defultDrawable_TwoStateImage" format="reference" />
+        <attr name="otherDrawable_TwoStateImage" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"></attr>
+        <attr name="border_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer" />
+        <attr name="animDuration" format="integer" />
+        <attr name="animAlphaStart" format="float" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MoreTextStyle">
+        <attr name="textSize_MoreTextStyle" format="dimension" />
+        <attr name="textColor_MoreTextStyle" format="color" />
+        <attr name="maxLine_MoreTextStyle" format="integer" />
+        <attr name="text_MoreTextStyle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SignInView">
+        <attr name="sign_in_bg_clor" format="color" />
+        <attr name="sign_in_pb_clor" format="color" />
+        <attr name="sign_in_check_clor" format="color" />
+        <attr name="sign_in_text_clor" format="color" />
+        <attr name="sign_in_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CoordinatorTabLayout">
+        <attr name="contentScrim" format="color" />
+        <attr name="tabIndicatorColor" format="color" />
+        <attr name="tabTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FlikerProgressBar">
+        <attr name="bar_textSize" format="dimension" />
+        <attr name="loadingColor" format="color" />
+        <attr name="stopColor" format="color" />
+        <attr name="progress_text_color" format="color"></attr>
+        <attr name="bar_radius" format="dimension" />
+        <attr name="bar_borderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="IconTopTextBottomViewStyleable">
+        <attr name="def_icon" format="reference" />
+        <attr name="icon" format="reference" />
+        <attr name="def_color" format="color" />
+        <attr name="other_color" format="color" />
+        <attr name="tv_text" format="string"></attr>
+        <attr name="text_size" format="dimension"></attr>
+        <attr name="badge_num" format="integer"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="St_CirclePageIndicator" >
+        <attr name="st_centered" format="boolean" />
+        <attr name="st_fillColor" format="color" />
+        <attr name="st_pageColor" format="color" />
+        <attr name="android:orientation"/>
+        <attr name="st_radius" format="dimension" />
+        <attr name="st_snap" format="boolean" />
+        <attr name="st_strokeColor" format="color" />
+        <attr name="st_strokeWidth" format="dimension" />
+        <attr name="android:background"/>
+        <attr name="st_unselectedColor" format="color" />
+        <attr name="st_selectedColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference" />
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference" />
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference" />
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference" />
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+    <attr name="centered" format="boolean" />
+    <attr name="selectedColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="unselectedColor" format="color" />
+
+    <declare-styleable name="CirclePageIndicator">
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the filled circle that represents the current page. -->
+        <attr name="fillColor" format="color" />
+        <!-- Color of the filled circles that represents pages. -->
+        <attr name="pageColor" format="color" />
+        <!-- Orientation of the indicator. -->
+        <attr name="android:orientation" />
+        <!-- Radius of the circles. This is also the spacing between circles. -->
+        <attr name="radius" format="dimension" />
+        <!-- Whether or not the selected indicator snaps to the circles. -->
+        <attr name="snap" format="boolean" />
+        <!-- Color of the open circles. -->
+        <attr name="strokeColor" format="color" />
+        <!-- Width of the stroke used to draw the circles. -->
+        <attr name="strokeWidth" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="LinePageIndicator">
+
+        <!-- Whether or not the indicators should be centered. -->
+        <attr name="centered" />
+        <!-- Color of the unselected lines that represent the pages. -->
+        <attr name="unselectedColor" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" />
+        <!-- Width of each indicator line. -->
+        <attr name="lineWidth_LinePageIndicator" format="dimension" />
+        <!-- Width of each indicator line's stroke. -->
+        <attr name="strokeWidth" />
+        <!-- Width of the gap between each indicator line. -->
+        <attr name="gapWidth" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+    <declare-styleable name="TitlePageIndicator">
+
+        <!-- Screen edge padding. -->
+        <attr name="clipPadding" format="dimension" />
+        <!-- Color of the footer line and indicator. -->
+        <attr name="footerColor" format="color" />
+        <!-- Height of the footer line. -->
+        <attr name="footerLineHeight" format="dimension" />
+        <!-- Style of the indicator. Default is triangle. -->
+        <attr name="footerIndicatorStyle">
+            <enum name="none" value="0" />
+            <enum name="triangle" value="1" />
+            <enum name="underline" value="2" />
+        </attr>
+        <!-- Height of the indicator above the footer line. -->
+        <attr name="footerIndicatorHeight" format="dimension" />
+        <!-- Left and right padding of the underline indicator. -->
+        <attr name="footerIndicatorUnderlinePadding" format="dimension" />
+        <!-- Padding between the bottom of the title and the footer. -->
+        <attr name="footerPadding" format="dimension" />
+        <!-- Position of the line. -->
+        <attr name="linePosition">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+        <!-- Color of the selected title. -->
+        <attr name="selectedColor" />
+        <!-- Whether or not the selected item is displayed as bold. -->
+        <attr name="selectedBold" format="boolean" />
+        <!-- Color of regular titles. -->
+        <attr name="android:textColor" />
+        <!-- Size of title text. -->
+        <attr name="android:textSize" />
+        <!-- Padding between titles when bumping into each other. -->
+        <attr name="titlePadding" format="dimension" />
+        <!-- Padding between titles and the top of the View. -->
+        <attr name="topPadding" format="dimension" />
+        <!-- View background -->
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="UnderlinePageIndicator">
+        <!-- Whether or not the selected indicator fades. -->
+        <attr name="fades" format="boolean" />
+        <!-- Length of the delay to fade the indicator. -->
+        <attr name="fadeDelay" format="integer" />
+        <!-- Length of the indicator fade to transparent. -->
+        <attr name="fadeLength" format="integer" />
+        <!-- Color of the selected line that represents the current page. -->
+        <attr name="selectedColor" />
+        <!-- View background -->
+        <attr name="android:background" />
+        <!-- View width -->
+        <attr name="lineWidth" format="dimension"></attr>
+        <!-- View Height -->
+        <attr name="lineHeight" format="dimension"></attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="BGAImageView">
+        <!-- 默认图片资源，默认为null -->
+        <attr name="android:src" />
+        <!-- 是否是圆形，默认值为false -->
+        <attr name="bga_iv_circle" format="boolean" />
+        <!-- 圆角矩形的半径，默认值为0dp -->
+        <attr name="bga_iv_cornerRadius" format="reference|dimension" />
+        <!-- 是否是矩形，默认值为false -->
+        <attr name="bga_iv_square" format="boolean" />
+        <!-- 描边的宽度，默认值为0dp -->
+        <attr name="bga_iv_borderWidth" format="reference|dimension" />
+        <!-- 描边的颜色，默认值为Color.WHITE -->
+        <attr name="bga_iv_borderColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="BGANinePhotoLayout">
+        <!-- Item 条目圆角尺寸，默认值为 0dp -->
+        <attr name="bga_npl_itemCornerRadius" format="dimension|reference" />
+        <!-- 当只有一张图片时，是否显示成大图，默认值为 true -->
+        <attr name="bga_npl_showAsLargeWhenOnlyOne" format="boolean" />
+        <!-- Item 间的水平和垂直间距，默认值为 4dp -->
+        <attr name="bga_npl_itemWhiteSpacing" format="dimension|reference" />
+        <!-- 出去九宫格部分的空白区域的尺寸，默认值为 100dp -->
+        <attr name="bga_npl_otherWhiteSpacing" format="dimension|reference" />
+        <!-- 占位图资源，默认值为 R.mipmap.bga_pp_ic_holder_light -->
+        <attr name="bga_npl_placeholderDrawable" format="reference" />
+        <!-- item 的尺寸，优先级高于 bga_npl_otherWhiteSpacing，默认值为 0dp -->
+        <attr name="bga_npl_itemWidth" format="dimension|reference" />
+        <!-- 列数,默认值为 3，当该值大于 3 并且数据源里只有四张图片时不会显示成 2 列 -->
+        <attr name="bga_npl_itemSpanCount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="BGASortableNinePhotoLayout">
+        <!-- 是否显示加号，默认值为 true -->
+        <attr name="bga_snpl_plusEnable" format="boolean" />
+        <!-- 是否可拖拽排序，默认值为 true -->
+        <attr name="bga_snpl_sortable" format="boolean" />
+        <!-- 删除按钮图片，默认值为 R.mipmap.bga_pp_ic_delete -->
+        <attr name="bga_snpl_deleteDrawable" format="reference" />
+        <!-- 可选择图片的总张数,默认值为 9 -->
+        <attr name="bga_snpl_maxItemCount" format="integer" />
+        <!-- 列数,默认值为 3 -->
+        <attr name="bga_snpl_itemSpanCount" format="integer" />
+        <!-- 删除按钮是否重叠四分之一，默认值为 false -->
+        <attr name="bga_snpl_deleteDrawableOverlapQuarter" format="boolean" />
+        <!-- 添加按钮图片，默认值为 R.mipmap.bga_pp_ic_plus -->
+        <attr name="bga_snpl_plusDrawable" format="reference" />
+        <!-- Item 条目圆角尺寸，默认值为 0dp -->
+        <attr name="bga_snpl_itemCornerRadius" format="dimension|reference" />
+        <!-- Item 间的水平和垂直间距，默认值为 4dp -->
+        <attr name="bga_snpl_itemWhiteSpacing" format="dimension|reference" />
+        <!-- 出去九宫格部分的空白区域的尺寸，默认值为 100dp -->
+        <attr name="bga_snpl_otherWhiteSpacing" format="dimension|reference" />
+        <!-- 占位图资源，默认值为 R.mipmap.bga_pp_ic_holder_light -->
+        <attr name="bga_snpl_placeholderDrawable" format="reference" />
+        <!-- 是否可编辑，默认值为 true -->
+        <attr name="bga_snpl_editable" format="boolean" />
+        <!-- item 的尺寸，大于 0dp 时优先级高于 bga_snpl_otherWhiteSpacing，默认值为 0dp -->
+        <attr name="bga_snpl_itemWidth" format="dimension|reference" />
+        <!-- 加号按钮开关是否打开，默认值为true -->
+        <attr name="bga_snpl_isPlusSwitchOpened" format="boolean" />
+        <!-- 是否可拖拽排序，默认值为true -->
+        <attr name="bga_snpl_isSortable" format="boolean" />
+    </declare-styleable>
+
+</resources>
