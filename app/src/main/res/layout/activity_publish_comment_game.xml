@@ -19,7 +19,7 @@
         android:gravity="top|left"
         android:hint="@string/commentHint"
         android:padding="5dp"
-        android:text="良心平台,很不错的游戏"
+        android:text="185sy良心平台,很不错的游戏"
         android:textColorHint="@color/defultTextColor"
         android:textSize="12sp" />
 </LinearLayout>

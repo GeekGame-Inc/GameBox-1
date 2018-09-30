@@ -150,7 +150,6 @@ public class SplashActivity extends Activity {
 				startActivityForResult( new Intent( this, InitJRTTActivity.class ), 12 );
 			} else if (msg.what == 1) {
 				cancleTimer();
-
 				String splashImgpath = Configuration.SPLASHIMGPATH + "/" + Configuration.SPLASHIMGNAME + ".JPEG";
 				File file = new File( splashImgpath );
 				Uri uri = getIntent().getData();

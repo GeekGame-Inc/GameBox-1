@@ -39,6 +39,7 @@ import com.tenone.gamebox.view.custom.popupwindow.AboutMeTypeWindow;
 import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,6 +70,7 @@ public class AboutForMeFragment extends BaseLazyFragment implements
         ViewUtils.inject( this, view );
         model = new AboutForMeModel();
         initView();
+			OnScrollHelper.getInstance().onScrollStateUpdate( refreshLayout);
         return view;
     }
 

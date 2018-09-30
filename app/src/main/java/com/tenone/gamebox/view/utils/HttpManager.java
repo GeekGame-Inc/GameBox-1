@@ -2857,6 +2857,7 @@ public class HttpManager {
 				.add( "page", page + "" )
 				.add( "sign", sign ).build();
 		HttpUtils.postHttp( context, what, url, body, listener );
+		Log.i( "consultInfo", "url is " + url + "&" + builder.toString() + "&sign=" + sign );
 	}
 
 

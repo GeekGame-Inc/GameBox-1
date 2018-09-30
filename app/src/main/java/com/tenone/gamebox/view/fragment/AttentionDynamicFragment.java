@@ -38,6 +38,7 @@ import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.DisplayMetricsUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -90,6 +91,7 @@ public class AttentionDynamicFragment extends BaseLazyFragment implements HttpRe
         listView.setOnItemClickListener( this );
         refreshLayout.setOnRefreshListener( this );
         ListenerManager.registerOnDataRefreshListener( this );
+			  OnScrollHelper.getInstance().onScrollStateUpdate( refreshLayout);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.tenone.gamebox.view.activity;
 
 import android.Manifest;
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,6 +24,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.gyf.barlibrary.ImmersionBar;
@@ -33,7 +35,9 @@ import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.biz.RequestPermissionThread;
 import com.tenone.gamebox.mode.listener.DeleteDialogConfrimListener;
 import com.tenone.gamebox.mode.listener.HttpResultListener;
+import com.tenone.gamebox.mode.listener.OnScrollStateListener;
 import com.tenone.gamebox.mode.listener.UpdateListener;
+import com.tenone.gamebox.mode.mode.OnScrollState;
 import com.tenone.gamebox.mode.mode.ResultItem;
 import com.tenone.gamebox.view.adapter.ManagementAdapter;
 import com.tenone.gamebox.view.base.BaseAppCompatActivity;
@@ -59,6 +63,7 @@ import com.tenone.gamebox.view.utils.GDTActionUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.JrttUtils;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 import com.tenone.gamebox.view.utils.SpUtil;
 import com.tenone.gamebox.view.utils.SystemBarUtils;
 import com.tenone.gamebox.view.utils.TrackingUtils;
@@ -76,7 +81,7 @@ import java.util.List;
 @SuppressLint("ResourceAsColor")
 @SuppressWarnings("deprecation")
 public class MainActivity extends BaseAppCompatActivity implements
-		DeleteDialogConfrimListener, UpdateListener, ViewPager.OnPageChangeListener, ToDrivingReceiver.ToDrivingListener {
+		DeleteDialogConfrimListener, UpdateListener, ViewPager.OnPageChangeListener, ToDrivingReceiver.ToDrivingListener, OnScrollStateListener {
 	@ViewInject(R.id.id_mian_viewpager)
 	NoScrollViewPager viewPager;
 	@ViewInject(R.id.mainRadioGroup)
@@ -85,6 +90,8 @@ public class MainActivity extends BaseAppCompatActivity implements
 	ImageView shareTv;
 	@ViewInject(R.id.radio_button2)
 	TabButtonView tabButtonView2;
+	@ViewInject(R.id.id_main_bottom_root)
+	RelativeLayout bottomRoot;
 
 	private static final int INTERVAL = 2000;
 	protected Context mContext;
@@ -137,8 +144,11 @@ public class MainActivity extends BaseAppCompatActivity implements
 		startServices();
 		initGuide();
 		initTj();
+		OnScrollHelper.getInstance().registerOnScrollWatcher(this );
 	}
 
+	boolean isUnder = false;
+	ObjectAnimator valueAnimator1, valueAnimator2;
 	private void initTj() {
 		TrackingUtils.initTracking( getApplicationContext() );
 		if (SpUtil.gdtIsFirst()) {
@@ -161,7 +171,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 			startActivity( new Intent( this, DynamicDetailsActivity.class )
 					.putExtra( "dynamicId", dynamicId ) );
 		}
-		
+
 	}
 
 	private void startServices() {
@@ -329,6 +339,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 		ListenerManager.unRegisterUpdateListener( this );
 		LocalBroadcastManager.getInstance( this ).unregisterReceiver( toDrivingReceiver );
 		ImmersionBar.with( this ).destroy();
+		OnScrollHelper.getInstance().deleteObserver( this );
 		super.onDestroy();
 	}
 
@@ -350,7 +361,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 				SystemBarUtils.compat( this, R.color.white );
 				break;
 			case 3:
-				
+
 				ListenerManager.sendOnMainViewPagerChangeListener( 3 );
 				break;
 		}
@@ -382,8 +393,29 @@ public class MainActivity extends BaseAppCompatActivity implements
 		toDriving();
 	}
 
+	@Override
+	public void onScrollState(OnScrollState scrollState) {
+		if (scrollState == OnScrollState.SCROLL_UP) {
+			if (isUnder) {
+				if (valueAnimator1==null){
+					valueAnimator1 = ObjectAnimator.ofFloat( bottomRoot, "translationY", 0 );
+					valueAnimator1.setDuration( 1000 );
+				}
+				valueAnimator1.start();
+				isUnder = false;
+			}
+		} else if (scrollState == OnScrollState.SCROLL_DOWN) {
+			if (!isUnder) {
+				if (valueAnimator2==null){
+					valueAnimator2 = ObjectAnimator.ofFloat( bottomRoot, "translationY", bottomRoot.getMeasuredHeight() );
+					valueAnimator2.setDuration( 1000 );
+				}
+				valueAnimator2.start();
+				isUnder = true;
+			}
+		}
+	}
 	private class DoLoginThread extends Thread {
-
 		private void login() {
 			String userName = SpUtil.getAccount();
 			String pwd = SpUtil.getPwd();

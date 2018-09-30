@@ -45,6 +45,7 @@ import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.CharSequenceUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 import com.tenone.gamebox.view.utils.SpUtil;
 import com.tenone.gamebox.view.utils.ToastUtils;
 
@@ -115,6 +116,7 @@ public class TradingFragment extends BaseLazyFragment implements SwipeRefreshLay
 			accountTv.setText( CharSequenceUtils.getVisibilyPhone( SpUtil.getTradingMobile() ) );
 		}
 		ListenerManager.registerOnTradingLoginStatusListener( this );
+		OnScrollHelper.getInstance().onScrollStateUpdate( listView);
 	}
 
 	private void initList() {

@@ -47,6 +47,7 @@ import com.tenone.gamebox.view.custom.xbanner.XBanner;
 import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.DisplayMetricsUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 import com.tenone.gamebox.view.utils.cache.ACache;
 import com.tenone.gamebox.view.utils.image.ImageLoadUtils;
 
@@ -216,6 +217,7 @@ public class BaseIndexGameFragment extends BaseLazyFragment implements HttpResul
 				searchIv.setVisibility( visibility );
 			}
 		} );
+		OnScrollHelper.getInstance().onScrollStateUpdate( refreshLayout);
 	}
 
 	private View initHeaderView(int platform) {
@@ -243,7 +245,7 @@ public class BaseIndexGameFragment extends BaseLazyFragment implements HttpResul
 						R.drawable.icon_cdzk : R.drawable.icon_zuanjinbi );
 		drawable.setBounds( 0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight() );
 		textView.setCompoundDrawables( null, drawable, null, null );
-		textView.setText( platform == 1 ? "\u9001" +getString( R.string.fullV ) :
+		textView.setText( platform == 1 ? "\u9001" + getString( R.string.fullV ) :
 				platform == 2 ? getString( R.string.ultralow_discount ) :
 						getString( R.string.make_coin ) );
 		textView.setOnClickListener( v -> {

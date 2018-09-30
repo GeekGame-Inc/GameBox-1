@@ -19,6 +19,7 @@ import com.tenone.gamebox.view.base.BaseActivity;
 import com.tenone.gamebox.view.custom.TitleBarView;
 import com.tenone.gamebox.view.custom.ToastCustom;
 import com.tenone.gamebox.view.utils.HttpManager;
+import com.tenone.gamebox.view.utils.ListenerManager;
 import com.tenone.gamebox.view.utils.SpUtil;
 import com.tenone.gamebox.view.utils.TrackingUtils;
 
@@ -39,6 +40,7 @@ public class ExchangePlatformActivity extends BaseActivity implements
 	@ViewInject(R.id.id_exchange_edit)
 	EditText editText;
 	private int coinNum = 0, count = 0, ratio = 0, can = 0;
+	private boolean isExchange = false;
 
 	@Override
 	protected void onCreate(@Nullable Bundle arg0) {
@@ -113,6 +115,8 @@ public class ExchangePlatformActivity extends BaseActivity implements
 					}
 					break;
 				case HttpType.LOADING:
+					isExchange = true;
+					ListenerManager.sendOnDataChangeListener();
 					request();
 					ToastCustom.makeText( this, "\u5151\u6362\u6210\u529f", ToastCustom.LENGTH_SHORT )
 							.show();
@@ -132,5 +136,12 @@ public class ExchangePlatformActivity extends BaseActivity implements
 	@Override
 	public void onError(int what, String error) {
 		ToastCustom.makeText( this, error, ToastCustom.LENGTH_SHORT ).show();
+	}
+
+	@Override
+	protected void onStop() {
+		if (isExchange)
+			setResult( RESULT_OK );
+		super.onStop();
 	}
 }

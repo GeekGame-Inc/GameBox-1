@@ -1,9 +1,6 @@
 package com.tenone.gamebox.mode.mode;
 
 import org.json.JSONObject;
-/**
- * 统计数据模型
- */
 public class StatisticsModel extends JSONObject {
 	private String action = "";
 	private String time = "";

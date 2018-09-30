@@ -404,13 +404,13 @@ public class SpUtil {
 	}
 
 	public static synchronized float getFloatingX() {
-		return sp.getFloat( "KEY_FLOATING_X", 0f );
+		return sp.getFloat( "KEY_FLOATING_X", -1f );
 	}
 	public static synchronized void setFloatingY(float y) {
 		sp.edit().putFloat( "KEY_FLOATING_Y", y ).commit();
 	}
 
 	public static synchronized float getFloatingY() {
-		return sp.getFloat( "KEY_FLOATING_Y", 0f );
+		return sp.getFloat( "KEY_FLOATING_Y", -1f );
 	}
 }

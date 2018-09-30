@@ -1,17 +1,21 @@
 package com.tenone.gamebox.view.custom;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.LayoutRes;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import com.tenone.gamebox.R;
+import com.tenone.gamebox.view.activity.CallCenterActivity;
 import com.tenone.gamebox.view.utils.SpUtil;
 
 import java.util.Observable;
@@ -28,15 +32,12 @@ public class FloatingDragger implements Observer {
 		View floatingView = LayoutInflater.from( context ).inflate( R.layout.layout_floating_dragged, null );
 		// ViewDragHelper的ViewGroup容器
 		floatingDraggedView = new FloatingDraggedView( context );
-		floatingDraggedView.addView( contentView, new FrameLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT ) );
-		floatingDraggedView.addView( floatingView, new FrameLayout.LayoutParams( dip2px( context, 40 ), dip2px( context, 40 ) ) );
+		floatingDraggedView.addView( contentView, new FrameLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT,
+				ViewGroup.LayoutParams.MATCH_PARENT ) );
+		Drawable drawable = ContextCompat.getDrawable( context, R.drawable.icon_kefu_ball );
+		floatingDraggedView.addView( floatingView, new FrameLayout.LayoutParams( drawable.getMinimumWidth(), drawable.getMinimumHeight() ) );
 		// 添加观察者
 		observable.addObserver( this );
-	}
-
-	public int dip2px(Context context, float dpValue) {
-		final float scale = context.getResources().getDisplayMetrics().density;
-		return (int) (dpValue * scale + 0.5f);
 	}
 
 	public View getView() {
@@ -53,7 +54,7 @@ public class FloatingDragger implements Observer {
 
 	public class FloatingDraggedView extends FrameLayout {
 		ViewDragHelper dragHelper;
-		Button floatingBtn;
+		ImageView floatingBtn;
 
 		public FloatingDraggedView(Context context) {
 			super( context );
@@ -190,7 +191,7 @@ public class FloatingDragger implements Observer {
 		 * 显示菜单
 		 */
 		public void showMenuDialog() {
-
+			getContext().startActivity( new Intent( getContext(), CallCenterActivity.class ) );
 		}
 
 		/**

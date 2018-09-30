@@ -1,7 +1,9 @@
 package com.tenone.gamebox.view.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,10 +34,10 @@ public class GoldCoinCenterActivity extends BaseActivity implements
 
 	@Override
 	protected void onCreate(@Nullable Bundle arg0) {
-		super.onCreate(arg0);
-		setContentView(R.layout.activity_gold_coin_center);
-		ViewUtils.inject(this);
-		presenter = new GoldCoinCenterPresenter(this, this);
+		super.onCreate( arg0 );
+		setContentView( R.layout.activity_gold_coin_center );
+		ViewUtils.inject( this );
+		presenter = new GoldCoinCenterPresenter( this, this );
 		presenter.initView();
 	}
 
@@ -44,7 +46,7 @@ public class GoldCoinCenterActivity extends BaseActivity implements
 		presenter.onRestart();
 		super.onRestart();
 	}
-	
+
 	@Override
 	public TitleBarView titleBarView() {
 		return titleBarView;
@@ -73,5 +75,14 @@ public class GoldCoinCenterActivity extends BaseActivity implements
 	@Override
 	public Button changeBt() {
 		return changeBt;
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult( requestCode, resultCode, data );
+		Log.i( "MineFragment", "刷新界面数据" );
+		if (268 == requestCode && resultCode == RESULT_OK) {
+			setResult( RESULT_OK );
+		}
 	}
 }

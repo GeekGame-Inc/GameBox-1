@@ -11,8 +11,8 @@ android {
         applicationId "com.tenone.gamebox"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 41
-        versionName "v4.1.6"
+        versionCode 42
+        versionName "v4.1.7"
     }
     buildTypes {
         release {

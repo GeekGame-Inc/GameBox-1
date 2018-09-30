@@ -1,6 +1,7 @@
 package com.tenone.gamebox.view.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.listener.AppBarStateChangeListener;
 import com.tenone.gamebox.mode.listener.HttpResultListener;
+import com.tenone.gamebox.mode.listener.OnDataChangeListener;
 import com.tenone.gamebox.mode.listener.OnMainViewPagerChangeListener;
 import com.tenone.gamebox.mode.listener.OnMineItemClickListener;
 import com.tenone.gamebox.mode.mode.MineItemModel;
@@ -65,6 +68,7 @@ import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.CharSequenceUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 import com.tenone.gamebox.view.utils.SpUtil;
 import com.tenone.gamebox.view.utils.TrackingUtils;
 import com.tenone.gamebox.view.utils.image.ImageLoadUtils;
@@ -75,7 +79,8 @@ import java.util.List;
 import java.util.Map;
 
 @SuppressLint("ResourceAsColor")
-public class MineFragment extends BaseLazyFragment implements OnMineItemClickListener, HttpResultListener, OnMainViewPagerChangeListener {
+public class MineFragment extends BaseLazyFragment implements OnMineItemClickListener, HttpResultListener, OnMainViewPagerChangeListener, OnDataChangeListener {
+	private static final int FORM_MINE = 585;
 	@ViewInject(R.id.id_new_mine_appBar)
 	AppBarLayout appBarLayout;
 	@ViewInject(R.id.id_new_mine_collapsing)
@@ -153,13 +158,10 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 			@Override
 			public void onStateChanged(AppBarLayout appBarLayout, State state) {
 				if (state == State.EXPANDED) {
-
 					titleTv.setText( "" );
 				} else if (state == State.COLLAPSED) {
-
 					titleTv.setText( "\u4e2a\u4eba\u4e2d\u5fc3" );
 				} else {
-
 					titleTv.setText( "\u4e2a\u4eba\u4e2d\u5fc3" );
 				}
 			}
@@ -172,6 +174,8 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 		recyclerView.setAdapter( adapter );
 		ininShowView( BeanUtils.isLogin() );
 		isCreate = true;
+		OnScrollHelper.getInstance().onScrollStateUpdate( recyclerView );
+		ListenerManager.registerOnDataChangeListener( this );
 	}
 
 	private void setOnViewClickListener() {
@@ -297,7 +301,7 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 				intent.putExtra( "type", 2 );
 				break;
 		}
-		startActivity( intent );
+		startActivityForResult( intent, FORM_MINE );
 	}
 
 	@Override
@@ -433,7 +437,6 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		ImmersionBar.with( this ).destroy();
 		ListenerManager.unRegisterOnMainViewPagerChangeListener( this );
 	}
 
@@ -518,5 +521,21 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 				AppStatisticsManager.addStatistics( StatisticActionEnum.PERSONAL_ABOUT );
 				break;
 		}
+	}
+
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult( requestCode, resultCode, data );
+		if (requestCode == FORM_MINE && resultCode == Activity.RESULT_OK) {
+			Log.i( "MineFragment", "刷新界面数据" );
+			HttpManager.userCenter( 18, getActivity(), this );
+		}
+	}
+
+	@Override
+	public void onDataChange() {
+		Log.i( "MineFragment", "刷新界面数据" );
+		HttpManager.userCenter( 18, getActivity(), this );
 	}
 }

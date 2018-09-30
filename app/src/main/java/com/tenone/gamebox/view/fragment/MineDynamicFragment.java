@@ -39,6 +39,7 @@ import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.DialogUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 import com.tenone.gamebox.view.utils.SpUtil;
 
 import java.util.ArrayList;
@@ -76,12 +77,12 @@ public class MineDynamicFragment extends BaseLazyFragment implements DynamicOper
 		View view = inflater.inflate( R.layout.fragment_fans_attention, container, false );
 		ViewUtils.inject( this, view );
 		Bundle bundle = getArguments();
-
 		if (bundle != null && !TextUtils.isEmpty( bundle.getString( "uid" ) ))
 			uid = bundle.getString( "uid" );
 		else
 			uid = SpUtil.getUserId();
 		initView();
+		OnScrollHelper.getInstance().onScrollStateUpdate( recyclerView);
 		return view;
 	}
 

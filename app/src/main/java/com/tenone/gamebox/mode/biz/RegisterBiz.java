@@ -29,7 +29,7 @@ public class RegisterBiz implements RegisterAble {
     public boolean verification(Context cxt, CustomizeEditText account,
                                 CustomizeEditText password, CustomizeEditText phone,
                                 CustomizeEditText code, String codeText, String type) {
-        if ("1".equals( type )) {
+        if (!"mobile".equals( type )) {
             if (TextUtils.isEmpty( account.getText().toString() )) {
                 ToastUtils.showToast( cxt, R.string.inputAccountHint );
                 return false;
@@ -38,35 +38,25 @@ public class RegisterBiz implements RegisterAble {
             if (TextUtils.isEmpty( phone.getText().toString() )) {
                 ToastUtils.showToast( cxt, R.string.inputPhoneHint );
                 return false;
-            }
-
-            if (!BeanUtils.isMatchered( BeanUtils.PHONE_PATTERN, phone.getText()
+            } else if (!BeanUtils.isMatchered( BeanUtils.PHONE_PATTERN, phone.getText()
                     .toString() )) {
                 ToastUtils.showToast( cxt, R.string.phoneError );
                 return false;
-            }
-
-            if (TextUtils.isEmpty( code.getText().toString() )) {
+            }else if (TextUtils.isEmpty( code.getText().toString() )) {
                 ToastUtils.showToast( cxt, R.string.inputCodeHint );
                 return false;
             }
         }
-
         if (TextUtils.isEmpty( password.getText().toString() )) {
             ToastUtils.showToast( cxt, R.string.inputPwdHint );
             return false;
-        }
-
-        if (password.getText().toString().length() < 6) {
+        }else if (password.getText().toString().length() < 6) {
             ToastUtils.showToast( cxt, R.string.pwdNotEnough );
             return false;
-        }
-
-        if (password.getText().toString().length() > 16) {
+        } else if (password.getText().toString().length() > 16) {
             ToastUtils.showToast( cxt, R.string.pwdEnoughed );
             return false;
         }
-
         return true;
     }
 

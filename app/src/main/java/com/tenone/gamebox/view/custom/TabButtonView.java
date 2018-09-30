@@ -13,28 +13,18 @@ import android.widget.RadioButton;
 import com.tenone.gamebox.R;
 import com.tenone.gamebox.view.utils.DisplayMetricsUtils;
 
-/**
- * 自定义tabview 底部按钮 ClassName: TabButtonView <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON(可选). <br/>
- * date: 2017-3-2 下午5:16:01 <br/>
- *
- * @author John Lie
- * @since JDK 1.6
- */
 @SuppressLint({"NewApi", "InflateParams"})
 public class TabButtonView extends RadioButton {
     Context mContext;
-    TypedArray typedArray;// 属性组
-    int defultIcon = -1;// 默认图标图片
-    int checkedIcon = -1;// 选中图标图片
-    Drawable top = null, top1 = null;// 两种状态的drawabletop 图片；
+    TypedArray typedArray;
+    int defultIcon = -1;
+    int checkedIcon = -1;
+    Drawable top = null, top1 = null;
 
     public TabButtonView(Context context, AttributeSet attrs, int defStyleAttr,
                          int defStyleRes) {
         super( context, attrs, defStyleAttr, defStyleRes );
         this.mContext = context;
-        /* 获取自定义属性组 */
         typedArray = mContext.getTheme().obtainStyledAttributes( attrs,
                 R.styleable.TabButtonAttr, defStyleRes, 0 );
         initView();
@@ -70,37 +60,28 @@ public class TabButtonView extends RadioButton {
         invalidate();
     }
 
-    /**
-     * initView:(初始化). <br/>
-     *
-     * @author John Lie
-     * @since JDK 1.6
-     */
     @SuppressWarnings("deprecation")
     private void initView() {
         try {
-            int num = typedArray.getIndexCount();// 获取有多少个属性
-            /* 遍历属性组 */
+            int num = typedArray.getIndexCount();
             for (int i = 0; i < num; i++) {
-                /* 获取一个属性 */
                 int attr = typedArray.getIndex( i );
                 switch (attr) {
                     case R.styleable.TabButtonAttr_text:
-                        setText( typedArray.getString( i ) );// 设置文字
+                        setText( typedArray.getString( i ) );
                         break;
                     case R.styleable.TabButtonAttr_defultIcon:
                         top1 = mContext.getResources().getDrawable(
-                                typedArray.getResourceId( i, 0 ) );// 获取默认图片属性
+                                typedArray.getResourceId( i, 0 ) );
                         break;
                     case R.styleable.TabButtonAttr_checkedIcon:
                         top = mContext.getResources().getDrawable(
-                                typedArray.getResourceId( i, 0 ) );// 获取选中图片属性
+                                typedArray.getResourceId( i, 0 ) );
                         break;
                 }
             }
             top1.setBounds( 0, 0, top1.getMinimumWidth(), top1.getMinimumHeight() );
             top.setBounds( 0, 0, top.getMinimumWidth(), top.getMinimumHeight() );
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -120,7 +101,7 @@ public class TabButtonView extends RadioButton {
         if (mode == MeasureSpec.EXACTLY) {
             result = size;
         } else {
-            result = DisplayMetricsUtils.dipTopx( getContext(), 45 );
+            result = DisplayMetricsUtils.dipTopx( getContext(), 40 );
             if (mode == MeasureSpec.AT_MOST) {
                 result = Math.min( result, size );
             }
@@ -136,7 +117,7 @@ public class TabButtonView extends RadioButton {
         if (mode == MeasureSpec.EXACTLY) {
             result = size;
         } else {
-            result = DisplayMetricsUtils.dipTopx( getContext(), 45 );//根据自己的需要更改
+            result = DisplayMetricsUtils.dipTopx( getContext(), 40 );
             if (mode == MeasureSpec.AT_MOST) {
                 result = Math.min( result, size );
             }
@@ -174,5 +155,4 @@ public class TabButtonView extends RadioButton {
         }
         super.onDraw( canvas );
     }
-
 }

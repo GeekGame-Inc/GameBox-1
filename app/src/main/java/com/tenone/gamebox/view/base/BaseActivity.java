@@ -12,7 +12,6 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -26,7 +25,6 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.listener.ApkInstallListener;
 import com.tenone.gamebox.mode.mode.GameModel;
-import com.tenone.gamebox.view.custom.FloatingDragger;
 import com.tenone.gamebox.view.custom.ToastCustom;
 import com.tenone.gamebox.view.custom.bga.BGABadgeView;
 import com.tenone.gamebox.view.receiver.DownActionReceiver;
@@ -38,7 +36,7 @@ import com.tenone.gamebox.view.utils.SystemBarUtils;
 
 
 @SuppressLint({"NewApi", "ResourceAsColor"})
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends BaseAppCompatActivity {
 
 	@Override
 	protected void onCreate(@Nullable Bundle arg0) {
@@ -49,10 +47,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 		SystemBarUtils.compat( this, R.color.white );
 	}
 
-	@Override
+/*	@Override
 	public void setContentView(int layoutResID) {
 		super.setContentView( new FloatingDragger( this, layoutResID ).getView() );
-	}
+	}*/
 
 	@Override
 	protected void onDestroy() {

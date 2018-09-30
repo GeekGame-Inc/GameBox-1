@@ -2,7 +2,7 @@
  * Project Name:GameBox
  * File Name:StrategyMode.java
  * Package Name:com.tenone.gamebox.mode.mode
- * Date:2017-3-29ÏÂÎç3:07:33
+ * Date:2017-3-29ï¿½ï¿½ï¿½ï¿½3:07:33
  * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
  */
 
@@ -10,46 +10,35 @@ package com.tenone.gamebox.mode.mode;
 
 import java.io.Serializable;
 
-/**
- * ¹¥ÂÔÊý¾ÝÄ£ÐÍ ClassName:StrategyMode <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-3-29 ÏÂÎç3:07:33 <br/>
- *
- * @author John Lie
- * @version
- * @since JDK 1.6
- * @see
- */
 public class StrategyMode implements Serializable {
 	private static final long serialVersionUID = -6130357769457137485L;
-	/*²ÈÔÞÊ¹ÓÃÕâ¸öID*/
+	/*ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ID*/
 	private String articleId;
 	/* id */
 	private int strategyId;
-	/* Ãû³Æ */
+	/* ï¿½ï¿½ï¿½ï¿½ */
 	private String strategyName;
-	/* ÓÎÏ·Ãû³Æ */
+	/* ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ */
 	private String gameName;
-	/* Í¼Æ¬µØÖ· */
+	/* Í¼Æ¬ï¿½ï¿½Ö· */
 	private String strategyImgUrl;
-	/* ×÷Õß */
+	/* ï¿½ï¿½ï¿½ï¿½ */
 	private String writer;
-	/* Ê±¼ä */
+	/* Ê±ï¿½ï¿½ */
 	private String time;
-	/*ÏêÇéµØÖ·*/
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½Ö·*/
 	private String url;
-	/*ÔÄ¶ÁÊýÁ¿*/
+	/*ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	private int viewCounts;
-	/*ÔÞÊýÁ¿*/
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	private int likes;
-	/*²ÈÊýÁ¿*/
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	private int disLikes;
-	/*ÊÇ·ñÖÃ¶¥ 1 ÊÇ 0 ²»ÊÇ*/
+	/*ï¿½Ç·ï¿½ï¿½Ã¶ï¿½ 1 ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½*/
 	private boolean isTop;
-	/*ÓÃ»§ÊÇ·ñÔÞ²È 0 ÒÑ²È 1 ÒÑÔÞ 2 Î´ÔÞ²È*/
+	/*ï¿½Ã»ï¿½ï¿½Ç·ï¿½ï¿½Þ²ï¿½ 0 ï¿½Ñ²ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ 2 Î´ï¿½Þ²ï¿½*/
 	private int likeType;
-	/*·ÖÏíÊý*/
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 	private int shareCounts;
 
 	public String getUrl() {

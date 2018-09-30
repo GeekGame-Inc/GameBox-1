@@ -1,13 +1,6 @@
-/**
- * Project Name:GameBox
- * File Name:DialogUtils.java
- * Package Name:com.tenone.gamebox.view.utils
- * Date:2017-4-6����3:53:12
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.view.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Handler;
@@ -21,18 +14,8 @@ import com.tenone.gamebox.view.custom.dialog.DeleteDialog;
 import com.tenone.gamebox.view.custom.dialog.DeleteDialog.Buidler;
 import com.tenone.gamebox.view.custom.dialog.RationaleDialog;
 
-/**
- * ClassName:DialogUtils <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-4-6 ����3:53:12 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 public class DialogUtils {
-	// ��ӵ��������������ʾ
+	// 添加到下载任务管理提示
 	static AddDownloadBuilder addDownloadBuilder;
 
 	public static void showAddDownloadDialog(Context context, String message,
@@ -49,7 +32,7 @@ public class DialogUtils {
 	}
 
 	static Handler handler = new Handler() {
-		public void handleMessage(Message msg) {
+		public void handleMessage(android.os.Message msg) {
 			switch (msg.what) {
 				case 0:
 					if (addDownloadBuilder != null) {
@@ -63,19 +46,24 @@ public class DialogUtils {
 
 	};
 
-	/* ��ʾ����wifi */
+	/* 显示不是wifi */
 	public static void showNotWifiDialog(Context cxt,
 																			 DeleteDialogConfrimListener listener) {
 		Buidler deleteBuidler = new DeleteDialog.Buidler( cxt );
-		deleteBuidler.setMessage( "�������ڷ�WIFI����,���鵽WIFI��������" );
-		deleteBuidler.setCancleText( "����,���ǵ�WIFI��" );
-		deleteBuidler.setConfirmText( "��������,��������" );
+		deleteBuidler.setMessage( "\u60a8\u6b63\u5904\u4e8e\u975eWIFI\u7f51\u7edc,\u5efa\u8bae\u5230WIFI\u73af\u5883\u4e0b\u8f7d" );
+		deleteBuidler.setCancleText( "\u7b97\u4e86,\u8fd8\u662f\u7b49WIFI\u5427" );
+		deleteBuidler.setConfirmText( "\u7ee7\u7eed\u4e0b\u8f7d,\u6211\u662f\u571f\u8c6a" );
 		deleteBuidler.setConfrimListener( listener );
 		deleteBuidler.createDialog();
 	}
 
 	public static void showConfirmDialog(Context cxt,
 																			 DeleteDialogConfrimListener listener, String message, String cancle, String confirm) {
+		if (cxt instanceof Activity) {
+			if (cxt == null || ((Activity) cxt).isFinishing()) {
+				return;
+			}
+		}
 		Buidler deleteBuidler = new DeleteDialog.Buidler( cxt );
 		deleteBuidler.setMessage( message );
 		deleteBuidler.setCancleText( cancle );
@@ -108,7 +96,5 @@ public class DialogUtils {
 		builder.create();
 		return builder;
 	}
-
-
 
 }

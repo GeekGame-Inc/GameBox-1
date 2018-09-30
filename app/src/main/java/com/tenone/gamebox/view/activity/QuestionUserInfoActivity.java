@@ -74,7 +74,6 @@ public class QuestionUserInfoActivity extends BaseActivity {
 		noticeIv.setOnClickListener( v -> {
 
 		} );
-
 		appBarLayout.addOnOffsetChangedListener( new AppBarStateChangeListener() {
 			@Override
 			public void onStateChanged(AppBarLayout appBarLayout, AppBarStateChangeListener.State state) {

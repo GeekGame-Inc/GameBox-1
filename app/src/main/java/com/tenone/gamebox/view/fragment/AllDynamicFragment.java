@@ -36,6 +36,7 @@ import com.tenone.gamebox.view.custom.ToastCustom;
 import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.HttpManager;
 import com.tenone.gamebox.view.utils.ListenerManager;
+import com.tenone.gamebox.view.utils.OnScrollHelper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,6 +87,7 @@ public class AllDynamicFragment extends BaseLazyFragment implements HttpResultLi
         refreshLayout.setOnLoadListener( this );
         ListenerManager.registerOnLoginStateChangeListener( this );
         ListenerManager.registerOnDataRefreshListener( this );
+			  OnScrollHelper.getInstance().onScrollStateUpdate( refreshLayout);
     }
 
 

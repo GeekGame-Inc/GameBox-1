@@ -1,10 +1,14 @@
 package com.tenone.gamebox.view.activity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
@@ -63,9 +67,12 @@ public class MyQuestionActivity extends BaseActivity {
 			finish();
 		} );
 		titleTv.setText( type == 1 ? "\u6211\u6765\u56de\u7b54" : "\u6211\u7684\u63d0\u95ee" );
+		Drawable drawable = ContextCompat.getDrawable( this, R.drawable.icon_wen );
+		DrawableCompat.setTintList( drawable, ColorStateList.valueOf( ContextCompat.getColor( this, R.color.gray_69 ) ) );
+		rightIv.setBackground( drawable );
 		rightIv.setOnClickListener( v ->
 			startActivity( new Intent( this, WebActivity.class )
-					.putExtra( "url", "http://www.baidu.com" )
+					.putExtra( "url", "http://boxapi.185sy.com/index.php?g=api&m=Consult&a=index" )
 					.putExtra( "title", "\u95ee(\u7b54)\u5ba1\u6838\u89c4\u8303" ) ) );
 	}
 

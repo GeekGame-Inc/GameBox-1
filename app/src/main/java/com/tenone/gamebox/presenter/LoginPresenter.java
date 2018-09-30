@@ -140,7 +140,7 @@ public class LoginPresenter extends BasePresenter implements OnClickListener,
 				break;
 			case R.id.id_titleBar_rightText:
 				openOtherActivityForResult( mContext, 2, new Intent(
-						mContext, RegisterActivity.class ).setAction( "2" ) );
+						mContext, RegisterActivity.class ).setAction( "mobile" ) );
 				break;
 			case R.id.id_login_loginBt:
 				if (verification()) {

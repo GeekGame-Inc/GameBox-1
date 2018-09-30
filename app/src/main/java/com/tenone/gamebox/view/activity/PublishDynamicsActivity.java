@@ -20,6 +20,7 @@ import com.tenone.gamebox.view.custom.TitleBarView;
 import com.tenone.gamebox.view.custom.ToastCustom;
 import com.tenone.gamebox.view.custom.popupwindow.SelecteDynamicTypeWindow;
 import com.tenone.gamebox.view.service.PublishDynamicService;
+import com.tenone.gamebox.view.utils.BeanUtils;
 import com.tenone.gamebox.view.utils.FileSizeUtil;
 
 import java.util.ArrayList;
@@ -68,8 +69,8 @@ public class PublishDynamicsActivity extends BaseActivity implements AdapterView
 				break;
 			case R.id.id_titleBar_rightText:
 				String content = editText.getText().toString();
-				if (TextUtils.isEmpty( content )) {
-					ToastCustom.makeText( this, "\u8bf4\u70b9\u4ec0\u4e48\u5427", ToastCustom.LENGTH_SHORT ).show();
+				if (TextUtils.isEmpty( content ) || content.length() < 10 || BeanUtils.isEmpty( paths )) {
+					ToastCustom.makeText( this, "\u60a8\u6240\u53d1\u8868\u7684\u5185\u5bb9\u672a\u8fbe\u5230\u53d1\u8f66\u9700\u6c42\uff0c\u8bf7\u91cd\u65b0\u7f16\u8f91", ToastCustom.LENGTH_SHORT ).show();
 					return;
 				}
 				for (String str : paths) {

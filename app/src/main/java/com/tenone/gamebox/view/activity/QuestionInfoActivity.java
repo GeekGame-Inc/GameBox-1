@@ -197,7 +197,7 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 					if (info != null) {
 						count = info.getIntValue( "consult_info_counts" );
 					}
-					setView( consult, count );
+					setView( consult, count, data.getIntValue( "type" ) );
 				}
 			} else {
 				recyclerView.setLoadMoreEnabled( false );
@@ -214,7 +214,6 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 			AnswerModel model = new AnswerModel();
 			model.setId( data.getIntValue( "id" ) );
 			model.setAnswer( data.getString( "content" ) );
-
 			model.setBest( data.getBooleanValue( "is_reward", 1 ) );
 			model.setTop( data.getBooleanValue( "top", 1 ) );
 			model.setTaskBonus( data.getBooleanValue( "is_task_bonus", 1 ) );
@@ -244,7 +243,7 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 		}
 	}
 
-	private void setView(ResultItem consult, int count) {
+	private void setView(ResultItem consult, int count, int type) {
 		ImageLoadUtils.loadCircleImg( this, consult.getString( "icon_url" ), headerIv );
 		nickTv.setText( consult.getString( "nick_name" ) );
 		questionTv.setText( consult.getString( "content" ) );
@@ -258,11 +257,11 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 			}
 		}
 		answerCountTv.setText( "\u5171" + count + "\u6761\u73a9\u5bb6\u56de\u7b54" );
-		int type = consult.getIntValue( "type" );
 		isMyself = TextUtils.equals( consult.getString( "uid" ), SpUtil.getUserId() ) || type == 2;
-		if (type == 4) {
-			setNoEdit( "\u8fd1\u671f\u73a9\u8fc7\u8be5 \u6e38\u620f\u7684\u73a9\u5bb6\u624d\u53ef\u56de\u7b54\u54df~" );
-		} else if (!isMyself) {
+		if (isMyself) {
+			bottomView.setVisibility( View.GONE );
+			hintTv.setVisibility( View.VISIBLE );
+		} else if (type == 3) {
 			editText.setFocusable( true );
 			editText.setFocusableInTouchMode( true );
 			editText.requestFocus();
@@ -270,8 +269,7 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 			sendTv.setVisibility( View.VISIBLE );
 			sendTv.setOnClickListener( v -> doAnswer() );
 		} else {
-			bottomView.setVisibility( View.GONE );
-			hintTv.setVisibility( View.VISIBLE );
+			setNoEdit( "\u8fd1\u671f\u73a9\u8fc7\u8be5\u6e38\u620f\u7684\u73a9\u5bb6\u624d\u53ef\u56de\u7b54\u54df~" );
 		}
 	}
 
@@ -293,13 +291,16 @@ public class QuestionInfoActivity extends BaseActivity implements HttpResultList
 
 	@Override
 	public void onItemClick(View itemView, int viewType, int position) {
+		if (!isMyself) {
+			return;
+		}
 		if (rationaleBuilder == null) {
 			rationaleBuilder = new RationaleDialog.RationaleBuilder( this );
 		}
-		rationaleBuilder.setMessage( "确认发放悬赏金币给玩家~" );
-		rationaleBuilder.setTitle( "发放悬赏" );
-		rationaleBuilder.setNegativeButtonText( "取消" );
-		rationaleBuilder.setPositiveButtonText( "确认" );
+		rationaleBuilder.setMessage( "\u786e\u8ba4\u53d1\u653e\u60ac\u8d4f\u91d1\u5e01\u7ed9\u73a9\u5bb6~" );
+		rationaleBuilder.setTitle( "\u53d1\u653e\u60ac\u8d4f" );
+		rationaleBuilder.setNegativeButtonText( "\u53d6\u6d88" );
+		rationaleBuilder.setPositiveButtonText( "\u786e\u8ba4" );
 		rationaleBuilder.setOnClickListener( (dialog, which) -> {
 			if (which == DialogInterface.BUTTON_POSITIVE) {
 				doReward( models.get( position ).getId() );

@@ -56,8 +56,8 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
 		setContentView( R.layout.activity_register );
 		ViewUtils.inject( this );
 		type = getIntent().getAction();
-		layout2.setVisibility( "1".equals( type ) ? View.GONE : View.VISIBLE );
-		layout1.setVisibility( "2".equals( type ) ? View.GONE : View.VISIBLE );
+		layout2.setVisibility( "mobile".equals( type ) ? View.VISIBLE : View.GONE );
+		layout1.setVisibility( "mobile".equals( type ) ? View.GONE : View.VISIBLE );
 		presenter = new RegisterPresenter( this, this, type );
 		presenter.initView();
 		presenter.initListener();

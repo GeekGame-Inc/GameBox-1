@@ -1,11 +1,3 @@
-/**
- * Project Name:GameBox
- * File Name:RegisterPresenter.java
- * Package Name:com.tenone.gamebox.presenter
- * Date:2017-3-15����5:45:44
- * Copyright (c) 2017, chenzhou1025@126.com All Rights Reserved.
- */
-
 package com.tenone.gamebox.presenter;
 
 import android.Manifest;
@@ -46,23 +38,12 @@ import com.tenone.gamebox.view.utils.TrackingUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * ClassName:RegisterPresenter <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-3-15 ����5:45:44 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 public class RegisterPresenter extends BasePresenter implements
 		OnClickListener, HttpResultListener, CompoundButton.OnCheckedChangeListener {
 	RegisterView registerView;
 	RegisterBiz registerBiz;
 	Context mContext;
 	boolean isChecked = true;
-	// ��֤��
 	String code = "", type = "";
 
 	public static final int GETCODE = 5;
@@ -75,24 +56,12 @@ public class RegisterPresenter extends BasePresenter implements
 		this.type = type;
 	}
 
-	/**
-	 * ��ʼ������ initView:(������һ�仰�����������������). <br/>
-	 *
-	 * @author John Lie
-	 * @since JDK 1.6
-	 */
 	public void initView() {
 		getTitleBarView().setLeftImg( R.drawable.icon_back_grey );
-		getTitleBarView().setRightText( "1".equals( type ) ? "�ֻ���ע��" : "�û���ע��" );
-		getTitleBarView().setTitleText( "1".equals( type ) ? "�û���ע��" : "�ֻ���ע��" );
+		getTitleBarView().setRightText( "mobile".equals( type ) ? "\u7528\u6237\u540d\u6ce8\u518c" : "\u624b\u673a\u53f7\u6ce8\u518c" );
+		getTitleBarView().setTitleText( "mobile".equals( type ) ? "\u624b\u673a\u53f7\u6ce8\u518c" : "\u7528\u6237\u540d\u6ce8\u518c" );
 	}
 
-	/**
-	 * ע����� initListener:(������һ�仰�����������������). <br/>
-	 *
-	 * @author John Lie
-	 * @since JDK 1.6
-	 */
 	public void initListener() {
 		getSendCodeView().setOnClickListener( this );
 		getRegisterView().setOnClickListener( this );
@@ -101,37 +70,30 @@ public class RegisterPresenter extends BasePresenter implements
 		getCheckBox().setOnCheckedChangeListener( this );
 	}
 
-	/* ���� */
 	TitleBarView getTitleBarView() {
 		return registerView.getTitleBarView();
 	}
 
-	/* �˺� */
 	public CustomizeEditText getAccountView() {
 		return registerView.getAccountView();
 	}
 
-	/* ���� */
 	public CustomizeEditText getPwdView() {
 		return registerView.getPwdView();
 	}
 
-	/* �ֻ��� */
 	public CustomizeEditText getPhoneView() {
 		return registerView.getPhoneView();
 	}
 
-	/* ��֤�� */
 	public CustomizeEditText getCodeView() {
 		return registerView.getCodeView();
 	}
 
-	/* ������֤�� */
 	public TextView getSendCodeView() {
 		return registerView.getSendCodeView();
 	}
 
-	/* ע�� */
 	public Button getRegisterView() {
 		return registerView.getRegisterView();
 	}
@@ -144,42 +106,25 @@ public class RegisterPresenter extends BasePresenter implements
 		return registerView.getCheckBox();
 	}
 
-	/* ��֤ */
 	public boolean verification() {
 		return registerBiz.verification( mContext, getAccountView(),
-				"1".equals( type ) ? getPwdView() : getPwdView2(),
+				"mobile".equals( type ) ? getPwdView2() : getPwdView(),
 				getPhoneView(), getCodeView(), code, type );
 	}
 
-	/* �ı�button״̬ */
 	public void changeButton() {
 		registerBiz.changeButton( mContext, getSendCodeView(), getPhoneView() );
 	}
 
-	/**
-	 * ע�� requestHttp:(������һ�仰�����������������). <br/>
-	 *
-	 * @param what
-	 * @author John Lie
-	 * @since JDK 1.6
-	 */
 	public void register(int what, String userName, String phone, String pwd,
-											 String type, String code) {
+											 int type, String code) {
 		getRegisterView().setFocusable( false );
 		getRegisterView().setClickable( false );
 		buildProgressDialog( mContext );
 		HttpManager.register( what, mContext, this, userName, pwd, code, phone,
-				type );
+				type + "" );
 	}
 
-	/**
-	 * ��ȡ��֤�� getCode:(������һ�仰�����������������). <br/>
-	 *
-	 * @param what
-	 * @param phone
-	 * @author John Lie
-	 * @since JDK 1.6
-	 */
 	public void getCode(int what, String phone) {
 		HttpManager.getCode( what, mContext, this, phone, 1 );
 	}
@@ -206,28 +151,28 @@ public class RegisterPresenter extends BasePresenter implements
 			case R.id.id_titleBar_leftImg:
 				close( mContext );
 				break;
-			case R.id.id_register_registerBt:// ע��
+			case R.id.id_register_registerBt:
 				boolean verification = verification();
 				if (verification) {
 					String name = getAccountView().getText().toString();
 					String phone = getPhoneView().getText().toString();
-					if (!"1".equals( type )) {
+					if ("mobile".equals( type )) {
 						code = getCodeView().getText().toString();
 						if (TextUtils.isEmpty( code )) {
-							showToast( mContext, "��������֤��!!!" );
+							showToast( mContext, "\u8bf7\u8f93\u5165\u9a8c\u8bc1\u7801!!!" );
 							return;
 						}
 					}
-					pwd = "1".equals( type ) ? getPwdView().getText().toString()
-							: getPwdView2().getText().toString();
+					pwd = "mobile".equals( type ) ? getPwdView2().getText().toString()
+							: getPwdView().getText().toString();
 					if (isChecked) {
-						register( REGISTER, name, phone, pwd, type, code );
+						register( REGISTER, name, phone, pwd, TextUtils.equals( "mobile", type ) ? 2 : 1, code );
 					} else {
-						showToast( mContext, "���Ķ���ͬ���û�Э��" );
+						showToast( mContext, "\u8bf7\u9605\u8bfb\u5e76\u540c\u610f\u7528\u6237\u534f\u8bae" );
 					}
 				}
 				break;
-			case R.id.id_register_sendCodeBt:// ��֤��
+			case R.id.id_register_sendCodeBt:
 				if (TextUtils.isEmpty( getPhoneView().getText().toString() )) {
 					ToastUtils.showToast( mContext, R.string.inputPhoneHint );
 				} else {
@@ -245,6 +190,8 @@ public class RegisterPresenter extends BasePresenter implements
 	@Override
 	public void onSuccess(int what, ResultItem resultItem) {
 		cancelProgressDialog();
+		getRegisterView().setFocusable( true );
+		getRegisterView().setClickable( true );
 		if ("1".equals( resultItem.getString( "status" ) )) {
 			Message message = new Message();
 			message.what = what;
@@ -272,7 +219,7 @@ public class RegisterPresenter extends BasePresenter implements
 					if (resultItem != null) {
 						changeButton();
 					} else {
-						showToast( mContext, "��֤��Ϊ��" );
+						showToast( mContext, "\u9a8c\u8bc1\u7801\u4e3a\u7a7a" );
 					}
 					break;
 				case REGISTER:
@@ -286,8 +233,6 @@ public class RegisterPresenter extends BasePresenter implements
 					} else {
 						JrttUtils.jrttReportData( ("1".equals( type )) ? JrttUtils.ACCOUNTREGISTER : JrttUtils.MOBILEREGISTER );
 					}
-					getRegisterView().setFocusable( true );
-					getRegisterView().setClickable( true );
 					if (resultItem != null) {
 						ResultItem item = resultItem.getItem( "data" );
 						final String uid = item.getString( "id" );
