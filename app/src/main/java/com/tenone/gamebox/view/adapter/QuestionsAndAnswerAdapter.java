@@ -7,6 +7,7 @@ import android.text.Html;
 import android.text.Spanned;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,38 +23,25 @@ import com.tenone.gamebox.view.utils.DisplayMetricsUtils;
 import java.util.List;
 
 public class QuestionsAndAnswerAdapter extends SuperAdapter<QuestionModel> {
-	private int dp2;
-	private Drawable drawable;
 	private Context mContext;
+	private View answerView;
 
 	public QuestionsAndAnswerAdapter(Context context, List<QuestionModel> items, int layoutResId) {
 		super( context, items, layoutResId );
 		this.mContext = context;
-		drawable = ContextCompat.getDrawable( context, R.drawable.d_icon_da );
-		this.dp2 = DisplayMetricsUtils.dipTopx( context, 2 );
 	}
 
 	@Override
 	public void onBind(SuperViewHolder holder, int viewType, int layoutPosition, QuestionModel item) {
 		holder.setText( R.id.id_item_question, item.getQuestion() );
 		List<AnswerModel> answerModels = item.getAnswers();
+		LinearLayout linearLayout = holder.getView( R.id.id_item_answerLayout );
+		linearLayout.removeAllViews();
 		if (!BeanUtils.isEmpty( answerModels )) {
-			LinearLayout linearLayout = holder.getView( R.id.id_item_answerLayout );
-			linearLayout.removeAllViews();
 			for (AnswerModel model : answerModels) {
-				TextView textView = new TextView( getContext() );
-				textView.setText( model.getAnswer() );
-				textView.setTextColor( ContextCompat.getColor( getContext(), R.color.gray_69 ) );
-				textView.setTextSize( TypedValue.COMPLEX_UNIT_SP, 12 );
-				textView.setGravity( Gravity.CENTER_VERTICAL );
-				linearLayout.addView( textView );
-				LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) textView.getLayoutParams();
-				params.topMargin = dp2;
-				params.bottomMargin = dp2;
-				textView.setLayoutParams( params );
-				textView.setCompoundDrawablePadding( dp2 );
-				drawable.setBounds( 0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight() );
-				textView.setCompoundDrawables( drawable, null, null, null );
+				answerView = LayoutInflater.from( mContext ).inflate( R.layout.layout_item_answer, linearLayout, false );
+				linearLayout.addView( answerView );
+				((TextView) answerView.findViewById( R.id.id_item_answer )).setText( model.getAnswer() );
 			}
 			holder.setText( R.id.id_item_time, item.getTime() );
 			holder.setText( R.id.id_item_answerNum, getPlayerTxt( item.getNum() ) );

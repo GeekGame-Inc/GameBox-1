@@ -157,24 +157,6 @@ public class LoginPresenter extends BasePresenter implements OnClickListener,
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	@Override
 	public void onSuccess(int what, ResultItem resultItem) {
 		cancelProgressDialog();

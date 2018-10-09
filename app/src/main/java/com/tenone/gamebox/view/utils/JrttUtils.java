@@ -27,7 +27,7 @@ public class JrttUtils {
 	}
 
 	public static void setIsJrttStatistical(boolean isJrttStatistical) {
-		JrttUtils.isJrttStatistical = true;
+		JrttUtils.isJrttStatistical = isJrttStatistical;
 	}
 
 	public static void init(Context context) {

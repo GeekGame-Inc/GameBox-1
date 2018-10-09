@@ -51,7 +51,7 @@ public class OnScrollHelper {
 
 	@SuppressWarnings("deprecation")
 	public void onScrollStateUpdate(Object object) {
-		if (object instanceof ListView) {
+	/*	if (object instanceof ListView) {
 			((ListView) object).setOnScrollListener( new AbsListView.OnScrollListener() {
 				private boolean fromTouch;
 
@@ -104,7 +104,7 @@ public class OnScrollHelper {
 					}
 				}
 			} );
-		}
+		}*/
 	}
 
 	private int lastScrollY, mTouchY, lastVisibleItem;

@@ -245,9 +245,7 @@ public class BaseIndexGameFragment extends BaseLazyFragment implements HttpResul
 						R.drawable.icon_cdzk : R.drawable.icon_zuanjinbi );
 		drawable.setBounds( 0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight() );
 		textView.setCompoundDrawables( null, drawable, null, null );
-		textView.setText( platform == 1 ? "\u9001" + getString( R.string.fullV ) :
-				platform == 2 ? getString( R.string.ultralow_discount ) :
-						getString( R.string.make_coin ) );
+		textView.setText( platform == 1 ? "\u9001" + getString( R.string.fullV ) : platform == 2 ? getString( R.string.ultralow_discount ) : getString( R.string.make_coin ) );
 		textView.setOnClickListener( v -> {
 			addButtonStatistics( platform, 2 );
 			startActivity( new Intent( getActivity(), StrategyListActivity.class )
@@ -258,11 +256,9 @@ public class BaseIndexGameFragment extends BaseLazyFragment implements HttpResul
 			startActivity( new Intent( getActivity(), OpenServerActivity.class )
 					.putExtra( "platform", platform ) );
 		} );
-
 		searchLayout.setOnClickListener( v -> startActivity( new Intent( getActivity(), GameClassifyRecyclerViewActivity.class )
 				.putExtra( "platform", platform )
 				.putExtra( "topGame", topGameName ) ) );
-
 		findView( view, R.id.id_game_header_classify ).setOnClickListener( v -> {
 			addButtonStatistics( platform, 4 );
 			startActivity( new Intent( getActivity(), GameClassifyRecyclerViewActivity.class )

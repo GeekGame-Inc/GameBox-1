@@ -21,19 +21,21 @@ public class InitJRTTActivity extends Activity {
 				Manifest.permission.READ_PHONE_STATE ) != PackageManager.PERMISSION_GRANTED) {
 			ActivityCompat.requestPermissions( this, new String[]{Manifest.permission.READ_PHONE_STATE,}, 1221 );
 		} else {
-			JrttUtils.init( this );
-			setResult( RESULT_OK );
-			finish();
+			initJrtt();
 		}
+	}
+
+	private void initJrtt() {
+		JrttUtils.init( this );
+		setResult( RESULT_OK );
+		finish();
 	}
 
 	@Override
 	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 		super.onRequestPermissionsResult( requestCode, permissions, grantResults );
 		if (requestCode == 1221) {
-			JrttUtils.init( this );
-			setResult( RESULT_OK );
-			finish();
+			initJrtt();
 		}
 	}
 }

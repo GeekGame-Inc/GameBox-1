@@ -172,7 +172,8 @@ public class SuperViewHolder extends RecyclerView.ViewHolder implements ChainSet
 		view.setColorFilter( colorFilter );
 		return this;
 	}
-	@SuppressWarnings( "deprecation" )
+
+	@SuppressWarnings("deprecation")
 	@Override
 	public SuperViewHolder setAlpha(int viewId, @FloatRange(from = 0.0, to = 1.0) float value) {
 		View view = findViewById( viewId );
@@ -184,6 +185,13 @@ public class SuperViewHolder extends RecyclerView.ViewHolder implements ChainSet
 	public SuperViewHolder setVisibility(int viewId, int visibility) {
 		View view = findViewById( viewId );
 		view.setVisibility( visibility );
+		return this;
+	}
+
+	@Override
+	public SuperViewHolder setVisibility(int viewId, boolean isVisible) {
+		View view = findViewById( viewId );
+		view.setVisibility( isVisible ? View.VISIBLE : View.GONE );
 		return this;
 	}
 

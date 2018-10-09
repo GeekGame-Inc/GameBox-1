@@ -23,16 +23,6 @@ public class AutoInstallApkThread extends AsyncTask<Void, Void, Boolean> {
         this.apkName = apkName;
     }
 
-    /* @Override
-     public synchronized void run() {
-         List<String> list = MyApplication.installingPacks;
-         if (!list.contains( apkName )) {
-             Log.i( "AutoInstallApkThread", "auto install " + apkName );
-             MyApplication.getInstance().setInstallingPacks( apkName );
-             ApkUtils.installApp( apkName, mContext );
-         }
-         super.run();
-     }*/
     @Override
     protected synchronized Boolean doInBackground(Void... voids) {
         List<String> list = MyApplication.installingPacks;

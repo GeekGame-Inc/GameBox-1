@@ -10,6 +10,7 @@ import com.john.superadapter.SuperAdapter;
 import com.john.superadapter.SuperViewHolder;
 import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.mode.GameQuestionModel;
+import com.tenone.gamebox.view.base.Constant;
 import com.tenone.gamebox.view.utils.image.ImageLoadUtils;
 
 import java.util.List;
@@ -31,6 +32,11 @@ public class MyQuestionAdapter extends SuperAdapter<GameQuestionModel> {
 		holder.setText( R.id.id_item_my_question_time, item.getQuestionModel().getTime() );
 		TextView counts = holder.findViewById( R.id.id_item_my_question_count );
 		counts.setText( getText( item.getQuestionModel().getNum() ) );
+		holder.setVisibility( R.id.id_my_question_coin, item.getQuestionModel().getCoin() > 0 );
+		if (item.getQuestionModel().getCoin() > 0) {
+			holder.setText( R.id.id_my_question_coin,
+					item.getQuestionModel().isCoinsIsReceived() ? "\u5df2\u88ab\u9886\u53d6" : "+" + item.getQuestionModel().getCoin() );
+		}
 	}
 
 	private Spanned getText(int count) {

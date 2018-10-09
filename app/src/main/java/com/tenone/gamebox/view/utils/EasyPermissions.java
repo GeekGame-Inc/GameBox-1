@@ -47,17 +47,17 @@ public class EasyPermissions {
 	public static final String INSTALL_PACKAGES = Manifest.permission.INSTALL_PACKAGES;
 
 	public static void initEasyPermissionsHintMap() {
-		hintMap.put( PERMISSION_READ_PHONE_STATE, "û���ֻ���ϢȨ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ��ֻ���ϢȨ��" );
-		hintMap.put( PERMISSION_READ_EXTERNAL_STORAGE, "û�д洢Ȩ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ򿪴洢Ȩ��" );
-		hintMap.put( PERMISSION_WRITE_EXTERNAL_STORAGE, "û�д洢Ȩ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ򿪴洢Ȩ��" );
-		hintMap.put( PERMISSION_CAMERA, "û��ʹ�������豸Ȩ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ�ʹ�������豸Ȩ��" );
-		hintMap.put( PERMISSION_INTERNET, "û�з�������Ȩ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ򿪷�������Ȩ��" );
-		hintMap.put( PERMISSION_WIFI, "�������ı�Wi-Fi����״̬" );
-		hintMap.put( PERMISSION_BLUETOOTH, "�������������Թ��������豸" );
-		hintMap.put( PERMISSION_RECEIVE_BOOT_COMPLETED, "��ȡ�豸��" );
-		hintMap.put( PERMISSION_RESTART_PACKAGES, "�����������������������" );
-		hintMap.put( PERMISSION_ACCESS_NETWORK_STATE, "��ȡ������Ϣ״̬" );
-		hintMap.put( INSTALL_PACKAGES, "û���������װӦ��Ȩ��,Ϊ��������ʹ�ú���,��������->Ȩ�޹���->���κ��Ӵ��������װӦ��" );
+		hintMap.put( PERMISSION_READ_PHONE_STATE, "\u6ca1\u6709\u624b\u673a\u4fe1\u606f\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u624b\u673a\u4fe1\u606f\u6743\u9650 " );
+		hintMap.put( PERMISSION_READ_EXTERNAL_STORAGE, "\u6ca1\u6709\u5b58\u50a8\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u5b58\u50a8\u6743\u9650" );
+		hintMap.put( PERMISSION_WRITE_EXTERNAL_STORAGE, "\u6ca1\u6709\u5b58\u50a8\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u5b58\u50a8\u6743\u9650" );
+		hintMap.put( PERMISSION_CAMERA, "\u6ca1\u6709\u4f7f\u7528\u7167\u76f8\u8bbe\u5907\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u4f7f\u7528\u7167\u76f8\u8bbe\u5907\u6743\u9650" );
+		hintMap.put( PERMISSION_INTERNET, "\u6ca1\u6709\u8bbf\u95ee\u7f51\u7edc\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u8bbf\u95ee\u7f51\u7edc\u6743\u9650" );
+		hintMap.put( PERMISSION_WIFI, "\u5141\u8bb8\u7a0b\u5e8f\u6539\u53d8Wi-Fi\u8fde\u63a5\u72b6\u6001" );
+		hintMap.put( PERMISSION_BLUETOOTH, "\u5141\u8bb8\u7a0b\u5e8f\u8fde\u63a5\u914d\u5bf9\u8fc7\u7684\u84dd\u7259\u8bbe\u5907" );
+		hintMap.put( PERMISSION_RECEIVE_BOOT_COMPLETED, "\u8bfb\u53d6\u8bbe\u5907\u53f7" );
+		hintMap.put( PERMISSION_RESTART_PACKAGES, "\u5141\u8bb8\u7a0b\u5e8f\u91cd\u65b0\u542f\u52a8\u5176\u4ed6\u7a0b\u5e8f" );
+		hintMap.put( PERMISSION_ACCESS_NETWORK_STATE, "\u83b7\u53d6\u7f51\u7edc\u4fe1\u606f\u72b6\u6001" );
+		hintMap.put( INSTALL_PACKAGES, "\u6ca1\u6709\u5141\u8bb8\u7a0b\u5e8f\u5b89\u88c5\u5e94\u7528\u6743\u9650,\u4e3a\u4e86\u80fd\u6b63\u5e38\u4f7f\u7528\u76d2\u5b50,\u8bf7\u5728\u8bbe\u7f6e->\u6743\u9650\u7ba1\u7406->\u624b\u6e38\u76d2\u5b50\u6253\u5f00\u5141\u8bb8\u7a0b\u5e8f\u5b89\u88c5\u5e94\u7528" );
 	}
 
 	public static HashMap<String, String> hintMap = new HashMap<String, String>();
@@ -104,7 +104,7 @@ public class EasyPermissions {
 
 
 	public static void requestPermissions(final Object object, final int requestCode, final String... perms) {
-		requestPermissions( object, "\b\b\b\bΪ��������ʹ��" + getActivity( object ).getString( R.string.app_name ) + "����Ҫ��ͬ��Ӧ�û�ȡ�����Ȩ��", android.R.string.ok, android.R.string.cancel, requestCode, perms );
+		requestPermissions( object, "\b\b\b\b\u4e3a\u4e86\u4fdd\u8bc1\u5e94\u7528\u5f97\u6b63\u5e38\u4f7f\u7528\uff0c\u8bf7\u540c\u610f" + getActivity( object ).getString( R.string.app_name ) + "\u6240\u8bf7\u6c42\u7684\u6240\u6709\u6743\u9650", android.R.string.ok, android.R.string.cancel, requestCode, perms );
 	}
 
 	public static void requestPermissions(final Object object, String rationale, @StringRes int positiveButton, @StringRes int negativeButton,
@@ -131,7 +131,7 @@ public class EasyPermissions {
 								}
 								break;
 						}
-					}, "Ȩ������", rationale, activity.getText( positiveButton ).toString(), activity.getText( negativeButton ).toString() );
+					}, "\u6743\u9650\u7533\u8bf7", rationale, activity.getText( positiveButton ).toString(), activity.getText( negativeButton ).toString() );
 		} else {
 			executePermissionsRequest( object, perms, requestCode );
 		}
@@ -195,7 +195,7 @@ public class EasyPermissions {
 									}
 									break;
 							}
-						}, "Ȩ������", rationale, activity.getText( positiveButton ).toString(), activity.getText( negativeButton ).toString() );
+						}, "\u6743\u9650\u7533\u8bf7", rationale, activity.getText( positiveButton ).toString(), activity.getText( negativeButton ).toString() );
 				return true;
 			}
 		}

@@ -144,11 +144,12 @@ public class MainActivity extends BaseAppCompatActivity implements
 		startServices();
 		initGuide();
 		initTj();
-		OnScrollHelper.getInstance().registerOnScrollWatcher(this );
+		OnScrollHelper.getInstance().registerOnScrollWatcher( this );
 	}
 
 	boolean isUnder = false;
 	ObjectAnimator valueAnimator1, valueAnimator2;
+
 	private void initTj() {
 		TrackingUtils.initTracking( getApplicationContext() );
 		if (SpUtil.gdtIsFirst()) {
@@ -397,7 +398,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 	public void onScrollState(OnScrollState scrollState) {
 		if (scrollState == OnScrollState.SCROLL_UP) {
 			if (isUnder) {
-				if (valueAnimator1==null){
+				if (valueAnimator1 == null) {
 					valueAnimator1 = ObjectAnimator.ofFloat( bottomRoot, "translationY", 0 );
 					valueAnimator1.setDuration( 1000 );
 				}
@@ -406,7 +407,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 			}
 		} else if (scrollState == OnScrollState.SCROLL_DOWN) {
 			if (!isUnder) {
-				if (valueAnimator2==null){
+				if (valueAnimator2 == null) {
 					valueAnimator2 = ObjectAnimator.ofFloat( bottomRoot, "translationY", bottomRoot.getMeasuredHeight() );
 					valueAnimator2.setDuration( 1000 );
 				}
@@ -415,14 +416,18 @@ public class MainActivity extends BaseAppCompatActivity implements
 			}
 		}
 	}
+
 	private class DoLoginThread extends Thread {
+
 		private void login() {
 			String userName = SpUtil.getAccount();
 			String pwd = SpUtil.getPwd();
+			Log.i( "HeaderTest", " pwd is " + pwd );
 			if (!TextUtils.isEmpty( pwd )) {
 				HttpManager.login( 1, mContext, new HttpResultListener() {
 					@Override
 					public void onSuccess(int what, ResultItem resultItem) {
+						Log.i( "HeaderTest", " login onSuccess " );
 						int status = resultItem.getIntValue( "status" );
 						jrtt( 1 == status );
 						if (1 == status) {
@@ -430,6 +435,7 @@ public class MainActivity extends BaseAppCompatActivity implements
 							if (null != item) {
 								String uId = item.getString( "id" );
 								String header = item.getString( "icon_url" );
+								Log.i( "HeaderTest", " header is " + header );
 								String coin = item.getString( "coin" );
 								String platform = item.getString( "platform_money" );
 								String bonus = item.getString( "recom_bonus" );

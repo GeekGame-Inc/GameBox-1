@@ -16,8 +16,7 @@ public class InstallReceiver extends BroadcastReceiver {
 		if (null != model) {
 			if (GameStatus.COMPLETED == model.getStatus()) {
 				if (SpUtil.getAutoInstall()) {
-					new AutoInstallApkThread(context, model.getApkName())
-							.start();
+					new AutoInstallApkThread(context, model.getApkName()).start();
 				}
 			}
 		}

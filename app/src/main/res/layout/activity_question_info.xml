@@ -56,18 +56,24 @@
                     android:textColor="@color/defultTextColor"
                     android:textSize="13sp" />
 
-
-                <TextView
-                    android:id="@+id/id_question_info_question"
+                <ImageView
+                    android:id="@+id/iv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/id_question_info_name"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="13dp"
                     android:layout_toRightOf="@id/id_question_info_icon"
-                    android:drawableLeft="@drawable/e_icon_wen"
-                    android:drawablePadding="3dp"
-                    android:gravity="center_vertical"
+                    android:src="@drawable/e_icon_wen" />
+
+                <TextView
+                    android:id="@+id/id_question_info_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_question_info_name"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toRightOf="@id/iv"
                     android:text="玩家的问题"
                     android:textColor="@color/textColor1"
                     android:textSize="15sp" />

@@ -78,16 +78,6 @@ import cn.sharesdk.framework.PlatformActionListener;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
-/**
- * ��Ϸ���� ClassName:GameDetailsPresenter <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON. <br/>
- * Date: 2017-3-30 ����3:29:41 <br/>
- *
- * @author John Lie
- * @see
- * @since JDK 1.6
- */
 @SuppressLint("HandlerLeak")
 public class GameDetailsPresenter extends BasePresenter implements
         OnClickListener, DownStatusChangeListener, InstallListener,

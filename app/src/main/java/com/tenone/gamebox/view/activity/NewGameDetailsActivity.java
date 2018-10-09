@@ -156,7 +156,7 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 	private DetailsOpenFragment detailsOpenFragment;
 	private GameDetailStrategyFragment gameDetailStrategyFragment;
 	private List<Fragment> fragments;
-	private GameModel gameModel;
+	private static GameModel gameModel;
 	private String gameId, qqUrl;
 	private Context mContext;
 	private ApkInstallListener installListener;
@@ -636,8 +636,7 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 			gameModel.setGameId( Integer.valueOf( id ) );
 		}
 		gameModel.setDis( item.getString( "discount" ) );
-		gameModel.setImgUrl( MyApplication.getHttpUrl().getBaseUrl()
-				+ item.getString( "logo" ) );
+		gameModel.setImgUrl( MyApplication.getHttpUrl().getBaseUrl() + item.getString( "logo" ) );
 		gameModel.setSize( item.getString( "size" ) );
 		gameModel.setUrl( item.getString( "android_url" ) );
 		gameModel.setVersionsName( item.getString( "version" ) );
@@ -666,12 +665,8 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 			String[] array = str.split( " " );
 			gameModel.setLabelArray( array );
 		}
-		String where = GameDownloadTab.GAMEID + "=? AND "
-				+ GameDownloadTab.GAMENAME + "=?";
-		GameModel model = DatabaseUtils.getInstanse( mContext ).getGameModel(
-				where,
-				new String[]{(gameModel.getGameId() + ""),
-						gameModel.getName()} );
+		String where = GameDownloadTab.GAMEID + "=? AND " + GameDownloadTab.GAMENAME + "=?";
+		GameModel model = DatabaseUtils.getInstanse( mContext ).getGameModel( where, new String[]{(gameModel.getGameId() + ""), gameModel.getName()} );
 		gameModel.setApkName( model.getApkName() );
 		gameModel.setStatus( model.getStatus() );
 		gameModel.setProgress( model.getProgress() );
@@ -716,44 +711,35 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 	@OnClick({R.id.id_new_game_down, R.id.id_new_game_sc, R.id.id_new_game_pl, R.id.id_new_game_start
 			, R.id.id_new_game_promptClose, R.id.id_new_game_topLayout, R.id.id_new_game_consult})
 	public void onClick(View view) {
-		switch (view.getId()) {
-			case R.id.id_new_game_down:
-				if (gameModel != null) {
-					String prefix = 1 == platform ? AppStatisticsManager.BT_PREFIX :
-							2 == platform ? AppStatisticsManager.DISCOUNT_PREFIX :
-									AppStatisticsManager.H5_PREFIX;
-					String action = prefix + AppStatisticsManager.DOWNLOAD_PREFIX + gameModel.getName();
-					AppStatisticsManager.addStatistics( action );
-					downloadGame();
+		if (view.getId() == R.id.id_new_game_down) {
+			if (gameModel != null) {
+				String prefix = 1 == platform ? AppStatisticsManager.BT_PREFIX :
+						2 == platform ? AppStatisticsManager.DISCOUNT_PREFIX :
+								AppStatisticsManager.H5_PREFIX;
+				String action = prefix + AppStatisticsManager.DOWNLOAD_PREFIX + gameModel.getName();
+				AppStatisticsManager.addStatistics( action );
+				downloadGame();
+			}
+		} else if (view.getId() == R.id.id_new_game_sc) {
+			if (gameModel != null) {
+				if (!BeanUtils.isLogin()) {
+					startActivity( new Intent( mContext, LoginActivity.class ) );
+					return;
 				}
-				break;
-			case R.id.id_new_game_sc:
-				if (gameModel != null) {
-					if (!BeanUtils.isLogin()) {
-						startActivity( new Intent( mContext,
-								LoginActivity.class ) );
-						break;
-					}
-					collect( 12, gameModel.isCollectde() ? 2 : 1 );
-				}
-				break;
-			case R.id.id_new_game_pl:
-				toComment();
-				break;
-			case R.id.id_new_game_start:
-				startGame();
-				break;
-			case R.id.id_new_game_promptClose:
-				promptLayout.setVisibility( View.GONE );
-				break;
-			case R.id.id_new_game_topLayout:
-				startActivity( new Intent( mContext, GameTopActivity.class )
-						.putExtra( "platform", platform ) );
-				break;
-			case R.id.id_new_game_consult:
-				startActivity( new Intent( mContext, QuestionsAndAnswerActivity.class )
-						.putExtra( "gameModel", gameModel ) );
-				break;
+				collect( 12, gameModel.isCollectde() ? 2 : 1 );
+			}
+		} else if (view.getId() == R.id.id_new_game_pl) {
+			toComment();
+		} else if (view.getId() == R.id.id_new_game_start) {
+			startGame();
+		} else if (view.getId() == R.id.id_new_game_promptClose) {
+			promptLayout.setVisibility( View.GONE );
+		} else if (view.getId() == R.id.id_new_game_topLayout) {
+			startActivity( new Intent( mContext, GameTopActivity.class )
+					.putExtra( "platform", platform ) );
+		} else if (view.getId() == R.id.id_new_game_consult) {
+			startActivity( new Intent( mContext, QuestionsAndAnswerActivity.class )
+					.putExtra( "gameModel", gameModel ) );
 		}
 	}
 
@@ -825,39 +811,42 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 	}
 
 	private void downloadGame() {
-		if (gameModel != null) {
-			int status = gameModel.getStatus();
-			switch (status) {
-				case GameStatus.UNLOAD:
-					startDownloadGame();
-					break;
-				case GameStatus.LOADING:
-					gameModel.setStatus( GameStatus.PAUSEING );
-					openDownService( mContext, gameModel );
-					break;
-				case GameStatus.PAUSEING:
-					gameModel.setStatus( GameStatus.LOADING );
-					openDownService( mContext, gameModel );
-					break;
-				case GameStatus.COMPLETED:
-					String apkName = gameModel.getApkName();
-					ApkUtils.installApp( apkName, mContext );
-					break;
-				case GameStatus.INSTALLING:
-					showToast( getString( R.string.instaling_txt ) );
-					break;
-				case GameStatus.INSTALLCOMPLETED:
-					ApkUtils.doStartApplicationWithPackageName(
-							gameModel.getPackgeName(), mContext );
-					break;
-				case GameStatus.DELETE:
-					gameModel.setStatus( GameStatus.LOADING );
-					openDownService( mContext, gameModel );
-				case GameStatus.UNINSTALLING:
-					ApkUtils.installApp( gameModel.getApkName(), mContext );
-					break;
-			}
-			return;
+		int status = gameModel.getStatus();
+		switch (status) {
+			case GameStatus.UNLOAD:
+				startDownloadGame();
+				break;
+			case GameStatus.LOADING:
+				gameModel.setStatus( GameStatus.PAUSEING );
+				openDownService( mContext, gameModel );
+				break;
+			case GameStatus.PAUSEING:
+				gameModel.setStatus( GameStatus.LOADING );
+				openDownService( mContext, gameModel );
+				break;
+			case GameStatus.COMPLETED:
+				String apkName = gameModel.getApkName();
+				if (TextUtils.isEmpty( apkName )){
+					String where = GameDownloadTab.GAMEID + "=? AND " + GameDownloadTab.GAMENAME + "=?";
+					GameModel model = DatabaseUtils.getInstanse( mContext ).getGameModel( where, new String[]{(gameModel.getGameId() + ""), gameModel.getName()} );
+					gameModel.setApkName( model.getApkName() );
+					apkName = gameModel.getApkName();
+				}
+				ApkUtils.installApp( apkName, mContext );
+				break;
+			case GameStatus.INSTALLING:
+				showToast( getString( R.string.instaling_txt ) );
+				break;
+			case GameStatus.INSTALLCOMPLETED:
+				ApkUtils.doStartApplicationWithPackageName(
+						gameModel.getPackgeName(), mContext );
+				break;
+			case GameStatus.DELETE:
+				gameModel.setStatus( GameStatus.LOADING );
+				openDownService( mContext, gameModel );
+			case GameStatus.UNINSTALLING:
+				ApkUtils.installApp( gameModel.getApkName(), mContext );
+				break;
 		}
 	}
 
@@ -900,7 +889,6 @@ public class NewGameDetailsActivity extends BaseAppCompatActivity implements Htt
 						}
 						break;
 				}
-				gameModel.setType( 1 );
 				downloadProgressBar.reset();
 				downloadProgressBar.setStae( model.getStatus() );
 				downloadProgressBar.setProgress( model.getProgress() );

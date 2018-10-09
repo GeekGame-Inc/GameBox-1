@@ -123,6 +123,8 @@ public class MyQuestionFragment extends BaseLazyFragment implements HttpResultLi
 				questionModel.setTime( item.getString( "create_time" ) );
 				questionModel.setQuestion( item.getString( "content" ) );
 				questionModel.setNum( item.getIntValue( "answer_counts" ) );
+				questionModel.setCoin( item.getIntValue( "money" ) );
+				questionModel.setCoinsIsReceived( item.getBooleanValue( "is_reward", 1 ) );
 				model.setQuestionModel( questionModel );
 				models.add( model );
 			}
@@ -147,6 +149,8 @@ public class MyQuestionFragment extends BaseLazyFragment implements HttpResultLi
 				questionModel.setTime( item.getString( "time" ) );
 				questionModel.setQuestion( item.getString( "question" ) );
 				questionModel.setNum( item.getIntValue( "anwsers" ) );
+				questionModel.setCoin( item.getIntValue( "money" ) );
+				questionModel.setCoinsIsReceived( item.getBooleanValue( "is_reward", 1 ) );
 				model.setQuestionModel( questionModel );
 				models.add( model );
 			}

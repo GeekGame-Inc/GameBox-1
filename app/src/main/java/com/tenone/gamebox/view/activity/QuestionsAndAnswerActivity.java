@@ -95,8 +95,8 @@ public class QuestionsAndAnswerActivity extends BaseActivity implements Runnable
 			actionBar.setDisplayHomeAsUpEnabled( true );
 		}
 		toolbar.setNavigationOnClickListener( v -> finish() );
-		Drawable drawable = ContextCompat.getDrawable( this, R.drawable.icon_wen );
-		DrawableCompat.setTintList( drawable, ColorStateList.valueOf( ContextCompat.getColor( this, R.color.gray_69 ) ) );
+		Drawable drawable = ContextCompat.getDrawable( this, R.drawable.i_icon_wen );
+		//DrawableCompat.setTintList( drawable, ColorStateList.valueOf( ContextCompat.getColor( this, R.color.gray_69 ) ) );
 		noticeIv.setBackground( drawable );
 		noticeIv.setOnClickListener( v -> {
 			if (builder == null) {

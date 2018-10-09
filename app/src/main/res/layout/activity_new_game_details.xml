@@ -36,12 +36,11 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:background="@drawable/radiu_white_top"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="1dp">
-
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp">
 
                     <ImageView
                         android:id="@+id/id_new_game_icon"
@@ -87,16 +86,16 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/id_new_game_label"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:maxLines="1"
                             android:id="@+id/id_new_game_size"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:maxLines="1"
                             android:textColor="@color/gray_69"
                             android:textSize="11sp" />
 
@@ -105,8 +104,8 @@
                             android:layout_width="2dp"
                             android:layout_height="9dp"
                             android:layout_centerVertical="true"
-                            android:layout_marginEnd="10dp"
                             android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
                             android:layout_toRightOf="@id/id_new_game_size"
                             android:background="@color/gray_69"></View>
 
@@ -136,29 +135,28 @@
                             <View
                                 android:layout_width="2dp"
                                 android:layout_height="9dp"
-                                android:layout_marginBottom="3dp"
                                 android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
                                 android:background="@color/gray_69"></View>
 
                             <TextView
-                                android:maxLines="1"
                                 android:id="@+id/id_new_game_time"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
+                                android:maxLines="1"
                                 android:textColor="@color/gray_69"
                                 android:textSize="11sp" />
                         </LinearLayout>
 
                     </RelativeLayout>
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/id_relative"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -189,8 +187,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginEnd="15dp"
-                                android:drawablePadding="3dp"
                                 android:drawableRight="@drawable/c_icon_top"
+                                android:drawablePadding="3dp"
                                 android:gravity="center"
                                 android:textColor="@color/blue_40"
                                 android:textSize="14sp" />
@@ -210,10 +208,10 @@
                                 android:layout_marginEnd="15dp"
                                 android:background="@drawable/shape_login_bt"
                                 android:gravity="center"
-                                android:paddingBottom="4dp"
-                                android:paddingEnd="10dp"
                                 android:paddingStart="10dp"
                                 android:paddingTop="4dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="4dp"
                                 android:text="向Ta请教"
                                 android:textColor="@color/white"
                                 android:textSize="13sp" />
@@ -248,16 +246,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="10dp"
                             android:background="@drawable/f_icon_fenggexianxia"></View>
-                    </LinearLayout>
 
+                    </LinearLayout>
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:paddingBottom="5dp"
-                        android:paddingEnd="5dp"
                         android:paddingStart="5dp"
-                        android:paddingTop="13dp">
+                        android:paddingTop="13dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="5dp">
 
                         <TextView
                             android:id="@+id/id_new_game_qq"
@@ -265,8 +263,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:drawablePadding="3dp"
                             android:drawableTop="@drawable/ic_qq"
+                            android:drawablePadding="3dp"
                             android:text="玩家QQ群"
                             android:textColor="@color/textColor1"
                             android:textSize="15sp"
@@ -289,7 +287,6 @@
                             trading:tv_text="账号交易" />
                     </RelativeLayout>
 
-
                     <LinearLayout
                         android:id="@+id/id_new_game_disLayout"
                         android:layout_width="wrap_content"
@@ -307,8 +304,6 @@
                             android:textColor="@color/white"
                             android:textSize="16sp" />
                     </LinearLayout>
-
-
                 </RelativeLayout>
             </LinearLayout>
 
@@ -350,8 +345,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            app:tabMode="fixed">
+            android:layout_height="44dp">
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/id_new_game_tabLayout"
@@ -410,8 +404,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginBottom="2dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
             android:contentDescription='""'
             android:src="@drawable/i_icon_dp_quxiaoanniiu" />
     </LinearLayout>
@@ -429,8 +423,8 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="9dp"
-            android:drawablePadding="2dp"
             android:drawableTop="@drawable/selector_sc"
+            android:drawablePadding="2dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="收藏"
@@ -444,8 +438,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="9dp"
-            android:drawablePadding="2dp"
             android:drawableTop="@drawable/icon_pl"
+            android:drawablePadding="2dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="评论"
@@ -457,10 +451,10 @@
             android:id="@+id/id_new_game_down"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="5dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp"
             android:layout_toLeftOf="@id/id_new_game_pl"
             android:layout_toRightOf="@id/id_new_game_sc"
             dlp:bar_borderWidth="1dp"
@@ -474,10 +468,10 @@
             android:id="@+id/id_new_game_start"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="6dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="6dp"
             android:layout_toLeftOf="@id/id_new_game_pl"
             android:layout_toRightOf="@id/id_new_game_sc"
             android:background="@drawable/shape_login_bt"

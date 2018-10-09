@@ -91,9 +91,10 @@ public class SplashActivity extends Activity {
 			@Override
 			public void run() {
 				t++;
-				if (t > 2) {
+				if (t > 5) {
 					timeEnd = true;
-					handler.sendEmptyMessage( 12 );
+					initEnd = true;
+					handler.sendEmptyMessage( 1 );
 				}
 			}
 		};
@@ -144,11 +145,11 @@ public class SplashActivity extends Activity {
 
 	@SuppressLint("HandlerLeak")
 	Handler handler = new Handler( msg -> {
-		if (!isStart && timeEnd && initEnd) {
-			if (msg.what == 12) {
-				cancleTimer();
-				startActivityForResult( new Intent( this, InitJRTTActivity.class ), 12 );
-			} else if (msg.what == 1) {
+		if (msg.what == 12) {
+			cancleTimer();
+			startActivityForResult( new Intent( this, InitJRTTActivity.class ), 12 );
+		} else if (msg.what == 1) {
+			if (!isStart && timeEnd && initEnd) {
 				cancleTimer();
 				String splashImgpath = Configuration.SPLASHIMGPATH + "/" + Configuration.SPLASHIMGNAME + ".JPEG";
 				File file = new File( splashImgpath );
@@ -230,7 +231,7 @@ public class SplashActivity extends Activity {
 				JrttUtils.setIsJrttStatistical( false );
 				MyLog.e( resultItem.getString( "msg" ) );
 			}
-			startMain();
+			startMain( JrttUtils.isIsJrttStatistical() );
 		}
 
 		private void setConsult(ResultItem item) {
@@ -239,8 +240,8 @@ public class SplashActivity extends Activity {
 				List<ResultItem> protocol = consult.getItems( "protocol" );
 				List<ResultItem> notice = consult.getItems( "notice" );
 				if (!BeanUtils.isEmpty( protocol )) {
-						Constant.getConsultProtocol().clear();
-						int size = protocol.size();
+					Constant.getConsultProtocol().clear();
+					int size = protocol.size();
 					for (int i = 0; i < size; i++) {
 						Constant.getConsultProtocol().add( String.valueOf( protocol.get( i ) ) );
 					}
@@ -255,10 +256,10 @@ public class SplashActivity extends Activity {
 			}
 		}
 
-		private void startMain() {
+		private void startMain(boolean isInitJrtt) {
 			if (handler != null) {
 				initEnd = true;
-				handler.sendEmptyMessage( 12 );
+				handler.sendEmptyMessage( isInitJrtt ? 12 : 1 );
 			}
 		}
 
@@ -281,8 +282,8 @@ public class SplashActivity extends Activity {
 			TrackingUtils.setIsStatistical( 2 == a );
 			GDTActionUtils.setIsStartGDTAction( 3 == a );
 			JrttUtils.setIsJrttStatistical( 4 == a );
-			int b = item.getIntValue( "discount_enabled" );
-			MyApplication.setIsShowDiscount( 1 == b );
+			Constant.setIsShowDiscount( item.getBooleanValue( "discount_enabled", 1 ) );
+			Constant.setIsShowBoutique( item.getBooleanValue( "good_product_enabled", 1 ) );
 		}
 
 		private void setGamePacks(ResultItem resultItem) {
@@ -329,7 +330,7 @@ public class SplashActivity extends Activity {
 			TrackingUtils.setIsStatistical( false );
 			GDTActionUtils.setIsStartGDTAction( false );
 			JrttUtils.setIsJrttStatistical( false );
-			startMain();
+			startMain( JrttUtils.isIsJrttStatistical() );
 		}
 	}
 
@@ -345,6 +346,7 @@ public class SplashActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult( requestCode, resultCode, data );
 		if (requestCode == 12 && resultCode == RESULT_OK) {
+			initEnd = true;
 			handler.sendEmptyMessage( 1 );
 		}
 	}

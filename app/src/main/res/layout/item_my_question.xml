@@ -12,29 +12,64 @@
         android:background="@drawable/ic_loading_logo" />
 
 
-    <TextView
-        android:id="@+id/id_item_my_question_name"
+    <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/id_item_my_question_icon"
-        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@id/id_item_my_question_icon">
+
+        <TextView
+            android:id="@+id/id_item_my_question_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="1dp"
+            android:text="游戏名字"
+            android:textColor="@color/defultTextColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/id_my_question_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/id_item_my_question_name"
+            android:background="@drawable/shape_login_bt"
+            android:drawableLeft="@drawable/f_icon_jinbin_liang"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text="+50"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/id_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:layout_toRightOf="@id/id_item_my_question_icon"
-        android:text="游戏名字"
-        android:textColor="@color/defultTextColor"
-        android:textSize="14sp" />
+        android:background="@drawable/e_icon_wen" />
 
     <TextView
         android:id="@+id/id_item_my_question_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_item_my_question_name"
-        android:layout_marginStart="10dp"
+        android:layout_below="@id/layout"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/id_item_my_question_icon"
-        android:drawableLeft="@drawable/e_icon_wen"
-        android:drawablePadding="3dp"
+        android:layout_toRightOf="@id/id_iv"
         android:gravity="center_vertical"
-        android:text="问题内容"
+        android:text="问题问题内容问题内内容"
         android:textColor="@color/textColor1"
         android:textSize="15sp" />
 
@@ -42,7 +77,7 @@
         android:id="@+id/id_item_my_question_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_item_my_question_icon"
+        android:layout_below="@id/id_item_my_question_question"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@id/id_item_my_question_icon"
@@ -55,7 +90,7 @@
         android:id="@+id/id_item_my_question_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id_item_my_question_icon"
+        android:layout_below="@id/id_item_my_question_question"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"

@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RadioGroup
+        android:id="@+id/mainRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f9f9f9"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp">
+
+        <com.tenone.gamebox.view.custom.TabButtonView
+            android:id="@+id/radio_button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:textColor="@drawable/text_select_color"
+            android:textSize="11sp"
+            app:checkedIcon="@drawable/ic_youxi_checked"
+            app:defultIcon="@drawable/ic_youxi_defult"
+            app:text="@string/game" />
+
+        <com.tenone.gamebox.view.custom.TabButtonView
+            android:id="@+id/radio_button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:textColor="@drawable/text_select_color"
+            android:textSize="11sp"
+            app:checkedIcon="@drawable/c_icon_jiaoyou"
+            app:defultIcon="@drawable/c_icon_jiaoyi_an"
+            app:text="@string/trading" />
+
+        <RadioButton
+            android:id="@+id/radio_button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:textSize="11sp"></RadioButton>
+
+        <com.tenone.gamebox.view.custom.TabButtonView
+            android:id="@+id/radio_button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:textColor="@drawable/text_select_color"
+            android:textSize="11sp"
+            app:checkedIcon="@drawable/icon_driving_checked"
+            app:defultIcon="@drawable/icon_driving"
+            app:text="车站" />
+
+        <com.tenone.gamebox.view.custom.TabButtonView
+            android:id="@+id/radio_button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:textColor="@drawable/text_select_color"
+            android:textSize="11sp"
+            app:checkedIcon="@drawable/ic_wode_checked"
+            app:defultIcon="@drawable/ic_wode_defult"
+            app:text="@string/mine" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/mainRadioGroup"
+        android:background="#b2b2b2" />
 
     <com.tenone.gamebox.view.custom.NoScrollViewPager
         android:id="@+id/id_mian_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.tenone.gamebox.view.custom.NoScrollViewPager>
+        android:layout_height="match_parent"
+        android:layout_above="@id/id_line"></com.tenone.gamebox.view.custom.NoScrollViewPager>
 
-
-    <include layout="@layout/layout_main_bottom"></include>
+    <ImageView
+        android:id="@+id/id_home_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:src="@drawable/icon_issue" />
 
 </RelativeLayout>

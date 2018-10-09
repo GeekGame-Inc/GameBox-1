@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/id_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/d_icon_da" />
+
+    <TextView
+        android:id="@+id/id_item_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/id_iv"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/id_iv"
+        android:textColor="@color/gray_69"
+        android:textSize="12sp" />
+</RelativeLayout>

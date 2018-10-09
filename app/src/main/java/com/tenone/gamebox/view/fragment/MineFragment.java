@@ -28,6 +28,7 @@ import com.tenone.gamebox.R;
 import com.tenone.gamebox.mode.listener.AppBarStateChangeListener;
 import com.tenone.gamebox.mode.listener.HttpResultListener;
 import com.tenone.gamebox.mode.listener.OnDataChangeListener;
+import com.tenone.gamebox.mode.listener.OnLoginStateChangeListener;
 import com.tenone.gamebox.mode.listener.OnMainViewPagerChangeListener;
 import com.tenone.gamebox.mode.listener.OnMineItemClickListener;
 import com.tenone.gamebox.mode.mode.MineItemModel;
@@ -78,8 +79,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 @SuppressLint("ResourceAsColor")
-public class MineFragment extends BaseLazyFragment implements OnMineItemClickListener, HttpResultListener, OnMainViewPagerChangeListener, OnDataChangeListener {
+public class MineFragment extends BaseLazyFragment implements OnMineItemClickListener, HttpResultListener, OnMainViewPagerChangeListener, OnDataChangeListener, OnLoginStateChangeListener {
 	private static final int FORM_MINE = 585;
 	@ViewInject(R.id.id_new_mine_appBar)
 	AppBarLayout appBarLayout;
@@ -176,6 +178,7 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 		isCreate = true;
 		OnScrollHelper.getInstance().onScrollStateUpdate( recyclerView );
 		ListenerManager.registerOnDataChangeListener( this );
+		ListenerManager.registerOnLoginStateChangeListener( this );
 	}
 
 	private void setOnViewClickListener() {
@@ -240,6 +243,7 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 		goldTv.setText( gold );
 		shareTv.setText( earnings );
 		platformTv.setText( platform );
+		Log.i( "HeaderTest", " header2 is " + SpUtil.getHeaderUrl() );
 		ImageLoadUtils.loadNormalImg( headerIv, getActivity(), SpUtil.getHeaderUrl() );
 		nickNameTv.setText( SpUtil.getAccount() );
 	}
@@ -255,8 +259,8 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 	public void onMineItemClic(int position) {
 		addButtonStatistics( position );
 		if (!BeanUtils.isLogin()) {
-			startActivity( new Intent( getActivity(),
-					LoginActivity.class ) );
+			startActivityForResult( new Intent( getActivity(),
+					LoginActivity.class ), FORM_MINE );
 			return;
 		}
 		Intent intent = null;
@@ -537,5 +541,10 @@ public class MineFragment extends BaseLazyFragment implements OnMineItemClickLis
 	public void onDataChange() {
 		Log.i( "MineFragment", "刷新界面数据" );
 		HttpManager.userCenter( 18, getActivity(), this );
+	}
+
+	@Override
+	public void onLoginStateChange(boolean isLogin) {
+		ininShowView( isLogin );
 	}
 }

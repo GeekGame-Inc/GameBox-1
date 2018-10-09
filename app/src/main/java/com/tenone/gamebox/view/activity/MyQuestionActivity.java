@@ -67,8 +67,8 @@ public class MyQuestionActivity extends BaseActivity {
 			finish();
 		} );
 		titleTv.setText( type == 1 ? "\u6211\u6765\u56de\u7b54" : "\u6211\u7684\u63d0\u95ee" );
-		Drawable drawable = ContextCompat.getDrawable( this, R.drawable.icon_wen );
-		DrawableCompat.setTintList( drawable, ColorStateList.valueOf( ContextCompat.getColor( this, R.color.gray_69 ) ) );
+		Drawable drawable = ContextCompat.getDrawable( this, R.drawable.i_icon_wen );
+	//	DrawableCompat.setTintList( drawable, ColorStateList.valueOf( ContextCompat.getColor( this, R.color.gray_69 ) ) );
 		rightIv.setBackground( drawable );
 		rightIv.setOnClickListener( v ->
 			startActivity( new Intent( this, WebActivity.class )

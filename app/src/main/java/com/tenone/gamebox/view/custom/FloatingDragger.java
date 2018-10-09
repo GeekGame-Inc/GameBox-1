@@ -202,8 +202,8 @@ public class FloatingDragger implements Observer {
 			float x = SpUtil.getFloatingX();
 			float y = SpUtil.getFloatingY();
 			if (x == -1 && y == -1) { // 初始位置
-				x = getMeasuredWidth() - floatingBtn.getMeasuredWidth();
-				y = getMeasuredHeight() * 2 / 3;
+				x = 30;
+				y = floatingBtn.getMeasuredHeight() - 50;
 			}
 			floatingBtn.layout( (int) x, (int) y,
 					(int) x + floatingBtn.getMeasuredWidth(), (int) y + floatingBtn.getMeasuredHeight() );

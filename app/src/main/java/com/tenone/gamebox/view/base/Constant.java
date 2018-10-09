@@ -16,6 +16,9 @@ public class Constant {
 	private static String random = "";
 	private static float productMinPrice = 20;
 	private static boolean isShowTrading = true;
+	private static boolean isShowBoutique = false;
+	private static boolean isShowDiscount = false;
+
 	private static boolean isVip = false;
 	private static List<String> buyerNotes = new ArrayList<String>();
 	private static List<String> sellerNotes = new ArrayList<String>();
@@ -93,5 +96,21 @@ public class Constant {
 
 	public static void setQuestionTaskCoin(String questionTaskCoin) {
 		Constant.questionTaskCoin = questionTaskCoin;
+	}
+
+	public static boolean isIsShowBoutique() {
+		return isShowBoutique;
+	}
+
+	public static void setIsShowBoutique(boolean isShowBoutique) {
+		Constant.isShowBoutique = isShowBoutique;
+	}
+
+	public static boolean isIsShowDiscount() {
+		return isShowDiscount;
+	}
+
+	public static void setIsShowDiscount(boolean isShowDiscount) {
+		Constant.isShowDiscount = isShowDiscount;
 	}
 }

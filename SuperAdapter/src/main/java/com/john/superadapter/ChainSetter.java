@@ -21,56 +21,58 @@ import android.widget.ImageView;
  */
 interface ChainSetter<VH> {
 
-    VH setText(int viewId, CharSequence text);
+	VH setText(int viewId, CharSequence text);
 
-    VH setTextColor(int viewId, int textColor);
+	VH setTextColor(int viewId, int textColor);
 
-    VH setTextColor(int viewId, ColorStateList colorStateList);
+	VH setTextColor(int viewId, ColorStateList colorStateList);
 
-    VH setMovementMethod(int viewId, MovementMethod method);
+	VH setMovementMethod(int viewId, MovementMethod method);
 
-    VH setImageResource(int viewId, @DrawableRes int resId);
+	VH setImageResource(int viewId, @DrawableRes int resId);
 
-    VH setImageDrawable(int viewId, Drawable drawable);
+	VH setImageDrawable(int viewId, Drawable drawable);
 
-    VH setImageBitmap(int viewId, Bitmap bitmap);
+	VH setImageBitmap(int viewId, Bitmap bitmap);
 
-    VH setImageUri(int viewId, Uri imageUri);
+	VH setImageUri(int viewId, Uri imageUri);
 
-    VH setScaleType(int viewId, ImageView.ScaleType type);
+	VH setScaleType(int viewId, ImageView.ScaleType type);
 
-    VH setBackgroundColor(int viewId, @ColorInt int bgColor);
+	VH setBackgroundColor(int viewId, @ColorInt int bgColor);
 
-    VH setBackgroundResource(int viewId, @DrawableRes int bgRes);
+	VH setBackgroundResource(int viewId, @DrawableRes int bgRes);
 
-    VH setColorFilter(int viewId, ColorFilter colorFilter);
+	VH setColorFilter(int viewId, ColorFilter colorFilter);
 
-    VH setColorFilter(int viewId, int colorFilter);
+	VH setColorFilter(int viewId, int colorFilter);
 
-    VH setAlpha(int viewId, @FloatRange(from = 0.0, to = 1.0) float value);
+	VH setAlpha(int viewId, @FloatRange(from = 0.0, to = 1.0) float value);
 
-    VH setVisibility(int viewId, int visibility);
+	VH setVisibility(int viewId, int visibility);
 
-    VH setMax(int viewId, int max);
+	VH setVisibility(int viewId, boolean isVisible);
 
-    VH setProgress(int viewId, int progress);
+	VH setMax(int viewId, int max);
 
-    VH setRating(int viewId, float rating);
+	VH setProgress(int viewId, int progress);
 
-    VH setTag(int viewId, Object tag);
+	VH setRating(int viewId, float rating);
 
-    VH setEnabled(int viewId, boolean enabled);
+	VH setTag(int viewId, Object tag);
 
-    VH setAdapter(int viewId, Adapter adapter);
+	VH setEnabled(int viewId, boolean enabled);
 
-    VH setAdapter(int viewId, RecyclerView.Adapter adapter);
+	VH setAdapter(int viewId, Adapter adapter);
 
-    VH setChecked(int viewId, boolean checked);
+	VH setAdapter(int viewId, RecyclerView.Adapter adapter);
 
-    VH setOnClickListener(int viewId, View.OnClickListener listener);
+	VH setChecked(int viewId, boolean checked);
 
-    VH setOnLongClickListener(int viewId, View.OnLongClickListener listener);
+	VH setOnClickListener(int viewId, View.OnClickListener listener);
 
-    VH setOnTouchListener(int viewId, View.OnTouchListener listener);
+	VH setOnLongClickListener(int viewId, View.OnLongClickListener listener);
+
+	VH setOnTouchListener(int viewId, View.OnTouchListener listener);
 
 }

@@ -32,16 +32,13 @@ public class AutoInstallUtils {
 		File file = new File(str);
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		if (Build.VERSION.SDK_INT >= 24) {
-			Uri apkUri = FileProvider.getUriForFile(context,
-					"com.tenone.gamebox.fileprovider", file);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			Uri apkUri = FileProvider.getUriForFile(context, "com.tenone.gamebox.fileprovider", file);
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-			intent.setDataAndType(apkUri,
-					"application/vnd.android.package-archive");
+			intent.setDataAndType(apkUri, "application/vnd.android.package-archive");
 		} else {
 			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			intent.setDataAndType(Uri.fromFile(file),
-					"application/vnd.android.package-archive");
+			intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
 		}
 		mContext.startActivity(intent);
 	}

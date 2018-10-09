@@ -42,17 +42,11 @@ import cn.sharesdk.framework.ShareSDK;
 public class MyApplication extends MultiDexApplication implements HttpResultListener, Application.ActivityLifecycleCallbacks {
 	public static AppConfigModle configModle;
 	public static HttpUrlModel httpUrlModel;
-	public int downSize = 0;
 	public static List<String> installingPacks = new ArrayList<String>();
-
 	public static List<String> installedGameIds = new ArrayList<String>();
-
 	private static MyApplication instance;
-
 	private static IWXAPI iwxapi;
-
 //	private PatchManager mPatchManager;
-
 	public static MyApplication getInstance() {
 		return instance;
 	}
@@ -60,22 +54,10 @@ public class MyApplication extends MultiDexApplication implements HttpResultList
 	public static IWXAPI getIwxapi() {
 		return iwxapi;
 	}
-
 	private String platform = "0";
 	private String coin = "0";
 	private String recom_bonus = "0";
 	private boolean isVip = false;
-
-	private static boolean isShowDiscount = false;
-
-	public static boolean isIsShowDiscount() {
-		return isShowDiscount;
-	}
-
-	public static void setIsShowDiscount(boolean isShowDiscount) {
-		MyApplication.isShowDiscount = isShowDiscount;
-	}
-
 	private static int topGameId = 0, defultGameId = 0;
 
 	public static int getTopGameId() {

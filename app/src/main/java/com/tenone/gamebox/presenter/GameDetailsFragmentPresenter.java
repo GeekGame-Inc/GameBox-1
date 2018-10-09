@@ -135,41 +135,40 @@ public class GameDetailsFragmentPresenter extends BasePresenter implements
 				height = 9 * width / 16;
 			}
 			gifUrl = MyApplication.getHttpUrl().getBaseUrl() + gifUrl;
-			getGifPalyImageView().setOnClickListener( v -> {
-				if (!isPlay) {
+			playGif();
+			/*getGifPalyImageView().setOnClickListener( v -> {
+				playGif();
+				*//*if (!isPlay) {
 					if ("WIFI".equals( NetworkUtils.GetNetworkType( context ) )) {
 						playGif();
 					} else {
 						showWifiDialog();
 					}
-				}
-			} );
+				}*//*
+			} );*/
 		} else {
 			getGifLayout().setVisibility( View.GONE );
 		}
-		getCheckTv().setOnClickListener( v -> {
-			openOtherActivity( context, new Intent( context, CheckAllCommentActivity.class )
-					.putExtra( "gameId", getGameId() ) );
-		} );
+		getCheckTv().setOnClickListener( v -> openOtherActivity( context, new Intent( context, CheckAllCommentActivity.class )
+					.putExtra( "gameId", getGameId() ) ) );
 	}
 
 	private void playGif() {
+		//getGifPalyImageView().setVisibility( View.GONE );
 		ImageLoadUtils.loadGifImg( getGifImageView(), context, gifUrl, new RequestListener<GifDrawable>() {
-
 			@Override
 			public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target,
 																	boolean isFirstResource) {
 				return false;
 			}
-
 			@Override
 			public boolean onResourceReady(GifDrawable resource, Object model, Target<GifDrawable> target,
 																		 DataSource dataSource, boolean isFirstResource) {
-				getGifPalyImageView().setVisibility( View.GONE );
+			//	getGifPalyImageView().setVisibility( View.GONE );
 				return false;
 			}
 		}, width, height );
-		ImageLoadUtils.loadGifPlayImg( getGifPalyImageView(), context );
+//	  ImageLoadUtils.loadGifPlayImg( getGifPalyImageView(), context );
 		isPlay = true;
 	}
 

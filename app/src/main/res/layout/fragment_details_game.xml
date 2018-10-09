@@ -237,6 +237,7 @@
                     android:id="@+id/id_fragment_details_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_centerInParent="true"
                     android:layout_margin="10dp"
                     android:contentDescription="@string/empty"

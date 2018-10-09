@@ -34,6 +34,7 @@ import com.tenone.gamebox.view.activity.MyMessageActivity;
 import com.tenone.gamebox.view.activity.TaskCenterActivity;
 import com.tenone.gamebox.view.adapter.GameViewPagerAdapter;
 import com.tenone.gamebox.view.base.BaseLazyFragment;
+import com.tenone.gamebox.view.base.Constant;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.custom.CustomQBadgeView;
 import com.tenone.gamebox.view.receiver.WarnReceiver;
@@ -112,8 +113,11 @@ public class NewGameFragment extends BaseLazyFragment implements WarnReceiver.Wa
 				titles.add( string );
 			}
 		}
-		if (!MyApplication.isIsShowDiscount()) {
+		if (!Constant.isIsShowDiscount()) {
 			titles.remove( "\u6298\u6263" );
+		}
+		if (!Constant.isIsShowBoutique()) {
+			titles.remove( "\u7cbe\u54c1" );
 		}
 		return titles;
 	}
@@ -144,9 +148,11 @@ public class NewGameFragment extends BaseLazyFragment implements WarnReceiver.Wa
 		fragments.clear();
 		btGameFragment = new BtGameFragment();
 		fragments.add( btGameFragment );
-		boutiqueFragment = new BoutiqueFragment();
-		fragments.add( boutiqueFragment );
-		if (MyApplication.isIsShowDiscount()) {
+		if (Constant.isIsShowBoutique()) {
+			boutiqueFragment = new BoutiqueFragment();
+			fragments.add( boutiqueFragment );
+		}
+		if (Constant.isIsShowDiscount()) {
 			discountGameFragment = new DiscountGameFragment();
 			fragments.add( discountGameFragment );
 		}
@@ -154,7 +160,6 @@ public class NewGameFragment extends BaseLazyFragment implements WarnReceiver.Wa
 		fragments.add( h5Fragment );
 		commitmentFragment = new CommitmentFragment();
 		fragments.add( commitmentFragment );
-
 		receiver = new WarnReceiver();
 		registerWarnReceiver( mContext, receiver );
 		receiver.setWarnNotifiacticonListener( this );

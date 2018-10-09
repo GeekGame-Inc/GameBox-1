@@ -93,11 +93,12 @@ public class ReleaseQuestionActivity extends Activity implements Runnable, TextW
 				finish();
 				break;
 			case R.id.id_window_release_question_release:
-				String text = editText.getText().toString();
+				String text = editText.getText().toString().trim();
 				if (TextUtils.isEmpty( text ) || text.length() < 5) {
 					ToastUtils.showToast( this, "5~100\u5b57\u8303\u56f4\u5185\uff0c\u8bf7\u63cf\u8ff0\u60a8\u7684\u95ee\u9898" );
 					return;
 				}
+				releaseTv.setClickable( false );
 				HttpManager.putQuestion( HttpType.REFRESH, this, this, money, text, gameId );
 				break;
 		}
@@ -116,13 +117,24 @@ public class ReleaseQuestionActivity extends Activity implements Runnable, TextW
 
 	@Override
 	public void afterTextChanged(Editable s) {
-		if (s != null) {
-			int length = s.length();
-			releaseTv.setSelected( length <= 4 );
-			releaseTv.setClickable( length > 4 );
-		}
 		if (!TextUtils.isEmpty( s )) {
-			indexTv.setText( s.length() + "/" + MAXLENGTH );
+			String text = s.toString();
+			if (!text.startsWith( " " ) && !text.endsWith( " " )) {
+				int length = text.length();
+				releaseTv.setSelected( length <= 4 );
+				releaseTv.setClickable( length > 4 );
+				indexTv.setText( length + "/" + MAXLENGTH );
+			} else if (text.endsWith( " " ) && !text.startsWith( " " )) {
+				int length = text.length() - 1;
+				releaseTv.setSelected( length <= 4 );
+				releaseTv.setClickable( length > 4 );
+				indexTv.setText( length + "/" + MAXLENGTH );
+			} else {
+				int length = text.trim().length();
+				releaseTv.setSelected( length <= 4 );
+				releaseTv.setClickable( length > 4 );
+				indexTv.setText( length + "/" + MAXLENGTH );
+			}
 		} else {
 			indexTv.setText( "0/" + MAXLENGTH );
 		}
@@ -134,6 +146,7 @@ public class ReleaseQuestionActivity extends Activity implements Runnable, TextW
 			setResult( RESULT_OK );
 			finish();
 		} else {
+			releaseTv.setClickable( true );
 			ToastUtils.showToast( this, resultItem.getString( "msg" ) );
 		}
 	}

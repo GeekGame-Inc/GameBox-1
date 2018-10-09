@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 
 import com.tenone.gamebox.mode.able.OpenServerTabAble;
+import com.tenone.gamebox.view.base.Constant;
 import com.tenone.gamebox.view.base.MyApplication;
 import com.tenone.gamebox.view.fragment.BTOpenFragment;
 import com.tenone.gamebox.view.fragment.DisOpenFragment;
@@ -18,7 +19,7 @@ public class OpenServerTabBiz implements OpenServerTabAble {
     public List<Fragment> getFragments() {
         ArrayList<Fragment> fragments = new ArrayList<Fragment>();
         fragments.add( new BTOpenFragment() );
-        if (MyApplication.isIsShowDiscount()) {
+        if (Constant.isIsShowDiscount()) {
             fragments.add( new DisOpenFragment() );
         }
         return fragments;
@@ -33,7 +34,7 @@ public class OpenServerTabBiz implements OpenServerTabAble {
                 titles.add( string );
             }
         }
-        if (!MyApplication.isIsShowDiscount()) {
+        if (!Constant.isIsShowDiscount()) {
             titles.remove( "\u6298\u6263" );
         }
         return titles;
